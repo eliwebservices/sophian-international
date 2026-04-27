@@ -13,7 +13,7 @@ export default function HomeAssessment() {
           {/* Image */}
           <div className="relative overflow-hidden aspect-[4/5] w-full">
             <img
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=85&fit=crop"
+              src="/images/assessment-side-image.jpg"
               alt="Professional hospitality consultation"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
             />
