@@ -5,7 +5,7 @@ export default function HomeFounder() {
         {/* Image — fixed height so it doesn't go gigantic */}
         <div className="relative h-[560px] md:h-auto overflow-hidden">
           <img
-            src="/images/nick-professional.JPG"
+            src="/images/nick-professional.jpg"
             alt="Nick Huang"
             className="w-full h-full object-cover object-top"
           />
