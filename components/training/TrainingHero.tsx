@@ -6,7 +6,7 @@ export default function TrainingHero() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1800&q=85&fit=crop')",
+              "url('/images/nick-training.jpg')",
             animation: "kenburns 18s ease-out forwards",
           }}
         />

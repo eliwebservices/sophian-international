@@ -17,7 +17,8 @@ export default function Navbar() {
     { label: "Executive Search",   href: "/executive-search" },
     { label: "Corporate Training",   href: "/corporate-training" },
     { label: "HR Consulting", href: "/hr-consulting" },
-    { label: "Contact",    href: "/#contact" },
+    { label: "Free Resources",    href: "/free-resources" },
+    { label: "Contact",    href: "/contact" },
   ];
 
   return (
@@ -58,7 +59,7 @@ export default function Navbar() {
 
       {/* CTA */}
       <Link
-        href="/#contact"
+        href="/contact"
         className="hidden md:inline-block font-body text-[9px] tracking-[0.25em] uppercase bg-gold text-navy px-6 py-2.5 hover:bg-gold2 transition-colors duration-300 no-underline"
       >
         Schedule a Call
