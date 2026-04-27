@@ -37,7 +37,7 @@ const stats = [
             <div className="md:col-span-2">
               <div className="relative overflow-hidden aspect-[3/4] mb-8">
                 <img
-                  src="/images/nick-professional.jpg"
+                  src="/images/nick-professional.JPG"
                   alt="Nick Huang, Founder & Managing Director of Sophian International"
                   className="w-full h-full object-cover object-top"
                 />

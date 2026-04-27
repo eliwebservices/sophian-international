@@ -1,21 +1,21 @@
 const scenes = [
     {
-      src: "/images/training-the-team.png",
+      src: "/images/training-the-team.PNG",
       alt: "Hospitality team in a luxury hotel training session",
       caption: "Training the Team",
     },
     {
-      src: "/images/advising-leaders.png",
+      src: "/images/advising-leaders.PNG",
       alt: "One-on-one executive consulting in a refined office",
       caption: "Advising Leaders",
     },
     {
-      src: "/images/elevating-guest-experience.png",
+      src: "/images/elevating-guest-experience.PNG",
       alt: "Luxury restaurant server delighting a guest",
       caption: "Elevating Guest Experience",
     },
     {
-      src: "/images/serving-owners-community.png",
+      src: "/images/serving-owners-community.PNG",
       alt: "Hotel owner with happy team and community",
       caption: "Serving Owners & Community",
     },
