@@ -22,11 +22,12 @@ export default function TrainingHero() {
             Sophian International
           </p> */}
           <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-8">
-            Learning & Culture Solutions for Hospitality
+          Corporate Training
+            
           </p>
   
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-[1.08] text-white mb-8">
-            Corporate Training
+          Learning & Culture Solutions for Hospitality
           </h1>
   
           <p className="font-body text-sm md:text-base leading-[1.8] text-white/75 max-w-2xl mx-auto mb-10">
@@ -36,14 +37,14 @@ export default function TrainingHero() {
   
           <div className="w-12 h-px bg-gold mx-auto mb-10" />
   
-          <div className="flex flex-col gap-1.5">
+          {/* <div className="flex flex-col gap-1.5">
             <p className="font-body text-[9px] tracking-[0.3em] uppercase text-gold">
               Corporate Training
             </p>
             <p className="font-body text-[9px] tracking-[0.3em] uppercase text-white/45">
               Capability Development Programme
             </p>
-          </div>
+          </div> */}
         </div>
   
         {/* Scroll */}
