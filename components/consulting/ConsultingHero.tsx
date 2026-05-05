@@ -36,7 +36,7 @@ export default function ConsultingHero() {
             ))}
           </div> */}
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-[1.08] text-white mb-8">
-          People Strategy, Leadership Architecture, Operating Discipline
+          People Strategy <br/> Leadership Architecture <br/>Operating Discipline
           </h1>
   
           {/* <p className="font-body text-sm md:text-base leading-[1.8] text-white/75 max-w-2xl mx-auto mb-10">
