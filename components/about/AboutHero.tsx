@@ -28,7 +28,7 @@ export default function AboutHero() {
             Our Culture
           </p>
   
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.08] text-white mb-10">
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-[1.08] text-white mb-10">
             We Help You<br />
             <span className="italic text-[45px]">Discover</span> <br/>
             Your True Hospitality<br />
