@@ -23,7 +23,6 @@ export default function TrainingHero() {
           </p> */}
           <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-8">
           Corporate Training
-            
           </p>
   
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-[1.08] text-white mb-8">

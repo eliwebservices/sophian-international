@@ -25,7 +25,7 @@ export default function ConsultingHero() {
           </p> */}
   
           {/* Three pillars */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10 mb-10">
+          {/* <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10 mb-10">
             {["People Strategy", "Leadership Architecture", "Operating Discipline"].map((tag, i) => (
               <span key={tag} className="flex items-center gap-4">
                 <span className="font-display italic text-xl md:text-2xl font-light text-white/90">
@@ -34,18 +34,28 @@ export default function ConsultingHero() {
                 {i < 2 && <span className="hidden md:block w-px h-5 bg-gold/30" />}
               </span>
             ))}
-          </div>
+          </div> */}
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-[1.08] text-white mb-8">
+          People Strategy, Leadership Architecture, Operating Discipline
+          </h1>
+  
+          {/* <p className="font-body text-sm md:text-base leading-[1.8] text-white/75 max-w-2xl mx-auto mb-10">
+          We transform people challenges into your greatest competitive advantage in the world
+            of exceptional service. When your property's EBITDA is being eroded by people problems you can't diagnose —
+            and your leadership team can't fix — we isolate the root cause and engineer the solution.
+          </p> */}
   
           <div className="w-12 h-px bg-gold mx-auto mb-10" />
   
           <p className="font-body text-sm md:text-base text-white/85 leading-relaxed max-w-3xl mx-auto mb-5">
-            We transform people challenges into your greatest competitive advantage in the world
-            of exceptional service.
-          </p>
-          <p className="font-body text-sm text-white/55 leading-relaxed max-w-3xl mx-auto mb-14">
-            When your property's EBITDA is being eroded by people problems you can't diagnose —
+          We transform people challenges into your greatest competitive advantage in the world
+            of exceptional service. When your property's EBITDA is being eroded by people problems you can't diagnose —
             and your leadership team can't fix — we isolate the root cause and engineer the solution.
           </p>
+          {/* <p className="font-body text-sm text-white/55 leading-relaxed max-w-3xl mx-auto mb-14">
+            When your property's EBITDA is being eroded by people problems you can't diagnose —
+            and your leadership team can't fix — we isolate the root cause and engineer the solution.
+          </p> */}
   
           <a
             href="#contact"
