@@ -11,8 +11,8 @@
   --color-warm:  #EDE9E1;
   --color-muted: #6b6b6b;
 
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body:    'DM Sans', sans-serif;
+  --font-display: 'DM Sans', sans-serif;
+  --font-body:    'Cormorant Garamond', Georgia, serif;
 }
 
 @keyframes kenburns {
