@@ -1,9 +1,9 @@
 const images = [
-    { src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80&fit=crop", alt: "Luxury hotel lobby" },
-    { src: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80&fit=crop", alt: "Hotel team" },
-    { src: "https://images.unsplash.com/photo-1606402179428-a57976d71fa4?w=600&q=80&fit=crop", alt: "Hospitality leadership" },
-    { src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80&fit=crop", alt: "Luxury resort" },
-  ];
+  { src: "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=600&q=80&fit=crop", alt: "Infinity pool ocean view" },
+  { src: "https://images.unsplash.com/photo-1439405326854-014607f694d7?w=600&q=80&fit=crop", alt: "Ocean waves aerial" },
+  { src: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=600&q=80&fit=crop", alt: "Lush green nature" },
+  { src: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80&fit=crop", alt: "Tropical coast" },
+];
   
   export default function HomeImageStrip() {
     return (

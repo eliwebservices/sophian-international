@@ -6,7 +6,7 @@ export default function ResourcesHero() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1800&q=85&fit=crop')",
+              "url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1800&q=85&fit=crop')",
             animation: "kenburns 18s ease-out forwards",
           }}
         />

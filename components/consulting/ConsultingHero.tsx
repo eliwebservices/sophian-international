@@ -6,7 +6,7 @@ export default function ConsultingHero() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1800&q=85&fit=crop')",
+              "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=85&fit=crop')",
             animation: "kenburns 18s ease-out forwards",
           }}
         />
