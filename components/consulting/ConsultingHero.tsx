@@ -65,7 +65,7 @@ export default function ConsultingHero() {
           </a>
   
           {/* 3-Step path */}
-          <div className="border border-gold/20 p-8 md:p-10 max-w-3xl mx-auto mb-12">
+          {/* <div className="border border-gold/20 p-8 md:p-10 max-w-3xl mx-auto mb-12">
             <p className="font-body text-[9px] tracking-[0.3em] uppercase text-gold mb-8">
               Your Path to Results: The 3-Step Experience
             </p>
@@ -90,7 +90,7 @@ export default function ConsultingHero() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
   
           {/* Bottom labels */}
           <div className="flex flex-wrap items-center justify-center gap-8">
