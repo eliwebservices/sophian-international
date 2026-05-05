@@ -34,29 +34,29 @@ export default function AboutHero() {
             Through the Power of People & Culture
           </h1>
   
-          <div className="w-12 h-px bg-gold mx-auto mb-10" />
+          {/* <div className="w-12 h-px bg-gold mx-auto mb-10" /> */}
   
-          <p className="font-body text-sm md:text-base text-white/80 max-w-3xl mx-auto leading-relaxed mb-12">
+          {/* <p className="font-body text-sm md:text-base text-white/80 max-w-3xl mx-auto leading-relaxed mb-12">
             At Sophian International, we are on a purpose to help individuals and organizations
             discover and embrace their inner calling, fostering environments where everyone feels
             genuinely welcomed, valued, and inspired to thrive.
-          </p>
+          </p> */}
   
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10 mb-14">
+          {/* <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10 mb-14">
             {["Executive Search", "Corporate Training", "HR Consulting"].map((tag, i) => (
               <span key={tag} className="flex items-center gap-6">
                 <span className="font-display italic text-xl font-light text-white/85">{tag}</span>
                 {i < 2 && <span className="hidden md:block w-px h-4 bg-gold/30" />}
               </span>
             ))}
-          </div>
+          </div> */}
   
-          <a
+          {/* <a
             href="/#contact"
             className="font-body text-[9px] tracking-[0.28em] uppercase bg-gold text-navy px-10 py-4 hover:bg-gold2 transition-colors duration-300 no-underline inline-flex items-center gap-3"
           >
             Schedule a Discovery Call →
-          </a>
+          </a> */}
         </div>
   
         {/* Scroll */}
