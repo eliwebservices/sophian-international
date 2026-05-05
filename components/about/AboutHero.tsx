@@ -29,9 +29,11 @@ export default function AboutHero() {
           </p>
   
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-[1.08] text-white mb-10">
-            We Help You Discover<br />
-            <span className="italic">Your True Hospitality</span><br />
-            Through the Power of People & Culture
+            We Help You<br />
+            <span className="text-[45px]">Discover</span> <br/>
+            Your True Hospitality<br />
+            <span className="text-[45px]">Through</span> <br/> 
+            The Power of People & Culture
           </h1>
   
           {/* <div className="w-12 h-px bg-gold mx-auto mb-10" /> */}
