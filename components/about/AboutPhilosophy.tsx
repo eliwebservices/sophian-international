@@ -6,7 +6,7 @@ export default function AboutPhilosophy() {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=85&fit=crop')",
+            "url('/images/our-philosophy-background.png')",
         }}
       />
       {/* Dark overlay so text remains readable */}
@@ -25,7 +25,7 @@ export default function AboutPhilosophy() {
         </p>
 
         {/* Decorative star */}
-        <div className="flex justify-center mb-14">
+        {/* <div className="flex justify-center mb-14">
           <svg width="56" height="56" viewBox="0 0 56 56" fill="none" className="text-gold">
             <path
               d="M28 2 L33 22 L54 22 L37 34 L43 54 L28 41 L13 54 L19 34 L2 22 L23 22 Z"
@@ -35,7 +35,7 @@ export default function AboutPhilosophy() {
             />
             <circle cx="28" cy="28" r="1.5" fill="currentColor" />
           </svg>
-        </div>
+        </div> */}
 
         <blockquote className="font-body text-2xl md:text-3xl italic text-white leading-relaxed mb-3">
           "Get wisdom, get insights."

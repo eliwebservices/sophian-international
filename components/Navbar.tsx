@@ -89,7 +89,7 @@ export default function Navbar() {
             Schedule a Call
           </Link>
           <Link
-            href="/contact"
+            href="/free-resources"
             className="hidden md:inline-flex font-body text-[11px] font-semibold uppercase text-navy px-5 py-2 hover:bg-gold2 transition-colors duration-300 no-underline items-center gap-2"
           >
             Free Workshop

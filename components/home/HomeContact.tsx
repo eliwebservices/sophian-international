@@ -10,33 +10,60 @@ export default function HomeContact() {
 
   const update = (k: string, v: string) => setForm(f => ({ ...f, [k]: v }));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.firstName || !form.email || !form.service || !form.message) return;
-    setSent(true);
-    setForm({ firstName: "", lastName: "", email: "", organisation: "", service: "", message: "" });
-    setTimeout(() => setSent(false), 5000);
+  
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: `${form.firstName} ${form.lastName}`.trim(),
+          role: "Other",
+          company: form.organisation,
+          email: form.email,
+          service: form.service,
+          message: form.message,
+        }),
+      });
+  
+      if (res.ok) {
+        setSent(true);
+        setForm({ firstName: "", lastName: "", email: "",
+                  organisation: "", service: "", message: "" });
+        setTimeout(() => setSent(false), 5000);
+      }
+    } catch (err) {
+      console.error(err);
+    }
   };
 
-  const inputClass =
-    "w-full bg-white/[0.06] border border-gold/20 text-white font-body text-sm px-4 py-3 outline-none focus:border-gold transition-colors placeholder:text-white/25";
+  // Underline-only field style
+  const fieldCls =
+    "w-full bg-transparent border-0 border-b border-gold/30 text-navy font-display text-sm px-0 py-3 outline-none focus:border-navy transition-colors placeholder:text-muted/50 rounded-none";
+
+  const labelCls =
+    "block font-display text-[9px] font-semibold tracking-[0.28em] uppercase text-muted mb-1";
 
   return (
     <section id="contact" className="bg-cream py-28 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-5 gap-16 items-start">
 
-          {/* Info */}
+          {/* Info column */}
           <div className="md:col-span-2">
-            <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-5">Get in Touch</p>
+            <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
+              Get in Touch
+            </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">
               Connect with<br />Sophian International
             </h2>
             <div className="w-12 h-px bg-gold mb-6" />
-            <p className="font-display italic text-lg text-navy mb-6">
+            <p className="font-body text-xl italic text-navy mb-6">
               Transforming Your People & Culture Starts Here
             </p>
-            <p className="font-body text-sm leading-relaxed text-muted mb-12">
+            <p className="font-display text-sm leading-relaxed text-muted mb-12">
               Whether you're preparing for a pre-opening, refining leadership structure,
               or strengthening organizational capability — we're ready to advise and
               support your next phase of growth.
@@ -52,76 +79,115 @@ export default function HomeContact() {
                   {d.icon}
                 </div>
                 <div>
-                  <p className="font-body text-[9px] tracking-[0.25em] uppercase text-muted mb-1">{d.label}</p>
+                  <p className="font-display text-[9px] font-semibold tracking-[0.25em] uppercase text-muted mb-1">
+                    {d.label}
+                  </p>
                   {d.href
-                    ? <a href={d.href} className="font-body text-sm text-[#1a1a1a] hover:text-gold transition-colors no-underline">{d.val}</a>
-                    : <p className="font-body text-sm text-[#1a1a1a]">{d.val}</p>
+                    ? <a href={d.href} className="font-display text-sm text-navy hover:text-gold transition-colors no-underline">{d.val}</a>
+                    : <p className="font-display text-sm text-navy">{d.val}</p>
                   }
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="md:col-span-3 bg-navy p-10 lg:p-14 flex flex-col gap-5">
-            <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold2 mb-2">Send an Enquiry</p>
+          {/* Form — white background, underline inputs */}
+          <form
+            onSubmit={handleSubmit}
+            className="md:col-span-3 bg-white p-10 lg:p-14 flex flex-col gap-7 border border-gold/15"
+          >
+            <div>
+              <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-1">
+                Send an Enquiry
+              </p>
+              <div className="w-8 h-px bg-gold mt-3" />
+            </div>
 
-            <div className="grid md:grid-cols-2 gap-5">
-              <div className="flex flex-col gap-2">
-                <label className="font-body text-[9px] tracking-[0.25em] uppercase text-white/45">First Name *</label>
-                <input value={form.firstName} onChange={e => update("firstName", e.target.value)} placeholder="First name" className={inputClass} />
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <label className={labelCls}>First Name *</label>
+                <input
+                  value={form.firstName}
+                  onChange={e => update("firstName", e.target.value)}
+                  placeholder="First name"
+                  className={fieldCls}
+                />
               </div>
-              <div className="flex flex-col gap-2">
-                <label className="font-body text-[9px] tracking-[0.25em] uppercase text-white/45">Last Name</label>
-                <input value={form.lastName} onChange={e => update("lastName", e.target.value)} placeholder="Last name" className={inputClass} />
+              <div>
+                <label className={labelCls}>Last Name</label>
+                <input
+                  value={form.lastName}
+                  onChange={e => update("lastName", e.target.value)}
+                  placeholder="Last name"
+                  className={fieldCls}
+                />
               </div>
             </div>
 
-            <div className="flex flex-col gap-2">
-              <label className="font-body text-[9px] tracking-[0.25em] uppercase text-white/45">Email Address *</label>
-              <input type="email" value={form.email} onChange={e => update("email", e.target.value)} placeholder="your@email.com" className={inputClass} />
+            <div>
+              <label className={labelCls}>Email Address *</label>
+              <input
+                type="email"
+                value={form.email}
+                onChange={e => update("email", e.target.value)}
+                placeholder="your@email.com"
+                className={fieldCls}
+              />
             </div>
 
-            <div className="flex flex-col gap-2">
-              <label className="font-body text-[9px] tracking-[0.25em] uppercase text-white/45">Organisation</label>
-              <input value={form.organisation} onChange={e => update("organisation", e.target.value)} placeholder="Hotel or company name" className={inputClass} />
+            <div>
+              <label className={labelCls}>Organisation</label>
+              <input
+                value={form.organisation}
+                onChange={e => update("organisation", e.target.value)}
+                placeholder="Hotel or company name"
+                className={fieldCls}
+              />
             </div>
 
-            <div className="flex flex-col gap-2">
-              <label className="font-body text-[9px] tracking-[0.25em] uppercase text-white/45">I'm enquiring about *</label>
-              <select value={form.service} onChange={e => update("service", e.target.value)} className={inputClass}>
-                <option value="" disabled className="bg-navy2">Select a service</option>
-                <option value="executive"  className="bg-navy2">Executive Search</option>
-                <option value="training"   className="bg-navy2">Corporate Training</option>
-                <option value="consulting" className="bg-navy2">HR Consulting</option>
-                <option value="multiple"   className="bg-navy2">Multiple Services</option>
+            <div>
+              <label className={labelCls}>I'm enquiring about *</label>
+              <select
+                value={form.service}
+                onChange={e => update("service", e.target.value)}
+                className={fieldCls}
+              >
+                <option value="" disabled>Select a service</option>
+                <option value="executive">Executive Search</option>
+                <option value="training">Corporate Training</option>
+                <option value="consulting">HR Consulting</option>
+                <option value="multiple">Multiple Services</option>
               </select>
             </div>
 
-            <div className="flex flex-col gap-2">
-              <label className="font-body text-[9px] tracking-[0.25em] uppercase text-white/45">Brief Overview *</label>
+            <div>
+              <label className={labelCls}>Brief Overview *</label>
               <textarea
                 value={form.message}
                 onChange={e => update("message", e.target.value)}
-                rows={5}
+                rows={4}
                 maxLength={1000}
                 placeholder="Briefly describe your situation or need..."
-                className={`${inputClass} resize-y`}
+                className={`${fieldCls} resize-none`}
               />
             </div>
 
             <button
               type="submit"
-              className="w-full bg-gold text-navy font-body text-[9px] tracking-[0.3em] uppercase py-4 hover:bg-gold2 transition-colors duration-300 flex items-center justify-center gap-3 cursor-pointer border-none mt-2"
+              className="w-full bg-navy text-white font-display text-[9px] font-semibold tracking-[0.3em] uppercase py-4 hover:bg-navy2 transition-colors duration-300 flex items-center justify-center gap-3 cursor-pointer border-none mt-2"
             >
               Submit Enquiry →
             </button>
 
             {sent && (
-              <p className="font-body text-sm text-gold text-center border-t border-gold/20 pt-4">
+              <p className="font-display text-sm text-gold text-center border-t border-gold/20 pt-4">
                 Enquiry received. We'll be in touch within 48 hours.
               </p>
             )}
+
+            <p className="font-display text-xs text-muted text-center italic">
+              All enquiries are treated with complete confidentiality.
+            </p>
           </form>
         </div>
       </div>

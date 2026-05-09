@@ -15,10 +15,10 @@ const careerImages = [
   
   export default function AboutConnect() {
     return (
-      <section className="bg-warm py-28 px-6">
+      <section className="bg-cream py-28 px-6">
         <div className="max-w-5xl mx-auto text-center">
   
-          <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-5">
+          <p className="font-display text-[9px] tracking-[0.35em] uppercase text-gold mb-5">
             Let's Connect
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-10">
@@ -49,7 +49,7 @@ const careerImages = [
   
           {/* Sophian tagline */}
           <div className="border-t border-gold/25 pt-14 mb-20">
-            <p className="font-body text-[9px] tracking-[0.4em] uppercase text-gold mb-3">
+            <p className="font-display text-[9px] tracking-[0.4em] uppercase text-gold mb-3">
               Sophian International
             </p>
             <p className="font-display italic text-lg text-muted">
@@ -58,7 +58,7 @@ const careerImages = [
           </div>
   
           {/* Career image strip */}
-          <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-10">
+          <p className="font-display text-[9px] tracking-[0.35em] uppercase text-gold mb-10">
             A Career Built Across World-Class Properties
           </p>
           <div className="grid md:grid-cols-3 gap-px bg-gold/15">

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const pillars = [
   {
@@ -58,6 +58,22 @@ export default function AssessmentModal({ open, onClose }: Props) {
 
   const total         = Object.values(answers).reduce((a, b) => a + b, 0);
   const progress      = step === 0 ? 0 : step === 5 ? 100 : Math.round((step / 5) * 100);
+
+  useEffect(() => {
+    if (step !== 5) return;
+    fetch("/api/assessment", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        totalScore: total,
+        scoreBand: getResult().band,
+        priority: routing || undefined,
+        answers,
+      }),
+    }).catch(console.error);
+  }, [step]);
+  
+
   const currentPillar = step >= 1 && step <= 3 ? pillars[step - 1] : null;
   const pillarDone    = currentPillar
     ? currentPillar.questions.every((_, i) => answers[`p${step}q${i}`] !== undefined)

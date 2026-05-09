@@ -6,7 +6,7 @@ export default function HomeHero() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1800&q=85&fit=crop')",
+              "url('/images/outdoor-terrace.jpg')",
             animation: "kenburns 18s ease-out forwards",
             paddingTop: "150px"
           }}

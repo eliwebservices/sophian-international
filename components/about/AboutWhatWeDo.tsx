@@ -23,23 +23,23 @@ const scenes = [
   
   export default function AboutWhatWeDo() {
     return (
-      <section className="bg-navy py-28 px-6">
+      <section className="bg-white py-28 px-6">
         <div className="max-w-6xl mx-auto">
   
           <div className="text-center mb-16">
-            <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-5">
+            <p className="font-display text-[9px] tracking-[0.35em] uppercase text-gold mb-5">
               What We Do
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-light text-white leading-[1.12] mb-6">
+            <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">
               Empowering Mission-Driven Hospitality
             </h2>
             <div className="w-12 h-px bg-gold mx-auto mb-8" />
-            <p className="font-body text-sm text-white/60 leading-relaxed max-w-3xl mx-auto mb-8">
+            <p className="font-body text-sm text-muted leading-relaxed max-w-3xl mx-auto mb-8">
               We exist to empower mission-driven hotels and restaurants to transform their growth
               through People & Culture solutions — creating people-first experiences for employees,
               guests, owners, and the broader community.
             </p>
-            <blockquote className="font-display italic text-xl md:text-2xl text-white/80 max-w-2xl mx-auto mb-3">
+            <blockquote className="font-display italic text-xl md:text-2xl text-muted max-w-2xl mx-auto mb-3">
               "Love your neighbor as yourself."
             </blockquote>
             <p className="font-body text-[9px] tracking-[0.3em] uppercase text-gold">
@@ -59,7 +59,7 @@ const scenes = [
                 />
                 <div className="absolute inset-0 bg-navy/30 group-hover:bg-navy/10 transition-colors duration-500" />
                 <figcaption className="absolute bottom-0 left-0 right-0 bg-navy/70 py-4 px-6">
-                  <p className="font-body text-[9px] tracking-[0.3em] uppercase text-gold">
+                  <p className="font-body text-[9px] tracking-[0.3em] uppercase text-white font-bold">
                     {s.caption}
                   </p>
                 </figcaption>

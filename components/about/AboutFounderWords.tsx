@@ -8,14 +8,14 @@ const paragraphs = [
   
   export default function AboutFounderWords() {
     return (
-      <section className="bg-navy py-28 px-6">
+      <section className="bg-white py-28 px-6">
         <div className="max-w-3xl mx-auto">
   
           <div className="text-center mb-16">
-            <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-5">
+            <p className="font-display text-[9px] tracking-[0.35em] uppercase text-gold mb-5">
               A Few Words From the Founder
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-light text-white leading-[1.12] mb-6">
+            <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">
               Hospitality Leadership Insights
             </h2>
             <div className="w-12 h-px bg-gold mx-auto" />
@@ -28,7 +28,7 @@ const paragraphs = [
             {paragraphs.map((p, i) => (
               <p
                 key={i}
-                className={`font-body text-sm leading-relaxed ${i === 2 ? "font-display italic text-xl text-white/90 not-font-body" : "text-white/65"}`}
+                className={`font-body text-sm leading-relaxed ${i === 2 ? "font-display italic text-xl text-muted not-font-body" : "text-muted"}`}
               >
                 {p}
               </p>
@@ -36,8 +36,8 @@ const paragraphs = [
           </div>
   
           <div className="border-t border-gold/25 pt-10">
-            <p className="font-display italic text-2xl font-light text-white">Nick Huang</p>
-            <p className="font-body text-[9px] tracking-[0.3em] uppercase text-gold mt-2">
+            <p className="font-display italic text-2xl font-light text-navy">Nick Huang</p>
+            <p className="font-display text-[9px] tracking-[0.3em] uppercase text-gold mt-2">
               Founder & Managing Director, Sophian International
             </p>
           </div>

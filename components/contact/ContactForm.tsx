@@ -26,361 +26,413 @@ const initial = {
   consultingPain: "",
 };
 
-const labelCls = "block font-body text-[9px] tracking-[0.3em] uppercase text-muted mb-2";
-const inputCls =
-  "w-full bg-white/[0.06] border border-gold/20 text-white font-body text-sm px-4 py-3 outline-none focus:border-gold transition-colors placeholder:text-white/25";
-const selectCls =
-  "w-full bg-white/[0.06] border border-gold/20 text-white font-body text-sm px-4 py-3 outline-none focus:border-gold transition-colors appearance-none";
+const labelCls =
+  "block font-display text-[9px] font-semibold tracking-[0.28em] uppercase text-muted mb-1";
+
+const fieldCls =
+  "w-full bg-transparent border-0 border-b border-gold/30 text-navy font-display text-sm px-0 py-3 outline-none focus:border-navy transition-colors placeholder:text-muted/40 rounded-none appearance-none";
 
 export default function ContactForm() {
   const [form, setForm] = useState(initial);
-  const [sent, setSent] = useState(false);
+  const [sent, setSent]   = useState(false);
   const [error, setError] = useState("");
 
   const update = <K extends keyof typeof form>(k: K, v: (typeof form)[K]) =>
     setForm((f) => ({ ...f, [k]: v }));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setError("");
+  //   if (!form.fullName || !form.email || !form.role || !form.company || !form.service || !form.message) {
+  //     setError("Please fill in all required fields.");
+  //     return;
+  //   }
+  //   setSent(true);
+  //   setForm(initial);
+  //   setTimeout(() => setSent(false), 6000);
+  // };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
-    if (!form.fullName || !form.email || !form.role || !form.company || !form.service || !form.message) {
+    if (!form.fullName || !form.email || !form.role ||
+        !form.company || !form.service || !form.message) {
       setError("Please fill in all required fields.");
       return;
     }
-    setSent(true);
-    setForm(initial);
-    setTimeout(() => setSent(false), 6000);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (res.ok) {
+        setSent(true);
+        setForm(initial);
+        setTimeout(() => setSent(false), 6000);
+      } else {
+        const data = await res.json();
+        setError(data.error ?? "Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setError("Something went wrong. Please try again.");
+    }
   };
 
   return (
-    <section id="inquiry" className="bg-navy py-28 px-6">
+    <section id="inquiry" className="bg-white py-28 px-6">
       <div className="max-w-4xl mx-auto">
 
         {/* Header */}
         <div className="text-center mb-14">
-          <p className="font-body text-[9px] tracking-[0.4em] uppercase text-gold mb-6">
+          <p className="font-display text-[9px] font-semibold tracking-[0.4em] uppercase text-gold mb-6">
             Send an Inquiry
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-light text-white leading-[1.12] mb-6">
+          <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">
             Begin a <span className="italic">private dialogue</span>
           </h2>
           <div className="w-12 h-px bg-gold mx-auto mb-6" />
-          <p className="font-body text-xs text-white/40">
+          <p className="font-display text-xs text-muted">
             Fields marked * are required. We respond within 24 business hours.
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+        {/* Form card */}
+        <div className="border border-gold/20 bg-white p-10 md:p-14">
 
-          {/* Row 1 */}
-          <div className="grid md:grid-cols-2 gap-5">
-            <div>
-              <label className={labelCls}>Full Name *</label>
-              <input
-                className={inputCls}
-                value={form.fullName}
-                onChange={(e) => update("fullName", e.target.value)}
-                placeholder="Your full name"
-              />
-            </div>
-            <div>
-              <label className={labelCls}>Role / Title *</label>
-              <select
-                className={selectCls}
-                value={form.role}
-                onChange={(e) => update("role", e.target.value)}
-              >
-                <option value="" disabled className="bg-navy2">Select your role</option>
-                <option value="owner" className="bg-navy2">Owner</option>
-                <option value="gm" className="bg-navy2">General Manager</option>
-                <option value="hr" className="bg-navy2">HR Director</option>
-                <option value="other" className="bg-navy2">Other</option>
-              </select>
-            </div>
+          <div className="mb-8">
+            <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-3">
+              Your Details
+            </p>
+            <div className="w-8 h-px bg-gold" />
           </div>
 
-          {/* Row 2 */}
-          <div className="grid md:grid-cols-2 gap-5">
-            <div>
-              <label className={labelCls}>Company / Hotel / Group *</label>
-              <input
-                className={inputCls}
-                value={form.company}
-                onChange={(e) => update("company", e.target.value)}
-                placeholder="Your organization"
-              />
-            </div>
-            <div>
-              <label className={labelCls}>Location</label>
-              <input
-                className={inputCls}
-                value={form.location}
-                onChange={(e) => update("location", e.target.value)}
-                placeholder="City + Country / Region"
-              />
-            </div>
-          </div>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-8">
 
-          {/* Row 3 */}
-          <div className="grid md:grid-cols-2 gap-5">
-            <div>
-              <label className={labelCls}>Work Email *</label>
-              <input
-                type="email"
-                className={inputCls}
-                value={form.email}
-                onChange={(e) => update("email", e.target.value)}
-                placeholder="your@email.com"
-              />
-            </div>
-            <div>
-              <label className={labelCls}>Phone / WeChat</label>
-              <input
-                className={inputCls}
-                value={form.phone}
-                onChange={(e) => update("phone", e.target.value)}
-                placeholder="Optional"
-              />
-            </div>
-          </div>
-
-          {/* Row 4 */}
-          <div className="grid md:grid-cols-2 gap-5">
-            <div>
-              <label className={labelCls}>Service Needed *</label>
-              <select
-                className={selectCls}
-                value={form.service}
-                onChange={(e) => update("service", e.target.value as ServiceKey)}
-              >
-                <option value="" disabled className="bg-navy2">Select a service</option>
-                <option value="search" className="bg-navy2">Executive Search</option>
-                <option value="training" className="bg-navy2">Corporate Training</option>
-                <option value="consulting" className="bg-navy2">HR Consulting</option>
-                <option value="unsure" className="bg-navy2">Not Sure Yet</option>
-              </select>
-            </div>
-            <div>
-              <label className={labelCls}>Timeline</label>
-              <select
-                className={selectCls}
-                value={form.timeline}
-                onChange={(e) => update("timeline", e.target.value)}
-              >
-                <option value="" disabled className="bg-navy2">Select a timeline</option>
-                <option value="urgent" className="bg-navy2">Urgent (0–30 days)</option>
-                <option value="1-6" className="bg-navy2">1–6 months</option>
-                <option value="6-12" className="bg-navy2">6–12 months</option>
-                <option value="exploring" className="bg-navy2">Exploring</option>
-              </select>
-            </div>
-          </div>
-
-          {/* Message */}
-          <div>
-            <label className={labelCls}>Your Message *</label>
-            <textarea
-              rows={5}
-              className={`${inputCls} resize-y`}
-              placeholder="Briefly describe your situation or need"
-              value={form.message}
-              onChange={(e) => update("message", e.target.value)}
-              maxLength={1500}
-            />
-          </div>
-
-          {/* Conditional — Executive Search */}
-          {form.service === "search" && (
-            <div className="border-t border-gold/20 pt-6 flex flex-col gap-5">
-              <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold">
-                Executive Search — Additional Details
-              </p>
-              <div className="grid md:grid-cols-2 gap-5">
-                <div>
-                  <label className={labelCls}>Role Title(s)</label>
-                  <input
-                    className={inputCls}
-                    value={form.searchRole}
-                    onChange={(e) => update("searchRole", e.target.value)}
-                    placeholder="e.g. General Manager"
-                  />
-                </div>
-                <div>
-                  <label className={labelCls}>Property Type / Brand Level</label>
-                  <select
-                    className={selectCls}
-                    value={form.searchBrand}
-                    onChange={(e) => update("searchBrand", e.target.value)}
-                  >
-                    <option value="" disabled className="bg-navy2">Select brand level</option>
-                    <option value="luxury" className="bg-navy2">Luxury</option>
-                    <option value="ultra" className="bg-navy2">Ultra-Luxury</option>
-                    <option value="lifestyle" className="bg-navy2">Lifestyle</option>
-                  </select>
-                </div>
-              </div>
+            {/* Row 1 */}
+            <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <label className={labelCls}>Property Location</label>
+                <label className={labelCls}>Full Name *</label>
                 <input
-                  className={inputCls}
-                  value={form.searchLocation}
-                  onChange={(e) => update("searchLocation", e.target.value)}
-                  placeholder="City, Country"
+                  className={fieldCls}
+                  value={form.fullName}
+                  onChange={(e) => update("fullName", e.target.value)}
+                  placeholder="Your full name"
                 />
               </div>
               <div>
-                <label className={labelCls}>Must-Have Experience (3 bullets)</label>
-                <textarea
-                  rows={3}
-                  className={`${inputCls} resize-y`}
-                  value={form.searchExperience}
-                  onChange={(e) => update("searchExperience", e.target.value)}
-                  placeholder="Key experience requirements"
-                />
-              </div>
-            </div>
-          )}
-
-          {/* Conditional — Corporate Training */}
-          {form.service === "training" && (
-            <div className="border-t border-gold/20 pt-6 flex flex-col gap-5">
-              <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold">
-                Corporate Training — Additional Details
-              </p>
-              <div className="grid md:grid-cols-2 gap-5">
-                <div>
-                  <label className={labelCls}>Audience Level</label>
-                  <select
-                    className={selectCls}
-                    value={form.trainingAudience}
-                    onChange={(e) => update("trainingAudience", e.target.value)}
-                  >
-                    <option value="" disabled className="bg-navy2">Select level</option>
-                    <option value="supervisors" className="bg-navy2">Supervisors</option>
-                    <option value="managers" className="bg-navy2">Managers</option>
-                    <option value="leaders" className="bg-navy2">Leaders</option>
-                  </select>
-                </div>
-                <div>
-                  <label className={labelCls}>Topic Focus</label>
-                  <select
-                    className={selectCls}
-                    value={form.trainingTopic}
-                    onChange={(e) => update("trainingTopic", e.target.value)}
-                  >
-                    <option value="" disabled className="bg-navy2">Select topic</option>
-                    <option value="service" className="bg-navy2">Service Culture</option>
-                    <option value="leadership" className="bg-navy2">Leadership</option>
-                    <option value="onboarding" className="bg-navy2">Onboarding</option>
-                    <option value="trainer" className="bg-navy2">Trainer System</option>
-                    <option value="other" className="bg-navy2">Other</option>
-                  </select>
-                </div>
-              </div>
-              <div className="grid md:grid-cols-2 gap-5">
-                <div>
-                  <label className={labelCls}>Number of Participants</label>
-                  <input
-                    type="number"
-                    className={inputCls}
-                    value={form.trainingParticipants}
-                    onChange={(e) => update("trainingParticipants", e.target.value)}
-                    placeholder="e.g. 25"
-                  />
-                </div>
-                <div>
-                  <label className={labelCls}>Delivery Format</label>
-                  <select
-                    className={selectCls}
-                    value={form.trainingFormat}
-                    onChange={(e) => update("trainingFormat", e.target.value)}
-                  >
-                    <option value="" disabled className="bg-navy2">Select format</option>
-                    <option value="onsite" className="bg-navy2">On-site</option>
-                    <option value="virtual" className="bg-navy2">Virtual</option>
-                    <option value="blended" className="bg-navy2">Blended</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Conditional — HR Consulting */}
-          {form.service === "consulting" && (
-            <div className="border-t border-gold/20 pt-6 flex flex-col gap-5">
-              <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold">
-                HR Consulting — Additional Details
-              </p>
-              <div>
-                <label className={labelCls}>What's Driving This Now?</label>
+                <label className={labelCls}>Role / Title *</label>
                 <select
-                  className={selectCls}
-                  value={form.consultingDriver}
-                  onChange={(e) => update("consultingDriver", e.target.value)}
+                  className={fieldCls}
+                  value={form.role}
+                  onChange={(e) => update("role", e.target.value)}
                 >
-                  <option value="" disabled className="bg-navy2">Select driver</option>
-                  <option value="audit" className="bg-navy2">Audit</option>
-                  <option value="compliance" className="bg-navy2">Compliance</option>
-                  <option value="culture" className="bg-navy2">Culture</option>
-                  <option value="hiring" className="bg-navy2">Hiring System</option>
-                  <option value="strategy" className="bg-navy2">People Strategy</option>
-                  <option value="systems" className="bg-navy2">HR Systems</option>
-                  <option value="other" className="bg-navy2">Other</option>
+                  <option value="" disabled>Select your role</option>
+                  <option value="owner">Owner</option>
+                  <option value="gm">General Manager</option>
+                  <option value="hr">HR Director</option>
+                  <option value="other">Other</option>
                 </select>
               </div>
-              <div className="grid md:grid-cols-2 gap-5">
+            </div>
+
+            {/* Row 2 */}
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <label className={labelCls}>Company / Hotel / Group *</label>
+                <input
+                  className={fieldCls}
+                  value={form.company}
+                  onChange={(e) => update("company", e.target.value)}
+                  placeholder="Your organization"
+                />
+              </div>
+              <div>
+                <label className={labelCls}>Location</label>
+                <input
+                  className={fieldCls}
+                  value={form.location}
+                  onChange={(e) => update("location", e.target.value)}
+                  placeholder="City + Country / Region"
+                />
+              </div>
+            </div>
+
+            {/* Row 3 */}
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <label className={labelCls}>Work Email *</label>
+                <input
+                  type="email"
+                  className={fieldCls}
+                  value={form.email}
+                  onChange={(e) => update("email", e.target.value)}
+                  placeholder="your@email.com"
+                />
+              </div>
+              <div>
+                <label className={labelCls}>Phone / WeChat</label>
+                <input
+                  className={fieldCls}
+                  value={form.phone}
+                  onChange={(e) => update("phone", e.target.value)}
+                  placeholder="Optional"
+                />
+              </div>
+            </div>
+
+            {/* Row 4 */}
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <label className={labelCls}>Service Needed *</label>
+                <select
+                  className={fieldCls}
+                  value={form.service}
+                  onChange={(e) => update("service", e.target.value as ServiceKey)}
+                >
+                  <option value="" disabled>Select a service</option>
+                  <option value="search">Executive Search</option>
+                  <option value="training">Corporate Training</option>
+                  <option value="consulting">HR Consulting</option>
+                  <option value="unsure">Not Sure Yet</option>
+                </select>
+              </div>
+              <div>
+                <label className={labelCls}>Timeline</label>
+                <select
+                  className={fieldCls}
+                  value={form.timeline}
+                  onChange={(e) => update("timeline", e.target.value)}
+                >
+                  <option value="" disabled>Select a timeline</option>
+                  <option value="urgent">Urgent (0–30 days)</option>
+                  <option value="1-6">1–6 months</option>
+                  <option value="6-12">6–12 months</option>
+                  <option value="exploring">Exploring</option>
+                </select>
+              </div>
+            </div>
+
+            {/* Message */}
+            <div>
+              <label className={labelCls}>Your Message *</label>
+              <textarea
+                rows={5}
+                className={`${fieldCls} resize-none`}
+                placeholder="Briefly describe your situation or need"
+                value={form.message}
+                onChange={(e) => update("message", e.target.value)}
+                maxLength={1500}
+              />
+            </div>
+
+            {/* ── Conditional — Executive Search ── */}
+            {form.service === "search" && (
+              <div className="border-t border-gold/20 pt-8 flex flex-col gap-8">
                 <div>
-                  <label className={labelCls}>Current Headcount</label>
+                  <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-3">
+                    Executive Search — Additional Details
+                  </p>
+                  <div className="w-8 h-px bg-gold" />
+                </div>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <label className={labelCls}>Role Title(s)</label>
+                    <input
+                      className={fieldCls}
+                      value={form.searchRole}
+                      onChange={(e) => update("searchRole", e.target.value)}
+                      placeholder="e.g. General Manager"
+                    />
+                  </div>
+                  <div>
+                    <label className={labelCls}>Property Type / Brand Level</label>
+                    <select
+                      className={fieldCls}
+                      value={form.searchBrand}
+                      onChange={(e) => update("searchBrand", e.target.value)}
+                    >
+                      <option value="" disabled>Select brand level</option>
+                      <option value="luxury">Luxury</option>
+                      <option value="ultra">Ultra-Luxury</option>
+                      <option value="lifestyle">Lifestyle</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label className={labelCls}>Property Location</label>
                   <input
-                    type="number"
-                    className={inputCls}
-                    value={form.consultingHeadcount}
-                    onChange={(e) => update("consultingHeadcount", e.target.value)}
-                    placeholder="e.g. 150"
+                    className={fieldCls}
+                    value={form.searchLocation}
+                    onChange={(e) => update("searchLocation", e.target.value)}
+                    placeholder="City, Country"
                   />
                 </div>
                 <div>
-                  <label className={labelCls}>Biggest Pain Point (one sentence)</label>
-                  <input
-                    className={inputCls}
-                    value={form.consultingPain}
-                    onChange={(e) => update("consultingPain", e.target.value)}
-                    placeholder="Describe in one sentence"
+                  <label className={labelCls}>Must-Have Experience (3 bullets)</label>
+                  <textarea
+                    rows={3}
+                    className={`${fieldCls} resize-none`}
+                    value={form.searchExperience}
+                    onChange={(e) => update("searchExperience", e.target.value)}
+                    placeholder="Key experience requirements"
                   />
                 </div>
               </div>
-            </div>
-          )}
+            )}
 
-          {/* Error */}
-          {error && (
-            <p className="font-body text-sm text-red-400 text-center">{error}</p>
-          )}
+            {/* ── Conditional — Corporate Training ── */}
+            {form.service === "training" && (
+              <div className="border-t border-gold/20 pt-8 flex flex-col gap-8">
+                <div>
+                  <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-3">
+                    Corporate Training — Additional Details
+                  </p>
+                  <div className="w-8 h-px bg-gold" />
+                </div>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <label className={labelCls}>Audience Level</label>
+                    <select
+                      className={fieldCls}
+                      value={form.trainingAudience}
+                      onChange={(e) => update("trainingAudience", e.target.value)}
+                    >
+                      <option value="" disabled>Select level</option>
+                      <option value="supervisors">Supervisors</option>
+                      <option value="managers">Managers</option>
+                      <option value="leaders">Leaders</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className={labelCls}>Topic Focus</label>
+                    <select
+                      className={fieldCls}
+                      value={form.trainingTopic}
+                      onChange={(e) => update("trainingTopic", e.target.value)}
+                    >
+                      <option value="" disabled>Select topic</option>
+                      <option value="service">Service Culture</option>
+                      <option value="leadership">Leadership</option>
+                      <option value="onboarding">Onboarding</option>
+                      <option value="trainer">Trainer System</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <label className={labelCls}>Number of Participants</label>
+                    <input
+                      type="number"
+                      className={fieldCls}
+                      value={form.trainingParticipants}
+                      onChange={(e) => update("trainingParticipants", e.target.value)}
+                      placeholder="e.g. 25"
+                    />
+                  </div>
+                  <div>
+                    <label className={labelCls}>Delivery Format</label>
+                    <select
+                      className={fieldCls}
+                      value={form.trainingFormat}
+                      onChange={(e) => update("trainingFormat", e.target.value)}
+                    >
+                      <option value="" disabled>Select format</option>
+                      <option value="onsite">On-site</option>
+                      <option value="virtual">Virtual</option>
+                      <option value="blended">Blended</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            )}
 
-          {/* Submit */}
-          <button
-            type="submit"
-            className="w-full bg-gold text-navy font-body text-[9px] tracking-[0.3em] uppercase py-4 hover:bg-gold2 transition-colors duration-300 flex items-center justify-center gap-3 cursor-pointer border-none mt-2"
-          >
-            Send Inquiry →
-          </button>
+            {/* ── Conditional — HR Consulting ── */}
+            {form.service === "consulting" && (
+              <div className="border-t border-gold/20 pt-8 flex flex-col gap-8">
+                <div>
+                  <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-3">
+                    HR Consulting — Additional Details
+                  </p>
+                  <div className="w-8 h-px bg-gold" />
+                </div>
+                <div>
+                  <label className={labelCls}>What's Driving This Now?</label>
+                  <select
+                    className={fieldCls}
+                    value={form.consultingDriver}
+                    onChange={(e) => update("consultingDriver", e.target.value)}
+                  >
+                    <option value="" disabled>Select driver</option>
+                    <option value="audit">Audit</option>
+                    <option value="compliance">Compliance</option>
+                    <option value="culture">Culture</option>
+                    <option value="hiring">Hiring System</option>
+                    <option value="strategy">People Strategy</option>
+                    <option value="systems">HR Systems</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <label className={labelCls}>Current Headcount</label>
+                    <input
+                      type="number"
+                      className={fieldCls}
+                      value={form.consultingHeadcount}
+                      onChange={(e) => update("consultingHeadcount", e.target.value)}
+                      placeholder="e.g. 150"
+                    />
+                  </div>
+                  <div>
+                    <label className={labelCls}>Biggest Pain Point (one sentence)</label>
+                    <input
+                      className={fieldCls}
+                      value={form.consultingPain}
+                      onChange={(e) => update("consultingPain", e.target.value)}
+                      placeholder="Describe in one sentence"
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
 
-          <p className="font-body text-xs text-white/35 italic text-center">
-            We treat your message as confidential. We will only use your details to respond.
-          </p>
+            {/* Error */}
+            {error && (
+              <p className="font-display text-sm text-red-500 text-center">{error}</p>
+            )}
 
-          {/* Success */}
-          {sent && (
-            <div className="border border-gold/30 bg-white/[0.04] p-6 text-center">
-              <p className="font-display italic text-lg text-gold mb-1">Inquiry received.</p>
-              <p className="font-body text-sm text-white/60">
-                We'll respond within 24 business hours. All inquiries are treated as confidential.
-              </p>
-            </div>
-          )}
-        </form>
+            {/* Divider before submit */}
+            <div className="w-full h-px bg-gold/20" />
 
-        <p className="font-body text-xs text-white/30 text-center mt-8 max-w-2xl mx-auto leading-relaxed">
+            {/* Submit */}
+            <button
+              type="submit"
+              className="w-full bg-navy text-white font-display text-[9px] font-semibold tracking-[0.3em] uppercase py-4 hover:bg-navy2 transition-colors duration-300 flex items-center justify-center gap-3 cursor-pointer border-none"
+            >
+              Send Inquiry →
+            </button>
+
+            <p className="font-display text-xs text-muted italic text-center">
+              We treat your message as confidential. We will only use your details to respond.
+            </p>
+
+            {/* Success */}
+            {sent && (
+              <div className="border border-gold/25 bg-cream p-6 text-center">
+                <p className="font-body text-lg italic text-navy mb-1">Inquiry received.</p>
+                <p className="font-display text-sm text-muted">
+                  We'll respond within 24 business hours. All inquiries are treated as confidential.
+                </p>
+              </div>
+            )}
+          </form>
+        </div>
+
+        <p className="font-display text-xs text-muted text-center mt-8 max-w-2xl mx-auto leading-relaxed">
           Response time: We will respond within 24 business hours. All inquiries are treated as
           confidential. We do not share names, data, or business details without your permission.
         </p>

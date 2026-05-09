@@ -7,21 +7,21 @@ const values = [
     cn: "意义",
     sub: "Serving with meaning and intention",
     desc: "We serve with clear calling, bringing meaning and intention to every engagement. Like a potter shaping clay, we approach each partnership with deliberate purpose and care.",
-    image: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=900&q=85&fit=crop",
+    image: "/images/potters-clay.png",
   },
   {
     title: "Authentic",
     cn: "本真",
     sub: "Leading with truth, integrity, and real experience",
     desc: "We lead authentically, grounded in truth, integrity, and proven real-world experience. Like clear spring water flowing from high mountains, our counsel is pure, transparent, and trustworthy.",
-    image: "https://images.unsplash.com/photo-1439405326854-014607f694d7?w=900&q=85&fit=crop",
+    image: "/images/waterfalls.png",
   },
   {
     title: "Transformative",
     cn: "新生",
     sub: "Creating lasting personal, cultural, and leadership change",
     desc: "We enable lasting transformation across people, leadership, and culture. Like a butterfly emerging from its chrysalis, we guide organizations through meaningful, beautiful change.",
-    image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=900&q=85&fit=crop",
+    image: "/images/butterfly-transform.png",
   },
 ];
 

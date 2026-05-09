@@ -10,10 +10,12 @@
   --color-cream: #F7F4EF;
   --color-warm:  #EDE9E1;
   --color-muted: #6b6b6b;
+  --color-white: #ffffff;
 
   --font-display: 'DM Sans', sans-serif;
   --font-body:    'Cormorant Garamond', Georgia, serif;
 }
+
 
 @keyframes kenburns {
   from { transform: scale(1.06); }
@@ -28,8 +30,9 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background-color: #F7F4EF;
+  background-color: #ffffff;
   color: #1a1a1a;
   -webkit-font-smoothing: antialiased;
   font-family: 'DM Sans', sans-serif;
 }
+
