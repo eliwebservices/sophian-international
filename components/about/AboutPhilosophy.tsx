@@ -55,7 +55,7 @@ export default function AboutPhilosophy() {
           "Be wise and help others to walk in wise ways."
         </blockquote>
         <p className="font-display text-[9px] font-semibold tracking-[0.3em] uppercase text-gold/70">
-          — Ross McKay
+          — Ross McKay (Friend and Consultant)
         </p>
       </div>
     </section>
