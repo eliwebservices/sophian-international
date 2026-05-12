@@ -1,6 +1,6 @@
 export default function ContactHero() {
     return (
-      <section className="relative min-h-screen flex items-end justify-center overflow-hidden text-white">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden text-white">
         {/* Background */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -17,7 +17,7 @@ export default function ContactHero() {
           className="relative z-10 w-full max-w-4xl mx-auto px-6 pb-28 text-center"
           style={{ animation: "fadeUp 0.9s 0.2s both" }}
         >
-          <p className="font-body text-[9px] tracking-[0.4em] uppercase text-gold mb-10">
+          <p className="font-body text-[14px] tracking-[0.4em] uppercase text-gold mb-10">
             Strategic Engagement
           </p>
   

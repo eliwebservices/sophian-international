@@ -25,14 +25,14 @@ export default function HomeServices() {
       <div className="max-w-6xl mx-auto">
 
         <div className="text-center mb-20">
-          <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
+          <p className="font-display text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
             Our Services
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] max-w-3xl mx-auto mb-6">
             Everything You Need to Elevate Your Organization's People Strategy & Operational Excellence
           </h2>
           <div className="w-12 h-px bg-gold mx-auto mb-6" />
-          <p className="font-body text-lg italic text-muted">
+          <p className="font-body text-lg text-muted">
             Three areas where we partner with clients to grow their businesses.
           </p>
         </div>
@@ -54,7 +54,7 @@ export default function HomeServices() {
                 </p>
                 <ul className="flex flex-col gap-2.5 mb-10 list-none p-0 m-0">
                   {s.bullets.map((b, j) => (
-                    <li key={j} className="flex gap-2.5 font-display text-xs text-muted group-hover:text-white/60 leading-relaxed transition-colors duration-500">
+                    <li key={j} className="flex gap-2.5 font-display text-sm text-muted group-hover:text-white/60 leading-relaxed transition-colors duration-500">
                       <span className="text-gold flex-shrink-0">→</span>
                       <span>{b}</span>
                     </li>

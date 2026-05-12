@@ -38,14 +38,14 @@ export default function HomeProof() {
 
         {/* Header */}
         <div className="text-center mb-20">
-          <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
+          <p className="font-display text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
             Proof of Value
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">
             Grow Your People —<br />Grow Your Business Faster and Stronger
           </h2>
           <div className="w-12 h-px bg-gold mx-auto mb-6" />
-          <p className="font-display text-sm leading-relaxed text-muted max-w-2xl mx-auto">
+          <p className="font-body text-lg leading-relaxed text-muted max-w-2xl mx-auto">
             When we work together, we clarify your mission, optimize your people strategy,
             reset your HR division to reduce voluntary turnover, find the talent that strengthens
             your team, rebuild your training system, and realign your culture.
@@ -69,7 +69,7 @@ export default function HomeProof() {
 
         {/* ── INFINITE BRAND CAROUSEL ── */}
         <div className="mb-6">
-          <p className="font-display text-[9px] font-semibold tracking-[0.3em] uppercase text-muted text-center mb-8">
+          <p className="font-display text-[14px] font-semibold tracking-[0.3em] uppercase text-muted text-center mb-8">
             Nick Huang Has Served as a People & Culture Leader For
           </p>
         </div>

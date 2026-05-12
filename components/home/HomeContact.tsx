@@ -53,14 +53,14 @@ export default function HomeContact() {
 
           {/* Info column */}
           <div className="md:col-span-2">
-            <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
+            <p className="font-display text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
               Get in Touch
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">
               Connect with<br />Sophian International
             </h2>
             <div className="w-12 h-px bg-gold mb-6" />
-            <p className="font-body text-xl italic text-navy mb-6">
+            <p className="font-body text-xl text-navy mb-6">
               Transforming Your People & Culture Starts Here
             </p>
             <p className="font-display text-sm leading-relaxed text-muted mb-12">

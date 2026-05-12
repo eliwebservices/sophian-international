@@ -21,14 +21,14 @@ export default function HomeAssessment() {
           </div>
 
           <div>
-            <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
+            <p className="font-display text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
               Free Assessment
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-5">
               Take the<br />3-Minute Assessment
             </h2>
             <div className="w-12 h-px bg-gold mb-6" />
-            <p className="font-body text-xl italic text-navy mb-5">
+            <p className="font-body text-xl text-navy mb-5">
               Get a Custom Audit to Grow Your People and Culture
             </p>
             <p className="font-display text-sm leading-relaxed text-muted mb-8">

@@ -10,13 +10,13 @@ export default function HomePlan() {
       <div className="max-w-6xl mx-auto">
 
         <div className="text-center mb-20">
-          <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
+          <p className="font-display text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
             The Plan
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-4">
             Working with a Coach is Easy
           </h2>
-          <p className="font-body text-xl italic text-muted mb-6">
+          <p className="font-body text-xl text-muted mb-6">
             Three Steps to Your People & Culture Success
           </p>
           <div className="w-12 h-px bg-gold mx-auto" />

@@ -17,11 +17,11 @@ export default function Home() {
       <Navbar />
       <HomeHero />
       <HomeStakes />
-      <HomeAssessment />
       <HomeFounder />
       <HomeServices />
       <HomeImageStrip />
       <HomeProof />
+      <HomeAssessment />
       <HomePlan />
       <HomeExplanation />
       <HomeContact />

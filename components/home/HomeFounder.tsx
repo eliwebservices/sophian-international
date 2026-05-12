@@ -19,7 +19,7 @@ export default function HomeFounder() {
 
       {/* Text side — white instead of navy */}
       <div className="bg-white flex flex-col justify-center px-12 lg:px-20 py-20 border-l border-gold/15">
-        <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-8">
+        <p className="font-display text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-8">
           A Word From Our Founder
         </p>
 

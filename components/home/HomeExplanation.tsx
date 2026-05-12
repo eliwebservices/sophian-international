@@ -5,14 +5,14 @@ export default function HomeExplanation() {
         <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
 
           <div>
-            <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
+            <p className="font-display text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
               You Don't Have to Build It Alone
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">
               It's Hard Enough to Build a Strong People and Culture.
             </h2>
             <div className="w-12 h-px bg-gold mb-8" />
-            <p className="font-display text-sm leading-relaxed text-muted mb-5">
+            <p className="font-display text-md leading-relaxed text-muted mb-5">
               Building a strong people and culture is challenging. You need to get your
               vision, mission, and values right — then focus on workforce planning, employer
               branding, interviewing and selection, training and development, brand and
@@ -20,7 +20,7 @@ export default function HomeExplanation() {
               and mobility, resignation processes, and finally, compensation, benefits, and
               talent development.
             </p>
-            <p className="font-body text-lg italic leading-relaxed text-muted mb-10">
+            <p className="font-display text-md leading-relaxed text-muted mb-10">
               Most owners, General Managers, and HR professionals don't fully understand
               the five key experiences needed for successful people and culture — which is
               why many hospitality businesses fail.

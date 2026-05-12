@@ -1,6 +1,6 @@
 export default function ConsultingHero() {
     return (
-      <section className="relative min-h-screen flex items-end justify-center overflow-hidden text-white">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden text-white">
         {/* Background */}
         <div
           className="absolute inset-0 bg-cover bg-center"

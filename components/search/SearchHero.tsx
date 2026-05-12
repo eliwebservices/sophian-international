@@ -1,6 +1,6 @@
 export default function SearchHero() {
     return (
-      <section className="relative min-h-screen flex items-end justify-center overflow-hidden text-white">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden text-white">
         {/* Background */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -21,7 +21,7 @@ export default function SearchHero() {
           {/* <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold2 mb-4">
             Sophian International
           </p> */}
-          <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-8">
+          <p className="font-body text-[14px] tracking-[0.35em] uppercase text-gold mb-8">
             Executive Search & Advisory
           </p>
   

@@ -1,6 +1,6 @@
 const stakes = [
   {
-    title: "Hire Wrongly",
+    title: "Wrongly Hire",
     items: [
       "Poor workforce planning and scheduling",
       "Ineffective HR marketing and weak employer branding",
@@ -8,7 +8,7 @@ const stakes = [
     ],
   },
   {
-    title: "Train Wrongly",
+    title: "Wrongly Train ",
     items: [
       "Lack of structured training system and development",
       "Inability to build a hotel brand and service culture",
@@ -16,7 +16,7 @@ const stakes = [
     ],
   },
   {
-    title: "Retain Wrongly",
+    title: "Wrongly Retain",
     items: [
       "High employee turnover and poor retention strategies",
       "Neglect of competitive compensation and benefits",
@@ -32,7 +32,7 @@ export default function HomeStakes() {
       <div className="max-w-6xl mx-auto">
 
         <div className="text-center mb-20">
-          <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
+          <p className="font-display text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
             The Stakes
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] max-w-2xl mx-auto mb-6">
