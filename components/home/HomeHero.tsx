@@ -49,7 +49,7 @@ export default function HomeHero() {
             </a>
           </div>
   
-          <div className="flex flex-wrap justify-center gap-6 font-body text-[9px] tracking-[0.22em] uppercase text-white/50 mb-14">
+          <div className="flex flex-wrap justify-center gap-6 font-body text-[9px] tracking-[0.22em] uppercase text-white mb-14">
             <span>One-on-One Conversations</span>
             <span className="text-gold">·</span>
             <span>Meetings</span>
