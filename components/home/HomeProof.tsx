@@ -8,14 +8,14 @@ const stats = [
 
 // Replace src values with actual brand logo images when ready
 const brands = [
-  { name: "Accor",     src: "/images/company-logos/Accor.jpeg" },
+  { name: "Accor",     src: "/images/company-logos/accor-logo.png" },
   { name: "IHG",       src: "/images/company-logos/IHG.png" },
-  { name: "Hilton",    src: "/images/company-logos/Hilton.png" },
-  { name: "Marriott",  src: "/images/company-logos/Marriott.jpeg" },
-  { name: "Rosewood",  src: "/images/company-logos/Rosewood.jpeg" },
+  { name: "Hilton",    src: "/images/company-logos/Hilton-Worldwide-Logo.png" },
+  { name: "Marriott",  src: "/images/company-logos/Marriott-Logo.png" },
+  { name: "Rosewood",  src: "/images/company-logos/Rosewood-logo.png" },
   { name: "Aman",      src: "/images/company-logos/Aman.png" },
-  { name: "Kempinski", src: "/images/company-logos/kempinski.png" },
-  { name: "Starwood",  src: "/images/company-logos/Starwood.png" },
+  { name: "Kempinski", src: "/images/company-logos/kempinski-Logo.png" },
+  { name: "Starwood",  src: "/images/company-logos/Starwood-logo.png" },
   { name: "SH",  src: "/images/company-logos/SH.jpeg" },
 ];
 
@@ -38,7 +38,7 @@ export default function HomeProof() {
 
         {/* Header */}
         <div className="text-center mb-20">
-          <p className="font-display text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
+          <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
             Proof of Value
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">
@@ -60,7 +60,7 @@ export default function HomeProof() {
                 {s.value}
               </p>
               <div className="w-7 h-px bg-gold mx-auto mb-5" />
-              <p className="font-display text-xs leading-relaxed text-muted max-w-[200px] mx-auto">
+              <p className="font-display text-sm leading-relaxed text-muted max-w-[200px] mx-auto">
                 {s.text}
               </p>
             </div>
@@ -69,8 +69,11 @@ export default function HomeProof() {
 
         {/* ── INFINITE BRAND CAROUSEL ── */}
         <div className="mb-6">
+        <h3 className="font-display text-3xl font-light text-navy text-center mb-12">
+          A Foundation of Proven Experience
+        </h3>
           <p className="font-display text-[14px] font-semibold tracking-[0.3em] uppercase text-muted text-center mb-8">
-            Nick Huang Has Served as a People & Culture Leader For
+            Nick Huang Our Founder Has Served as a People & Culture Leader For
           </p>
         </div>
 
@@ -91,7 +94,7 @@ export default function HomeProof() {
             {doubled.map((brand, i) => (
               <div
                 key={`${brand.name}-${i}`}
-                className="flex items-center justify-center flex-shrink-0 h-10 px-4 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+                className="flex items-center justify-center flex-shrink-0 h-10 px-4 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
                 style={{ minWidth: "120px" }}
               >
                 <img
@@ -121,9 +124,9 @@ export default function HomeProof() {
         `}</style>
 
         {/* Highlights */}
-        <h3 className="font-display text-3xl font-light text-navy text-center mb-12">
+        {/* <h3 className="font-display text-3xl font-light text-navy text-center mb-12">
           A Foundation of Proven Experience
-        </h3>
+        </h3> */}
         <div className="grid md:grid-cols-2 border border-gold/25 divide-y divide-gold/25 mb-20">
           {highlights.map((h, i) => (
             <div
@@ -144,7 +147,7 @@ export default function HomeProof() {
           {/* Image — left */}
           <div className="relative overflow-hidden min-h-[400px]">
             <img
-              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=85&fit=crop"
+              src="https://images.rosewoodhotels.com/is/image/rwhg/rosewood-beijing-jiao-tu-sons-of-dragon-hotel-entrance-2"
               alt="Luxury hospitality scene"
               className="absolute inset-0 w-full h-full object-cover"
             />

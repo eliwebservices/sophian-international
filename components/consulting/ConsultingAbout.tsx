@@ -13,7 +13,7 @@ export default function ConsultingAbout() {
       <div className="max-w-4xl mx-auto">
 
         <div className="text-center mb-16">
-          <p className="font-body text-[9px] tracking-[0.4em] uppercase text-gold mb-5">
+          <p className="font-display text-[9px] md:text-[14px] tracking-[0.4em] font-semibold uppercase text-gold mb-5">
             About Sophian International
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-5">

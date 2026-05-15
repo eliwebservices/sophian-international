@@ -55,7 +55,7 @@ const advisoryReceives = [
           <div className="max-w-4xl mx-auto">
   
             <div className="text-center mb-16">
-              <p className="font-body text-[9px] tracking-[0.4em] uppercase text-gold mb-5">
+              <p className="font-display text-[9px] md:text-[14px] tracking-[0.4em] font-semibold uppercase text-gold mb-5">
                 The External Chief People & Culture Advisor
               </p>
               <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-5">
@@ -70,7 +70,7 @@ const advisoryReceives = [
             <div className="grid md:grid-cols-2 gap-px bg-gold/15">
               {/* Left — what it is */}
               <div className="bg-white p-12">
-                <p className="font-body text-[9px] tracking-[0.3em] uppercase text-gold mb-5">
+                <p className="font-display text-[9px] md:text-[14px] tracking-[0.3em] font-semibold uppercase text-gold mb-5">
                   The Advisory
                 </p>
                 <div className="w-8 h-px bg-gold mb-5" />
@@ -80,7 +80,7 @@ const advisoryReceives = [
                   your executive thinking — one who knows your business, your team, and what
                   you're building.
                 </p>
-                <p className="font-body text-[9px] tracking-[0.3em] uppercase text-gold mb-5">
+                <p className="font-display text-[9px] md:text-[12px] tracking-[0.3em] font-semibold uppercase text-gold mb-5">
                   What You Receive
                 </p>
                 <ul className="flex flex-col gap-3 list-none p-0 m-0">
@@ -95,7 +95,7 @@ const advisoryReceives = [
   
               {/* Right — what it's not + engagement */}
               <div className="bg-navy p-12 flex flex-col">
-                <p className="font-body text-[9px] tracking-[0.3em] uppercase text-gold mb-5">
+                <p className="font-display text-[9px] md:text-[14px] tracking-[0.3em] font-semibold uppercase text-gold mb-5">
                   What This Is Not
                 </p>
                 <div className="w-8 h-px bg-gold mb-5" />
@@ -106,7 +106,7 @@ const advisoryReceives = [
                 </p>
   
                 <div className="border border-gold/20 p-6 mb-4">
-                  <p className="font-body text-[9px] tracking-[0.3em] uppercase text-gold mb-3">
+                  <p className="font-display text-[9px] md:text-[12px] tracking-[0.3em] font-semibold uppercase text-gold mb-3">
                     Engagement
                   </p>
                   <p className="font-body text-sm text-white/60 leading-relaxed">
@@ -114,7 +114,7 @@ const advisoryReceives = [
                   </p>
                 </div>
                 <div className="border border-gold/20 p-6 mb-10">
-                  <p className="font-body text-[9px] tracking-[0.3em] uppercase text-gold mb-3">
+                  <p className="font-display text-[9px] md:text-[12px] tracking-[0.3em] font-semibold uppercase text-gold mb-3">
                     Investment
                   </p>
                   <p className="font-body text-sm text-white/60 leading-relaxed">

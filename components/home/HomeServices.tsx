@@ -25,7 +25,7 @@ export default function HomeServices() {
       <div className="max-w-6xl mx-auto">
 
         <div className="text-center mb-20">
-          <p className="font-display text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
+          <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
             Our Services
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] max-w-3xl mx-auto mb-6">
@@ -39,8 +39,8 @@ export default function HomeServices() {
 
         <div className="grid md:grid-cols-3 divide-x divide-gold/25 border border-gold/25">
           {services.map((s, i) => (
-            <div key={i} className="group relative bg-white overflow-hidden flex flex-col p-12">
-              <div className="absolute inset-0 bg-navy translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]" />
+            <div key={i} className="group relative bg-white overflow-hidden flex flex-col p-12 hover:bg-navy transition-colors duration-500">
+              {/* <div className="absolute inset-0 bg-navy translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]" /> */}
               <div className="relative z-10 flex flex-col h-full">
                 <p className="font-display text-[56px] font-light text-navy/10 group-hover:text-white/10 leading-none mb-3 transition-colors duration-500">
                   0{i + 1}

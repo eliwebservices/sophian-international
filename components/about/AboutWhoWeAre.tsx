@@ -3,32 +3,32 @@ const pillars = [
     num: "01",
     title: "Here to Serve",
     desc: "We are designed to serve all stakeholders with love. We possess full passion for serving people and make authentic connections with every client we engage.",
-    image: "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=900&q=85&fit=crop",
+    image: "/images/here-to-serve_.jpg",
     reverse: false,
   },
   {
     num: "02",
     title: "True Partners",
     desc: "We add value in three dimensions: helping you find the right executives, building your team, and shaping your culture. We bring practical, creative solutions to real-world challenges.",
-    image: "https://images.unsplash.com/photo-1468276311594-df7cb65d8df6?w=900&q=85&fit=crop",
+    image: "/images/true-partner.jpg",
     reverse: true,
   },
   {
     num: "03",
     title: "Your Game Changer",
     desc: "We enable your people and culture to reach new heights. We strive for excellence, value, and significance — delivering practical wisdom that brings life-changing results.",
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=900&q=85&fit=crop",
+    image: "/images/here-to-serve.jpg",
     reverse: false,
   },
 ];
 
 export default function AboutWhoWeAre() {
   return (
-    <section className="bg-cream py-28 px-6">
+    <section className="bg-white py-28 px-6">
       <div className="max-w-6xl mx-auto">
 
         <div className="text-center mb-20">
-          <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
+          <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
             Who We Are
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">

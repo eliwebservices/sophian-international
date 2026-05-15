@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function HomeContact() {
@@ -53,7 +54,7 @@ export default function HomeContact() {
 
           {/* Info column */}
           <div className="md:col-span-2">
-            <p className="font-display text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
+            <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
               Get in Touch
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">
@@ -71,13 +72,13 @@ export default function HomeContact() {
 
             {[
               { icon: "✉", label: "Email",       val: "YourGuide@sophianinternational.com", href: "mailto:YourGuide@sophianinternational.com" },
+              { icon: "💬", label: "WeChat/WhatsApp",      val: "+853 6350 9608" },
               { icon: "📍", label: "Head Office", val: "Beijing, China" },
-              { icon: "💬", label: "WeChat",      val: "Available on request" },
             ].map((d) => (
               <div key={d.label} className="flex gap-4 items-start mb-7">
-                <div className="w-9 h-9 border border-gold/25 flex items-center justify-center text-gold text-sm flex-shrink-0">
+                {/* <div className="w-9 h-9 border border-gold/25 flex items-center justify-center text-gold text-sm flex-shrink-0">
                   {d.icon}
-                </div>
+                </div> */}
                 <div>
                   <p className="font-display text-[9px] font-semibold tracking-[0.25em] uppercase text-muted mb-1">
                     {d.label}
@@ -89,6 +90,7 @@ export default function HomeContact() {
                 </div>
               </div>
             ))}
+            {/* <Image src="/images/sophian-wechat-qr-code.png" width={120} height={120} alt="sophian-wechat-qr-code"/> */}
           </div>
 
           {/* Form — white background, underline inputs */}

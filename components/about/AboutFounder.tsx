@@ -19,20 +19,38 @@ const stats = [
         <div className="max-w-6xl mx-auto">
   
           <div className="text-center mb-16">
-            <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-5">
+            <p className="font-display text-[9px] md:text-[14px] tracking-[0.35em] uppercase text-gold mb-5">
               Your Guide
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-3">
               Nick Huang
             </h2>
-            <p className="font-body text-[9px] tracking-[0.3em] uppercase text-muted mb-6">
+            {/* <p className="font-body text-[9px] tracking-[0.3em] uppercase text-muted mb-6">
               Founder & Managing Director
-            </p>
+            </p> */}
             <div className="w-12 h-px bg-gold mx-auto" />
           </div>
   
           <div className="grid md:grid-cols-5 gap-16 items-start">
+
+  {/* Bio */}
+  <div className="md:col-span-3">
+              <div className="space-y-5 mb-10">
+                {bio.map((p, i) => (
+                  <p key={i} className="font-body text-sm text-muted leading-relaxed">{p}</p>
+                ))}
+              </div>
   
+              <blockquote className="border-l-2 border-gold pl-6 py-2">
+                <p className="font-display italic text-xl md:text-2xl font-light text-navy leading-relaxed">
+                  "When people are developed with clarity, care, and purpose, performance follows
+                  naturally."
+                </p>
+                <p className="font-body text-[9px] tracking-[0.25em] uppercase text-gold mt-4">
+                  — Nick Huang
+                </p>
+              </blockquote>
+            </div>
             {/* Portrait + stats */}
             <div className="md:col-span-2">
               <div className="relative overflow-hidden aspect-[3/4] mb-8">
@@ -68,32 +86,15 @@ const stats = [
               {/* Brands */}
               <div className="bg-navy p-8 mt-px">
                 <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-4">
-                  Brands Served
+                  Key Brands Served
                 </p>
                 <p className="font-display text-sm text-white/70 tracking-[0.1em] leading-relaxed">
-                  Starwood · Rosewood · Aman · Marriott · Hilton · IHG · Sofitel
+                  Starwood · Rosewood · Aman · Marriott · Hilton
                 </p>
               </div>
             </div>
   
-            {/* Bio */}
-            <div className="md:col-span-3">
-              <div className="space-y-5 mb-10">
-                {bio.map((p, i) => (
-                  <p key={i} className="font-body text-sm text-muted leading-relaxed">{p}</p>
-                ))}
-              </div>
-  
-              <blockquote className="border-l-2 border-gold pl-6 py-2">
-                <p className="font-display italic text-xl md:text-2xl font-light text-navy leading-relaxed">
-                  "When people are developed with clarity, care, and purpose, performance follows
-                  naturally."
-                </p>
-                <p className="font-body text-[9px] tracking-[0.25em] uppercase text-gold mt-4">
-                  — Nick Huang
-                </p>
-              </blockquote>
-            </div>
+            
           </div>
         </div>
       </section>

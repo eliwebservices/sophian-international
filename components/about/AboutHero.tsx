@@ -6,7 +6,7 @@ export default function AboutHero() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('/images/about-hero.png')",
+              "url('/images/about_hero.png')",
             animation: "kenburns 18s ease-out forwards",
           }}
         />
@@ -24,7 +24,7 @@ export default function AboutHero() {
             People & Culture Partner
           </p> */}
   
-          <p className="font-body text-[14px] tracking-[0.35em] uppercase text-gold mb-8">
+          <p className="font-body text-[9px] md:text-[14px] tracking-[0.35em] uppercase text-gold mb-8">
             Our Culture
           </p>
   

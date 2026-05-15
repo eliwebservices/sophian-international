@@ -14,7 +14,7 @@ export default function AboutPhilosophy() {
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
 
-        <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
+        <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
           Our Philosophy
         </p>
         <h2 className="font-display text-4xl md:text-5xl font-light text-white leading-[1.12] mb-4">
@@ -37,25 +37,27 @@ export default function AboutPhilosophy() {
           </svg>
         </div> */}
 
-        <blockquote className="font-body text-2xl md:text-3xl italic text-white leading-relaxed mb-3">
+        <p className="font-display text-xl text-white/70 leading-relaxed max-w-2xl mx-auto mb-10 border border-gold/50 p-10">
+          We passionately believe in the transformative power of the Star of Wisdom — that brings
+          life to people and light to hospitality.
+        </p>
+
+        {/* <div className="w-12 h-px bg-gold mx-auto mb-14" /> */}
+
+        <blockquote className="font-body text-md md:text-lg italic text-white leading-relaxed mb-3">
           "Get wisdom, get insights."
         </blockquote>
         <p className="font-display text-[9px] font-semibold tracking-[0.3em] uppercase text-gold mb-14">
           — Proverbs 4:5
         </p>
 
-        <div className="w-12 h-px bg-gold mx-auto mb-14" />
 
-        <p className="font-display text-sm text-white/70 leading-relaxed max-w-2xl mx-auto mb-10">
-          We passionately believe in the transformative power of the Star of Wisdom — that brings
-          life to people and light to hospitality.
-        </p>
 
-        <blockquote className="font-body text-xl md:text-2xl italic text-white/80 mb-3">
+        <blockquote className="font-body text-lg md:text-lg italic text-white/80 mb-3">
           "Be wise and help others to walk in wise ways."
         </blockquote>
         <p className="font-display text-[9px] font-semibold tracking-[0.3em] uppercase text-gold/70">
-          — Ross McKay (Friend and Consultant)
+          — Ross McKay (A Friend and Mentor of 20 years)
         </p>
       </div>
     </section>

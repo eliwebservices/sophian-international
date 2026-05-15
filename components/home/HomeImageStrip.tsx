@@ -1,8 +1,8 @@
 const images = [
-  { src: "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=600&q=80&fit=crop", alt: "Infinity pool ocean view" },
-  { src: "https://res.cloudinary.com/dn70tysny/image/upload/v1778287283/receptionist-providing-luxury-service_50_zoclh8.jpg", alt: "Ocean waves aerial" },
-  { src: "https://res.cloudinary.com/dn70tysny/image/upload/v1778287777/beautiful-umbrella-chair-around-outdoor-swimming-pool-hotel-resort-holiday-vacation-travel_50_rsr34c.jpg", alt: "Lush green nature" },
-  { src: "https://res.cloudinary.com/dn70tysny/image/upload/v1778287284/holiday-landscape-relaxation-travel-view_50_x0bivu.jpg", alt: "Tropical coast" },
+  { src: "/images/home-strip-1.jpg", alt: "Infinity pool ocean view" },
+  { src: "/images/home-strip-4.jpg", alt: "Ocean waves aerial" },
+  { src: "/images/here-to-serve_.jpg", alt: "Lush green nature" },
+  { src: "/images/home-strip-2.jpg", alt: "Tropical coast" },
 ];
   
   export default function HomeImageStrip() {

@@ -6,6 +6,7 @@ const stakes = [
       "Ineffective HR marketing and weak employer branding",
       "Difficulty finding and hiring the right executives",
     ],
+    color: "bg-muted/50"
   },
   {
     title: "Wrongly Train ",
@@ -14,6 +15,7 @@ const stakes = [
       "Inability to build a hotel brand and service culture",
       "Failure in talent development",
     ],
+    color: "bg-navy"
   },
   {
     title: "Wrongly Retain",
@@ -23,6 +25,7 @@ const stakes = [
       "Failure to boost team and employee morale",
       "Poor employee engagement, recognition and wellbeing",
     ],
+    color: "bg-gold"
   },
 ];
 
@@ -32,16 +35,16 @@ export default function HomeStakes() {
       <div className="max-w-6xl mx-auto">
 
         <div className="text-center mb-20">
-          <p className="font-display text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
+          <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
             The Stakes
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] max-w-2xl mx-auto mb-6">
-            An Unclear People Strategy That Does Not Drive the Team
+          People And Culture in the Hospitality Business Often Fail For One of Three
+            Reasons. You Can Avoid These Pitfalls.
           </h2>
           <div className="w-12 h-px bg-gold mx-auto mb-7" />
           <p className="font-body text-lg leading-relaxed text-muted max-w-xl mx-auto">
-            People and culture in the hospitality business often fail for one of three
-            reasons. You can avoid these pitfalls.
+          An Unclear People Strategy That Does Not Drive the Team
           </p>
         </div>
 
@@ -52,9 +55,11 @@ export default function HomeStakes() {
               className="group bg-cream p-12 overflow-hidden relative hover:bg-navy transition-colors duration-500"
             >
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gold scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
-              <p className="font-display text-[64px] font-light text-navy/10 group-hover:text-white/10 leading-none mb-4 transition-colors duration-500">
+              <div className="w-full text-center flex justify-center rounded-full">
+              <p className={`font-display text-[44px] font-light text-white/50 group-hover:text-white group-hover:border group-hover:border-white group-hover:bg-navy leading-none mb-4 transition-colors duration-500 text-center ${s.color} w-18 h-18 flex items-center justify-center rounded-full`}>
                 0{i + 1}
               </p>
+              </div>
               <p className="font-display text-2xl font-light text-navy group-hover:text-gold mb-6 transition-colors duration-500">
                 {s.title}
               </p>
@@ -78,9 +83,9 @@ export default function HomeStakes() {
           </p>
           <a
             href="#contact"
-            className="font-display text-[9px] font-semibold tracking-[0.28em] uppercase border border-navy text-navy px-10 py-4 hover:bg-navy hover:text-white transition-all duration-300 no-underline inline-flex items-center gap-3"
+            className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase border border-navy text-navy px-10 py-4 hover:bg-navy hover:text-white transition-all duration-300 no-underline inline-flex items-center gap-3"
           >
-            Schedule a Discovery Call →
+            Schedule a Discovery Call
           </a>
         </div>
       </div>

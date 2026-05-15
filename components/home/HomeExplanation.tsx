@@ -5,7 +5,7 @@ export default function HomeExplanation() {
         <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
 
           <div>
-            <p className="font-display text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
+            <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
               You Don't Have to Build It Alone
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">
@@ -27,15 +27,15 @@ export default function HomeExplanation() {
             </p>
             <a
               href="#contact"
-              className="font-display text-[9px] font-semibold tracking-[0.28em] uppercase bg-navy text-white px-10 py-4 hover:bg-navy2 transition-colors duration-300 no-underline inline-flex items-center gap-3"
+              className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase border border-navy text-navy px-10 py-4 hover:bg-navy hover:text-white transition-all duration-300 no-underline inline-flex items-center gap-3"
             >
-              Schedule a Discovery Call →
+              Schedule a Discovery Call
             </a>
           </div>
 
           <div className="relative overflow-hidden aspect-[4/5] w-full">
             <img
-              src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=85&fit=crop"
+              src="/images/here-to-serve_.jpg"
               alt="Luxury hotel service excellence"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
             />

@@ -10,7 +10,7 @@ export default function HomePlan() {
       <div className="max-w-6xl mx-auto">
 
         <div className="text-center mb-20">
-          <p className="font-display text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
+          <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
             The Plan
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-4">
@@ -45,9 +45,9 @@ export default function HomePlan() {
         <div className="text-center">
           <a
             href="#contact"
-            className="font-display text-[9px] font-semibold tracking-[0.28em] uppercase bg-navy text-white px-10 py-4 hover:bg-navy2 transition-colors duration-300 no-underline inline-flex items-center gap-3"
+            className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase border border-navy text-navy px-10 py-4 hover:bg-navy hover:text-white transition-all duration-300 no-underline inline-flex items-center gap-3"
           >
-            Book Your Free Discovery Call →
+            Book Your Discovery Call Now
           </a>
         </div>
       </div>

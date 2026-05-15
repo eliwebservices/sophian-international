@@ -27,7 +27,7 @@ const scenes = [
         <div className="max-w-6xl mx-auto">
   
           <div className="text-center mb-16">
-            <p className="font-display text-[9px] tracking-[0.35em] uppercase text-gold mb-5">
+            <p className="font-display text-[9px] md:text-[14px] tracking-[0.35em] font-semibold uppercase text-gold mb-5">
               What We Do
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">
@@ -39,7 +39,7 @@ const scenes = [
               through People & Culture solutions — creating people-first experiences for employees,
               guests, owners, and the broader community.
             </p>
-            <blockquote className="font-display italic text-xl md:text-2xl text-muted max-w-2xl mx-auto mb-3">
+            <blockquote className="font-display italic text-md md:text-lg text-muted max-w-2xl mx-auto mb-3">
               "Love your neighbor as yourself."
             </blockquote>
             <p className="font-body text-[9px] tracking-[0.3em] uppercase text-gold">

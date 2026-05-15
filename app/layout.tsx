@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sophian International | People & Culture Partner for Hospitality",
+  title: "Sophian International | Your People & Culture Partner for Mission Driven Hospitality",
   description:
     "Sophian International helps luxury hotels appoint the right leaders, train teams to standard, and build winning people and culture.",
 };

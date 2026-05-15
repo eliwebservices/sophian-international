@@ -56,21 +56,100 @@ export default function AboutCoreValues() {
 
   return (
     <section className="bg-cream py-28 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
 
         {/* Header */}
-        <div className="text-center mb-16">
-          <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
+        <div className="text-center mb-5">
+          <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
             Core Values
           </p>
           {/* <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">
             Purposeful. Authentic. Transformative.
           </h2> */}
-          <div className="w-12 h-px bg-gold mx-auto" />
+          {/* <div className="w-12 h-px bg-gold mx-auto" /> */}
+        </div>
+
+        {/* Slide */}
+        <div
+          className="flex flex-col"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
+          {/* Title row */}
+          <div
+            className={[
+              "text-center mb-8 transition-opacity duration-300",
+              fadeIn ? "opacity-100" : "opacity-0",
+            ].join(" ")}
+          >
+            {/* Chinese character */}
+            {/* <p className="font-body text-[56px] italic text-gold/20 leading-none mb-2 select-none">
+              {current.cn}
+            </p> */}
+
+            {/* Title */}
+            <h3 className="font-display text-4xl md:text-5xl font-light text-navy mb-3">
+              {current.title}
+            </h3>
+
+            {/* Subtitle */}
+            <p className="font-display text-[10px] font-semibold tracking-[0.2em] uppercase text-gold mb-4">
+              {current.sub}
+            </p>
+
+            {/* Gold line */}
+            <div className="w-12 h-px bg-gold mx-auto" />
+          </div>
+
+          {/* Image — big, full width */}
+          <div className="relative overflow-hidden w-full h-[420px] md:h-[520px]">
+            <img
+              key={active}
+              src={current.image}
+              alt={current.title}
+              className={[
+                "absolute inset-0 w-full h-full object-cover transition-all duration-500",
+                fadeIn ? "opacity-100 scale-100" : "opacity-0 scale-105",
+              ].join(" ")}
+            />
+            <div className="absolute inset-0 bg-navy/10" />
+
+            {/* Progress bar */}
+            <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-white/20">
+              {!paused && (
+                <div
+                  key={active}
+                  className="h-full bg-gold"
+                  style={{
+                    animation: `progress ${INTERVAL}ms linear forwards`,
+                  }}
+                />
+              )}
+            </div>
+
+            {/* Counter */}
+            <div className="absolute bottom-5 right-5 bg-navy/70 backdrop-blur-sm px-4 py-2">
+              <p className="font-display text-[9px] font-semibold tracking-[0.25em] uppercase text-gold">
+                {String(active + 1).padStart(2, "0")} / {String(values.length).padStart(2, "0")}
+              </p>
+            </div>
+          </div>
+
+          {/* Paragraph — underneath image */}
+          <div
+            className={[
+              "bg-white border border-gold/20 border-t-0 px-10 md:px-16 py-10 text-center transition-opacity duration-300",
+              fadeIn ? "opacity-100" : "opacity-0",
+            ].join(" ")}
+          >
+            <p className="font-body text-lg md:text-xl text-muted leading-relaxed max-w-2xl mx-auto">
+              {current.desc}
+            </p>
+          </div>
         </div>
 
         {/* Tab bar */}
-        <div className="flex border border-gold/25">
+        {/* <div className="flex border border-gold/25">
           {values.map((v, i) => (
             <button
               key={v.title}
@@ -91,70 +170,7 @@ export default function AboutCoreValues() {
               {v.title}
             </button>
           ))}
-        </div>
-
-        {/* Slide */}
-        <div
-          className="grid md:grid-cols-2 border border-gold/25 border-t-0 overflow-hidden h-[440px]"
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
-        >
-          {/* Text — left */}
-          <div
-            className={[
-              "flex flex-col justify-center px-12 md:px-16 py-10 bg-white transition-opacity duration-300",
-              fadeIn ? "opacity-100" : "opacity-0",
-            ].join(" ")}
-          >
-            <p className="font-body text-[64px] italic text-gold/25 leading-none mb-3 select-none">
-              {current.cn}
-            </p>
-            <h3 className="font-display text-3xl font-light text-navy mb-3">
-              {current.title}
-            </h3>
-            <p className="font-display text-[10px] font-semibold tracking-[0.15em] uppercase text-gold mb-6">
-              {current.sub}
-            </p>
-            <div className="w-12 h-px bg-gold mb-7" />
-            <p className="font-body text-lg text-muted leading-relaxed">
-              {current.desc}
-            </p>
-          </div>
-
-          {/* Image — right */}
-          <div className="relative overflow-hidden">
-            <img
-              key={active}
-              src={current.image}
-              alt={current.title}
-              className={[
-                "absolute inset-0 w-full h-full object-cover transition-all duration-500",
-                fadeIn ? "opacity-100 scale-100" : "opacity-0 scale-105",
-              ].join(" ")}
-            />
-            <div className="absolute inset-0 bg-navy/15" />
-
-            {/* Progress bar */}
-            <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-white/20">
-              {!paused && (
-                <div
-                  key={active}
-                  className="h-full bg-gold"
-                  style={{
-                    animation: `progress ${INTERVAL}ms linear forwards`,
-                  }}
-                />
-              )}
-            </div>
-
-            {/* Counter */}
-            <div className="absolute bottom-6 right-6 bg-navy/70 backdrop-blur-sm px-4 py-2">
-              <p className="font-display text-[9px] font-semibold tracking-[0.25em] uppercase text-gold">
-                {String(active + 1).padStart(2, "0")} / {String(values.length).padStart(2, "0")}
-              </p>
-            </div>
-          </div>
-        </div>
+        </div> */}
 
         {/* Dot navigation */}
         <div className="flex justify-center gap-3 mt-6">
