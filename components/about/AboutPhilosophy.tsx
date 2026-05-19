@@ -37,6 +37,13 @@ export default function AboutPhilosophy() {
           </svg>
         </div> */}
 
+        <blockquote className="font-body text-md md:text-lg italic text-white leading-relaxed mb-3">
+          "Get wisdom, get insights."
+        </blockquote>
+        <p className="font-display text-[9px] font-semibold tracking-[0.3em] uppercase text-gold mb-14">
+          — Proverbs 4:5
+        </p>
+        
         <p className="font-display text-xl text-white/70 leading-relaxed max-w-2xl mx-auto mb-10 border border-gold/50 p-10">
           We passionately believe in the transformative power of the Star of Wisdom — that brings
           life to people and light to hospitality.
@@ -44,12 +51,6 @@ export default function AboutPhilosophy() {
 
         {/* <div className="w-12 h-px bg-gold mx-auto mb-14" /> */}
 
-        <blockquote className="font-body text-md md:text-lg italic text-white leading-relaxed mb-3">
-          "Get wisdom, get insights."
-        </blockquote>
-        <p className="font-display text-[9px] font-semibold tracking-[0.3em] uppercase text-gold mb-14">
-          — Proverbs 4:5
-        </p>
 
 
 

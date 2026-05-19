@@ -24,18 +24,25 @@ export default function HomePlan() {
 
         <div className="grid md:grid-cols-3 gap-px bg-gold/15 mb-16">
           {steps.map((s, i) => (
+            // <div
+            //   key={i}
+            //   className="group bg-white p-14 text-center hover:bg-navy transition-colors duration-500"
+            // >
             <div
               key={i}
-              className="group bg-white p-14 text-center hover:bg-navy transition-colors duration-500"
+              className="group bg-white p-14 text-center"
             >
-              <p className="font-display text-[80px] font-light text-navy/10 group-hover:text-white/10 leading-none mb-6 transition-colors duration-500">
+              {/* <p className="font-display text-[80px] font-light text-navy/10 group-hover:text-white/10 leading-none mb-6 transition-colors duration-500"> */}
+              <p className="font-display text-[80px] font-light text-navy/10 leading-none mb-6">
                 {s.n}
               </p>
-              <h3 className="font-display text-2xl font-light text-navy group-hover:text-white mb-4 transition-colors duration-500">
+              {/* <h3 className="font-display text-2xl font-light text-navy group-hover:text-white mb-4 transition-colors duration-500"> */}
+              <h3 className="font-display text-2xl font-light text-navy mb-4">
                 {s.title}
               </h3>
               <div className="w-6 h-px bg-gold mx-auto mb-5 group-hover:w-12 transition-all duration-500" />
-              <p className="font-display text-sm text-muted group-hover:text-white/60 leading-relaxed transition-colors duration-500">
+              {/* <p className="font-display text-sm text-muted group-hover:text-white/60 leading-relaxed transition-colors duration-500"> */}
+              <p className="font-display text-sm text-muted leading-relaxed">
                 {s.body}
               </p>
             </div>
@@ -45,7 +52,7 @@ export default function HomePlan() {
         <div className="text-center">
           <a
             href="#contact"
-            className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase border border-navy text-navy px-10 py-4 hover:bg-navy hover:text-white transition-all duration-300 no-underline inline-flex items-center gap-3"
+            className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase bg-navy hover:bg-navy/90 text-white px-10 py-4 transition-all duration-300 no-underline inline-flex items-center gap-3"
           >
             Book Your Discovery Call Now
           </a>

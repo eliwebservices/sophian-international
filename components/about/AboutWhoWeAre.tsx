@@ -80,9 +80,48 @@ export default function AboutWhoWeAre() {
           ))}
         </div>
 
-        <p className="font-display text-[11px] font-semibold tracking-[0.4em] uppercase text-muted text-center mt-16">
-          —— Think Globally, Act Locally ——
-        </p>
+        {/* ── THINK GLOBALLY, ACT LOCALLY ── */}
+<div className="relative overflow-hidden mt-16 h-[220px] flex items-center justify-center">
+
+{/* Background image */}
+<img
+  src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1800&q=85&fit=crop"
+  alt=""
+  className="absolute inset-0 w-full h-full object-cover"
+/>
+
+{/* Overlay */}
+<div className="absolute inset-0 bg-navy/65" />
+
+{/* Decorative border frame */}
+<div className="absolute top-5 left-5 right-5 bottom-5 border border-gold/25 pointer-events-none" />
+
+{/* Content */}
+<div className="relative z-10 text-center px-8">
+
+  {/* Top decorative line */}
+  <div className="flex items-center justify-center gap-4 mb-5">
+    <div className="w-12 h-px bg-gold/60" />
+    <div className="w-1.5 h-1.5 rounded-full bg-gold/60" />
+    <div className="w-12 h-px bg-gold/60" />
+  </div>
+
+  <p className="font-display text-xl md:text-2xl font-light tracking-[0.4em] uppercase text-white">
+    Think Globally
+  </p>
+  <p className="font-body uppercase tracking-[0.4em] italic text-md text-gold my-2">
+    Act Locally
+  </p>
+
+  {/* Bottom decorative line */}
+  <div className="flex items-center justify-center gap-4 mt-5">
+    <div className="w-12 h-px bg-gold/60" />
+    <div className="w-1.5 h-1.5 rounded-full bg-gold/60" />
+    <div className="w-12 h-px bg-gold/60" />
+  </div>
+</div>
+</div>
+
       </div>
     </section>
   );

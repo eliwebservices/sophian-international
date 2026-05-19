@@ -128,27 +128,29 @@ export default function Navbar() {
         <ul className="hidden md:flex items-center list-none m-0 p-0">
           {navItems.map((l, index) => (
             <li key={l.label} className="flex items-center">
+            <div className="px-4">
               <Link
                 href={l.href}
                 className={[
-                  "font-display text-[11px] font-medium tracking-[0.18em] uppercase transition-all duration-300 no-underline px-4 py-1 relative group",
-                  "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-gold after:transition-all after:duration-300",
+                  "font-display text-[11px] font-medium tracking-[0.18em] uppercase transition-all duration-300 no-underline py-1 relative",
+                  "after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-px after:bg-gold after:transition-all after:duration-300",
                   isActive(l.href)
-                    ? "text-gold after:opacity-100"
-                    : "text-white/80 hover:text-gold after:opacity-0 hover:after:opacity-100",
+                    ? "text-gold after:w-full after:opacity-100"
+                    : "text-white/80 hover:text-gold after:w-0 hover:after:w-full after:opacity-100",
                 ].join(" ")}
               >
                 {l.label}
               </Link>
-
-              {/* Gold dot separator — shown between items, not after the last */}
-              {index < navItems.length - 1 && (
-                <span className="w-1 h-1 rounded-full bg-gold/60 flex-shrink-0" />
-              )}
-            </li>
+            </div>
+          
+            {/* Gold dot separator */}
+            {index < navItems.length - 1 && (
+              <span className="w-1 h-1 rounded-full bg-gold/60 flex-shrink-0" />
+            )}
+          </li>
+          
           ))}
         </ul>
-
 
         {/* Right — Desktop contact icons + Mobile hamburger */}
         <div className="flex items-center gap-5">

@@ -25,9 +25,13 @@ export default function HomeExplanation() {
               the five key experiences needed for successful people and culture — which is
               why many hospitality businesses fail.
             </p>
-            <a
+            {/* <a
               href="#contact"
               className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase border border-navy text-navy px-10 py-4 hover:bg-navy hover:text-white transition-all duration-300 no-underline inline-flex items-center gap-3"
+            > */}
+            <a
+              href="#contact"
+              className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase bg-navy hover:bg-navy/90  text-white px-10 py-4  transition-all duration-300 no-underline inline-flex items-center gap-3"
             >
               Schedule a Discovery Call
             </a>

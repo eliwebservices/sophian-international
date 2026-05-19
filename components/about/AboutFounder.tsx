@@ -1,6 +1,6 @@
 const stats = [
     { value: "20+",   label: "Years Exp." },
-    { value: "1,200+", label: "Team Members" },
+    { value: "30,000+", label: "Team Members" },
     { value: "4.2B+", label: "RMB Rev. Supported" },
   ];
   
@@ -57,7 +57,7 @@ const stats = [
                 <img
                   src="/images/nick-professional.jpg"
                   alt="Nick Huang, Founder & Managing Director of Sophian International"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-top scale-x-[-1]"
                 />
                 {/* Name plate */}
                 <div className="absolute bottom-0 left-0 right-0 bg-navy px-8 py-5">

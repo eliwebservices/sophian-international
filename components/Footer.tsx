@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
+  // Dynamic year — updates automatically every year
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-navy px-6 pt-20 pb-10">
       <div className="max-w-6xl mx-auto">
@@ -27,9 +30,17 @@ export default function Footer() {
           <div>
             <p className="font-display text-[9px] font-semibold tracking-[0.28em] uppercase text-gold mb-6">Services</p>
             <ul className="flex flex-col gap-3 list-none p-0 m-0">
-              {[{title: "Executive Search", slug: "executive-search"}, {title: "Corporate Training", slug: "corporate-training"}, {title: "HR Consulting", slug: "hr-consulting"}, {title: "Free Career Clarity", slug: "free-resources"}].map(s => (
+              {[
+                { title: "Executive Search",    slug: "executive-search"    },
+                { title: "Corporate Training",  slug: "corporate-training"  },
+                { title: "HR Consulting",       slug: "hr-consulting"       },
+                { title: "Free Career Clarity", slug: "free-resources"      },
+              ].map(s => (
                 <li key={s.slug}>
-                  <Link href={s.slug} className="font-display text-sm text-white/45 hover:text-gold transition-colors duration-200 no-underline">
+                  <Link
+                    href={s.slug}
+                    className="font-display text-sm text-white/45 hover:text-gold transition-colors duration-200 no-underline"
+                  >
                     {s.title}
                   </Link>
                 </li>
@@ -42,33 +53,68 @@ export default function Footer() {
             <div className="flex flex-col gap-5">
               {[
                 { label: "Email",    val: "YourGuide@sophianinternational.com" },
-                { label: "Location", val: "Beijing, China" },
-                { label: "WeChat",   val: "Available on request" },
+                { label: "Location", val: "Beijing, China"                     },
+                { label: "WeChat",   val: "Available on request"               },
               ].map(d => (
                 <div key={d.label}>
-                  <p className="font-display text-[9px] font-semibold tracking-[0.2em] uppercase text-gold/60 mb-1">{d.label}</p>
+                  <p className="font-display text-[9px] font-semibold tracking-[0.2em] uppercase text-gold/60 mb-1">
+                    {d.label}
+                  </p>
                   <p className="font-display text-sm text-white/45">{d.val}</p>
                 </div>
               ))}
-              <Image src="/images/sophian-wechat-qr-code.png" width={150} height={150} alt="sophian-wechat-qr-code"/>
+              <Image
+                src="/images/sophian-wechat-qr-code.png"
+                width={150}
+                height={150}
+                alt="sophian-wechat-qr-code"
+              />
             </div>
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-between items-center gap-4">
-          <p className="font-display text-xs text-white/25 tracking-wide">
-            © 2026 Sophian International. All rights reserved.
+        {/* ── ICP LICENSE BAR ── */}
+        <div className="flex items-center justify-between mb-8">
+          {/* Left — ICP license */}
+          <p className="font-display text-[10px] font-semibold tracking-[0.2em] uppercase text-white/25">
+            ICP LICENSE
           </p>
-          <ul className="flex gap-8 list-none p-0 m-0">
+
+          {/* Centre — Logo */}
+          <div className="flex items-center justify-center">
+            <Image
+              src="/images/sophian-logo-white-1.png"
+              width={100}
+              height={100}
+              alt="Sophian International"
+            />
+          </div>
+
+          {/* Right — Dynamic year */}
+          <p className="font-display text-[10px] font-semibold tracking-[0.2em] uppercase text-white/25">
+            Sophian International © {currentYear}
+          </p>
+        </div>
+
+        {/* ── BOTTOM BAR ── */}
+        <div className="flex flex-wrap justify-between items-center gap-4">
+          {/* <p className="font-display text-xs text-white/25 tracking-wide">
+            © 2026 Sophian International. All rights reserved.
+          </p> */}
+          {/* <ul className="flex gap-8 list-none p-0 m-0">
             {["Privacy Policy", "Terms of Use"].map(l => (
               <li key={l}>
-                <Link href="#" className="font-display text-[10px] font-semibold tracking-[0.15em] uppercase text-white/25 hover:text-gold transition-colors no-underline">
+                <Link
+                  href="#"
+                  className="font-display text-[10px] font-semibold tracking-[0.15em] uppercase text-white/25 hover:text-gold transition-colors no-underline"
+                >
                   {l}
                 </Link>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
+
       </div>
     </footer>
   );

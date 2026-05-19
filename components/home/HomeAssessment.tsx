@@ -12,7 +12,7 @@ export default function HomeAssessment() {
 
           <div className="relative overflow-hidden aspect-[4/5] w-full">
             <img
-              src="/images/assessment-section-img-2.png"
+              src="/images/assessement-image-side.png"
               alt="Professional hospitality consultation"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
             />
@@ -53,9 +53,13 @@ export default function HomeAssessment() {
               ))}
             </div>
 
-            <button
+            {/* <button
               onClick={() => setOpen(true)}
               className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase border border-navy text-navy px-10 py-4 hover:bg-navy hover:text-white transition-all duration-300 no-underline inline-flex items-center gap-3"
+            > */}
+            <button
+              onClick={() => setOpen(true)}
+              className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase bg-navy text-white px-10 py-4 hover:bg-navy/90 transition-all duration-300 no-underline inline-flex items-center gap-3"
             >
               Take the Assessment
             </button>

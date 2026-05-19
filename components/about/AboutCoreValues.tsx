@@ -14,7 +14,7 @@ const values = [
     cn: "本真",
     sub: "Leading with truth, integrity, and real experience",
     desc: "We lead authentically, grounded in truth, integrity, and proven real-world experience. Like clear spring water flowing from high mountains, our counsel is pure, transparent, and trustworthy.",
-    image: "/images/waterfalls.png",
+    image: "/images/glass-water.png",
   },
   {
     title: "Transformative",

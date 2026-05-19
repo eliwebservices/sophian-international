@@ -48,25 +48,30 @@ export default function HomeStakes() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-px bg-gold/15 mb-20">
+        <div className="grid md:grid-cols-3 gap-4 bg-gold/0 mb-20">
           {stakes.map((s, i) => (
             <div
               key={i}
-              className="group bg-cream p-12 overflow-hidden relative hover:bg-navy transition-colors duration-500"
+              // className="group bg-muted/10 p-12 overflow-hidden relative hover:bg-navy transition-colors duration-500"
+              className="group bg-muted/10 p-12 overflow-hidden relative"
             >
-              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gold scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
+              {/* <div className="absolute top-0 left-0 right-0 h-[2px] bg-gold scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" /> */}
+              <div className={`absolute top-0 left-0 right-0 h-[12px] ${s.color} origin-left transition-transform duration-500`} />
               <div className="w-full text-center flex justify-center rounded-full">
-              <p className={`font-display text-[44px] font-light text-white/50 group-hover:text-white group-hover:border group-hover:border-white group-hover:bg-navy leading-none mb-4 transition-colors duration-500 text-center ${s.color} w-18 h-18 flex items-center justify-center rounded-full`}>
-                0{i + 1}
+              {/* <p className={`font-display text-[44px] font-light text-white/50 group-hover:text-white group-hover:border group-hover:border-white group-hover:bg-navy leading-none mb-4 transition-colors duration-500 text-center ${s.color} w-18 h-18 flex items-center justify-center rounded-full`}> */}
+              <p className={`font-display text-[44px] font-light text-white leading-none mb-4 transition-colors duration-500 text-center ${s.color} w-18 h-18 flex items-center justify-center rounded-full`}>
+                {i + 1}
               </p>
               </div>
-              <p className="font-display text-2xl font-light text-navy group-hover:text-gold mb-6 transition-colors duration-500">
+              {/* <p className="font-display text-2xl font-light text-navy group-hover:text-gold mb-6 transition-colors duration-500"> */}
+              <p className="font-display text-2xl font-light text-navy mb-6 text-center">
                 {s.title}
               </p>
               <div className="w-8 h-px bg-gold/40 mb-6" />
               <ul className="flex flex-col gap-3 list-none p-0 m-0">
                 {s.items.map((item, j) => (
-                  <li key={j} className="flex gap-3 font-body text-base text-muted group-hover:text-white/70 leading-relaxed transition-colors duration-500">
+                  // <li key={j} className="flex gap-3 font-body text-base text-muted group-hover:text-white/70 leading-relaxed transition-colors duration-500">
+                  <li key={j} className="flex gap-3 font-body text-base text-muted leading-relaxed">
                     <span className="text-gold flex-shrink-0 mt-0.5">—</span>
                     <span>{item}</span>
                   </li>
@@ -81,9 +86,13 @@ export default function HomeStakes() {
             These three issues are the root causes of most business disasters. Coaching
             will help you professionalize your operation as your business grows.
           </p>
-          <a
+          {/* <a
             href="#contact"
             className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase border border-navy text-navy px-10 py-4 hover:bg-navy hover:text-white transition-all duration-300 no-underline inline-flex items-center gap-3"
+          > */}
+          <a
+            href="#contact"
+            className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase text-white px-10 py-4 bg-navy hover:bg-navy/90 hover:text-white transition-all duration-300 no-underline inline-flex items-center gap-3"
           >
             Schedule a Discovery Call
           </a>

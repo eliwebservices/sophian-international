@@ -21,7 +21,7 @@ const items = [
   
   export default function AboutVisionMission() {
     return (
-      <section className="bg-cream py-28 px-6">
+      <section className="bg-cream py-28 px-6 pb-0">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 divide-x divide-gold/25 border border-gold/25">
             {items.map((item) => (

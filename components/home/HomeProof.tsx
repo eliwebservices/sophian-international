@@ -1,31 +1,59 @@
 "use client";
 
 const stats = [
-  { value: "85%",  text: "of hotels saw a 30%+ decrease in voluntary turnover after engaging Nick as their People & Culture leader." },
-  { value: "98%+", text: "team member engagement scores achieved — record-breaking milestones at Rosewood Beijing and Starwood Hotels." },
-  { value: "100%", text: "of hotels recover their investment in people, with at least a 2× return within a year of his leadership." },
+  {
+    value: "85%",
+    text: "of hotels saw a 30%+ decrease in voluntary turnover after engaging Nick as their People & Culture leader.",
+  },
+  {
+    value: "98%+",
+    text: "team member engagement scores achieved — record-breaking milestones at Rosewood Beijing and Starwood Hotels.",
+  },
+  {
+    value: "100%",
+    text: "of hotels recover their investment in people, with at least a 2× return within a year of his leadership.",
+  },
 ];
 
 // Replace src values with actual brand logo images when ready
 const brands = [
-  { name: "Accor",     src: "/images/company-logos/accor-logo.png" },
-  { name: "IHG",       src: "/images/company-logos/IHG.png" },
-  { name: "Hilton",    src: "/images/company-logos/Hilton-Worldwide-Logo.png" },
-  { name: "Marriott",  src: "/images/company-logos/Marriott-Logo.png" },
-  { name: "Rosewood",  src: "/images/company-logos/Rosewood-logo.png" },
-  { name: "Aman",      src: "/images/company-logos/Aman.png" },
+  { name: "Accor", src: "/images/company-logos/accor-logo.png" },
+  { name: "IHG", src: "/images/company-logos/IHG.png" },
+  { name: "Hilton", src: "/images/company-logos/Hilton-Worldwide-Logo.png" },
+  { name: "Marriott", src: "/images/company-logos/Marriott-Logo.png" },
+  { name: "Rosewood", src: "/images/company-logos/Rosewood-logo.png" },
+  { name: "Aman", src: "/images/company-logos/Aman.png" },
   { name: "Kempinski", src: "/images/company-logos/kempinski-Logo.png" },
-  { name: "Starwood",  src: "/images/company-logos/Starwood-logo.png" },
-  { name: "SH",  src: "/images/company-logos/SH.jpeg" },
+  { name: "Starwood", src: "/images/company-logos/starwood.png" },
+  { name: "SH", src: "/images/company-logos/SH.jpeg" },
+  { name: "one hotel", src: "/images/company-logos/one-hotel.png" },
 ];
 
 const highlights = [
-  { n: "2",       text: "Successful luxury hotel pre-openings — built and led teams from construction to fully operational, profit-generating properties." },
-  { n: "9",       text: "International hotel brands across Asia, Europe, and the United States." },
-  { n: "13",      text: "Key cities in China — from remote island resorts (Xiamen, Sanya) to top-tier metros (Beijing, Shanghai, Guangzhou, Chengdu)." },
-  { n: "18",      text: "Years of executive leadership in People & Culture, managing teams of 350 to 1,200+ employees." },
-  { n: "20",      text: "Years of global hospitality experience across upscale, luxury, and ultra-luxury segments." },
-  { n: "30,000+", text: "Team members managed and developed across 12 prestigious hotels." },
+  {
+    n: "2",
+    text: "Successful luxury hotel pre-openings — built and led teams from construction to fully operational, profit-generating properties.",
+  },
+  {
+    n: "9",
+    text: "International hotel brands across Asia, Europe, and the United States.",
+  },
+  {
+    n: "13",
+    text: "Key cities in China — from remote island resorts (Xiamen, Sanya) to top-tier metros (Beijing, Shanghai, Guangzhou, Chengdu).",
+  },
+  {
+    n: "18",
+    text: "Years of executive leadership in People & Culture, managing teams of 350 to 1,200+ employees.",
+  },
+  {
+    n: "20",
+    text: "Years of global hospitality experience across upscale, luxury, and ultra-luxury segments.",
+  },
+  {
+    n: "30,000+",
+    text: "Team members managed and developed across 12 prestigious hotels.",
+  },
 ];
 
 export default function HomeProof() {
@@ -35,20 +63,21 @@ export default function HomeProof() {
   return (
     <section className="bg-white py-28 px-6">
       <div className="max-w-6xl mx-auto">
-
         {/* Header */}
         <div className="text-center mb-20">
           <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
             Proof of Value
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">
-            Grow Your People —<br />Grow Your Business Faster and Stronger
+            Grow Your People —<br />
+            Grow Your Business Faster and Stronger
           </h2>
           <div className="w-12 h-px bg-gold mx-auto mb-6" />
           <p className="font-body text-lg leading-relaxed text-muted max-w-2xl mx-auto">
-            When we work together, we clarify your mission, optimize your people strategy,
-            reset your HR division to reduce voluntary turnover, find the talent that strengthens
-            your team, rebuild your training system, and realign your culture.
+            When we work together, we clarify your mission, optimize your people
+            strategy, reset your HR division to reduce voluntary turnover, find
+            the talent that strengthens your team, rebuild your training system,
+            and realign your culture.
           </p>
         </div>
 
@@ -69,9 +98,9 @@ export default function HomeProof() {
 
         {/* ── INFINITE BRAND CAROUSEL ── */}
         <div className="mb-6">
-        <h3 className="font-display text-3xl font-light text-navy text-center mb-12">
-          A Foundation of Proven Experience
-        </h3>
+          <h3 className="font-display text-3xl font-light text-navy text-center mb-12">
+            A Foundation of Proven Experience
+          </h3>
           <p className="font-display text-[14px] font-semibold tracking-[0.3em] uppercase text-muted text-center mb-8">
             Nick Huang Our Founder Has Served as a People & Culture Leader For
           </p>
@@ -100,7 +129,7 @@ export default function HomeProof() {
                 <img
                   src={brand.src}
                   alt={brand.name}
-                  className="max-h-8 max-w-[110px] w-auto object-contain"
+                  className="max-h-10 max-w-[110px] w-auto object-contain"
                   onError={(e) => {
                     // Fallback to text if image fails to load
                     const parent = e.currentTarget.parentElement;
@@ -131,43 +160,57 @@ export default function HomeProof() {
           {highlights.map((h, i) => (
             <div
               key={i}
-              className={`flex gap-6 items-start bg-white p-10 hover:bg-cream transition-colors duration-300 ${i % 2 === 0 ? "md:border-r md:border-gold/25" : ""}`}
+              className={`flex gap-6 items-start bg-white p-10 hover:bg-cream transition-colors duration-300 ${
+                i % 2 === 0 ? "md:border-r md:border-gold/25" : ""
+              }`}
             >
               <span className="font-display text-5xl font-light text-gold leading-none flex-shrink-0 min-w-[72px]">
                 {h.n}
               </span>
-              <p className="font-body text-base text-muted leading-relaxed pt-2">{h.text}</p>
+              <p className="font-body text-base text-muted leading-relaxed pt-2">
+                {h.text}
+              </p>
             </div>
           ))}
         </div>
 
         {/* ── TESTIMONIAL + IMAGE ── */}
-        <div className="grid md:grid-cols-2 border border-gold/25 overflow-hidden">
+        {/* ── TESTIMONIAL — full bleed image with overlay text ── */}
+        <div className="relative overflow-hidden min-h-[560px] flex items-center justify-center">
+          {/* Background image */}
+          <img
+            src="https://images.rosewoodhotels.com/is/image/rwhg/rosewood-beijing-jiao-tu-sons-of-dragon-hotel-entrance-2"
+            alt="Luxury hospitality scene"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
 
-          {/* Image — left */}
-          <div className="relative overflow-hidden min-h-[400px]">
-            <img
-              src="https://images.rosewoodhotels.com/is/image/rwhg/rosewood-beijing-jiao-tu-sons-of-dragon-hotel-entrance-2"
-              alt="Luxury hospitality scene"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-navy/20" />
-          </div>
+          {/* Dark gradient overlay — heavier at center for text legibility */}
+          <div className="absolute inset-0 bg-gradient-to-br from-navy/90 via-navy/70 to-navy/50" />
 
-          {/* Testimonial — right */}
-          <div className="relative bg-cream px-14 py-16 flex flex-col justify-center">
-            <div className="absolute top-0 left-0 w-1 h-full bg-gold" />
-            <span className="block font-body text-[80px] leading-[0.75] text-gold/25 mb-5">"</span>
-            <blockquote className="font-body text-xl md:text-2xl italic font-light leading-[1.6] text-navy/80 mb-10">
-              Ever since I hired Nick as my People & Culture coach, my life has been more
-              exciting and less stressful. Our hotel business is growing, and I have a plan
-              to make it grow even more.
+          {/* Decorative gold border frame */}
+          <div className="absolute top-8 left-8 right-8 bottom-8 border border-gold/25 pointer-events-none" />
+
+          {/* Content */}
+          <div className="relative z-10 max-w-3xl mx-auto px-16 py-20 text-center">
+            {/* Large decorative quote mark */}
+            <span className="block font-body text-[120px] leading-[0.75] text-gold/30 mb-4 select-none">
+              "
+            </span>
+
+            <blockquote className="font-body text-xl md:text-2xl lg:text-3xl italic font-light leading-[1.6] text-white mb-10">
+              Ever since I hired Nick as my People & Culture coach, my life has
+              been more exciting and less stressful. Our hotel business is
+              growing, and I have a plan to make it grow even more.
             </blockquote>
-            <div className="w-12 h-px bg-gold mb-6" />
-            <p className="font-display text-[9px] font-semibold tracking-[0.28em] uppercase text-gold">
+
+            <div className="w-16 h-px bg-gold mx-auto mb-7" />
+
+            <p className="font-display text-[10px] font-bold tracking-[0.35em] uppercase text-gold mb-2">
               Managing Director
             </p>
-            <p className="font-body text-sm text-muted mt-1 italic">A Rosewood Hotel</p>
+            <p className="font-body text-sm italic text-white/70">
+              A Rosewood Hotel
+            </p>
           </div>
         </div>
       </div>
