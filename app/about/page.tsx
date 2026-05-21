@@ -19,7 +19,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main>
-      <Navbar />
+      {/* <Navbar /> */}
       <AboutHero />
       <AboutWhatWeDo />
       <AboutPhilosophy />
@@ -29,7 +29,7 @@ export default function AboutPage() {
       <AboutFounder />
       <AboutFounderWords />
       <AboutConnect />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

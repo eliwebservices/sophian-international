@@ -1,10 +1,10 @@
 const careerImages = [
     {
-      src: "/images/training-the-team.png",
+      src: "/images/home-strip-1.jpg",
       alt: "Training session",
     },
     {
-      src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=85&fit=crop",
+      src: "/images/nick-training.jpg",
       alt: "Luxury service moment",
     },
     {

@@ -18,7 +18,7 @@ export const metadata = {
 export default function HRConsultingPage() {
   return (
     <main>
-      <Navbar />
+      {/* <Navbar /> */}
       <ConsultingHero />
       <ConsultingProblem />
       <ConsultingSolutions />
@@ -27,7 +27,7 @@ export default function HRConsultingPage() {
       <ConsultingAdvisor />
       <ConsultingNextStep />
       <ConsultingAbout />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

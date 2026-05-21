@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="min-h-screen bg-cream">
-      <Navbar />
+      {/* <Navbar /> */}
       <HomeHero />
       <HomeStakes />
       <HomeFounder />
@@ -25,7 +25,7 @@ export default function Home() {
       <HomePlan />
       <HomeExplanation />
       <HomeContact />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

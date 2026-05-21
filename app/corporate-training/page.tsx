@@ -20,7 +20,7 @@ export const metadata = {
 export default function CorporateTrainingPage() {
   return (
     <main>
-      <Navbar />
+      {/* <Navbar /> */}
       <TrainingHero />
       <TrainingChallenge />
       <TrainingWhoWeAre />
@@ -31,7 +31,7 @@ export default function CorporateTrainingPage() {
       <TrainingSignature />
       <TrainingMethodology />
       <TrainingCTA />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

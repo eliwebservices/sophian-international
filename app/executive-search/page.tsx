@@ -24,7 +24,7 @@ export const metadata = {
 export default function ExecutiveSearchPage() {
   return (
     <main>
-      <Navbar />
+      {/* <Navbar /> */}
       <SearchHero />
       <SearchClientGains />
       <SearchChallenge />
@@ -39,7 +39,7 @@ export default function ExecutiveSearchPage() {
       <SearchWhySophian />
       <SearchGlobalReach />
       <SearchContact />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

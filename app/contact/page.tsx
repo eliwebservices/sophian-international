@@ -19,7 +19,7 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <main>
-      <Navbar />
+      {/* <Navbar /> */}
       <ContactHero />
       <ContactPathways />
       <ContactPosition />
@@ -29,7 +29,7 @@ export default function ContactPage() {
       <ContactDiscovery />
       <ContactCredibility />
       <ContactFAQ />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

@@ -100,10 +100,10 @@ export default function Navbar() {
       {/* ── BOTTOM BAR — becomes sticky once top bar scrolls out of view ── */}
       <div
         className={[
-          "px-6 md:px-8 py-3 flex items-center justify-between transition-all duration-300",
+          "px-6 md:px-8 py-3 flex items-center justify-between transition-all duration-300 border-b-3 border-gold/60",
           isStuck
             ? "fixed top-0 left-0 right-0 bg-navy/97 backdrop-blur-md border-b border-gold/15 shadow-lg"
-            : "relative bg-navy/90",
+            : "relative bg-navy/90 border-b-3 border-gold/60",
         ].join(" ")}
       >
         {/* Left — alternate logo */}

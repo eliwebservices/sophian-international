@@ -23,7 +23,7 @@ const brands = [
   { name: "Marriott", src: "/images/company-logos/Marriott-Logo.png" },
   { name: "Rosewood", src: "/images/company-logos/Rosewood-logo.png" },
   { name: "Aman", src: "/images/company-logos/Aman.png" },
-  { name: "Kempinski", src: "/images/company-logos/kempinski-Logo.png" },
+  { name: "Kempinski", src: "/images/company-logos/Kempinski-Logo.png" },
   { name: "Starwood", src: "/images/company-logos/starwood.png" },
   { name: "SH", src: "/images/company-logos/SH.jpeg" },
   { name: "one hotel", src: "/images/company-logos/one-hotel.png" },

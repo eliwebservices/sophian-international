@@ -19,7 +19,7 @@ export const metadata = {
 export default function FreeResourcesPage() {
   return (
     <main>
-      <Navbar />
+      {/* <Navbar /> */}
       <ResourcesHero />
       <ResourcesProblem />
       <ResourcesStakes />
@@ -29,7 +29,7 @@ export default function FreeResourcesPage() {
       <ResourcesGains />
       <ResourcesRequest />
       <ResourcesBoundaries />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

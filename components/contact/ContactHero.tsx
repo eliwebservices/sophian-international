@@ -6,7 +6,7 @@ export default function ContactHero() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1468276311594-df7cb65d8df6?w=1800&q=85&fit=crop')",
+              "url('/images/contact-us-hero.jpg')",
             animation: "kenburns 18s ease-out forwards",
           }}
         />
