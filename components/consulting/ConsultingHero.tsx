@@ -3,10 +3,10 @@ export default function ConsultingHero() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden text-white">
         {/* Background */}
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-top"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=85&fit=crop')",
+              "url('/images/consulting-hero-img.jpg')",
             animation: "kenburns 18s ease-out forwards",
           }}
         />

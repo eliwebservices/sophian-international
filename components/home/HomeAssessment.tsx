@@ -12,7 +12,7 @@ export default function HomeAssessment() {
 
           <div className="relative overflow-hidden aspect-[4/5] w-full">
             <img
-              src="/images/assessement-image-side.png"
+              src="/images/assessment-section-side-img.png"
               alt="Professional hospitality consultation"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
             />

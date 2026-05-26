@@ -1,12 +1,14 @@
+import {Globe, Sparkles, Target} from "lucide-react"
+
 const items = [
-    { icon: "🌐", title: "World Class",       desc: "Bringing international standards with lasting impact" },
-    { icon: "🎯", title: "Purpose-Driven",    desc: "Training aligned with your culture and business goals" },
-    { icon: "✨", title: "Transformative",    desc: "Creating lasting personal, cultural, and leadership change" },
+    { icon: <Globe />, title: "World Class",       desc: "Bringing international standards with lasting impact" },
+    { icon: <Target />, title: "Purpose-Driven",    desc: "Training aligned with your culture and business goals" },
+    { icon: <Sparkles />, title: "Transformative",    desc: "Creating lasting personal, cultural, and leadership change" },
   ];
   
   export default function TrainingDifferentiators() {
     return (
-      <section className="bg-navy py-28 px-6">
+      <section className="bg-white py-28 pb-0 px-6">
         <div className="max-w-5xl mx-auto text-center">
   
           <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
@@ -21,10 +23,10 @@ const items = [
                 className="group bg-white/[0.04] p-12 hover:bg-white/[0.08] transition-colors duration-500 relative overflow-hidden"
               >
                 <div className="absolute top-0 left-0 right-0 h-[2px] bg-gold scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
-                <span className="block text-3xl mb-6">{item.icon}</span>
-                <h3 className="font-display text-2xl font-light text-white mb-4">{item.title}</h3>
+                <span className="text-3xl mb-6 flex justify-center text-gold">{item.icon}</span>
+                <h3 className="font-display text-2xl font-light text-navy mb-4">{item.title}</h3>
                 <div className="w-8 h-px bg-gold/40 mx-auto mb-5" />
-                <p className="font-body text-sm text-white/55 leading-relaxed">{item.desc}</p>
+                <p className="font-body text-sm text-muted leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>

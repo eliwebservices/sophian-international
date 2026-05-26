@@ -1,8 +1,8 @@
 const images = [
-  { src: "/images/home-strip-3.jpg", alt: "Infinity pool ocean view" },
-  { src: "/images/home-strip-4.jpg", alt: "Ocean waves aerial" },
-  { src: "/images/home-strip-6.jpg", alt: "Lush green nature" },
-  { src: "/images/home-strip-5.jpg", alt: "Tropical coast" },
+  { src: "/images/home-strip-7.jpg", alt: "Infinity pool ocean view" },
+  { src: "/images/home-strip-8.jpg", alt: "Ocean waves aerial" },
+  { src: "/images/home-strip-3.jpg", alt: "Lush green nature" },
+  { src: "/images/home-strip-9.jpg", alt: "Tropical coast" },
 ];
   
   export default function HomeImageStrip() {

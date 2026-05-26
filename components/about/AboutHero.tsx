@@ -6,7 +6,7 @@ export default function AboutHero() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('/images/about-hero_new.png')",
+              "url('/images/about-hero-new-img.jpg')",
             animation: "kenburns 18s ease-out forwards",
           }}
         />

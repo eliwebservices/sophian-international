@@ -3,16 +3,16 @@ export default function TrainingWhoWeAre() {
       <section className="bg-cream py-28 px-6">
         <div className="max-w-5xl mx-auto">
   
-          <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
+          <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5 text-center">
             Who We Are
           </p>
-          <div className="w-12 h-px bg-gold mb-12" />
+          <div className="w-12 h-px bg-gold mb-12 mx-auto" />
   
-          <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-10">
+          <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-10 text-center">
             Empowering Service &<br />Leadership Excellence
           </h2>
   
-          <div className="max-w-3xl space-y-5 mb-16">
+          <div className="max-w-3xl space-y-5 mb-16 mx-auto">
             <p className="font-body text-sm text-muted leading-relaxed">
               Sophian International is a specialist hospitality learning and culture solutions
               provider. We partner with hotels and hospitality organizations to design and embed
