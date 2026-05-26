@@ -18,7 +18,7 @@ const steps = [
         <div className="max-w-5xl mx-auto">
   
           <div className="text-center mb-16">
-            <p className="font-body text-[9px] tracking-[0.4em] uppercase text-gold mb-5">
+            <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.4em] uppercase text-gold mb-5">
               How We Work
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-5">
@@ -54,7 +54,7 @@ const steps = [
   
           {/* Track record */}
           <div className="border-t border-gold/25 pt-16">
-            <p className="font-body text-[9px] tracking-[0.3em] uppercase text-gold text-center mb-12">
+            <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.3em] uppercase text-gold text-center mb-12">
               Our Track Record
             </p>
             <div className="grid grid-cols-2 md:grid-cols-5 divide-x divide-gold/25 border border-gold/25 mb-12">

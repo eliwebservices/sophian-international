@@ -82,7 +82,7 @@ export default function TrainingCTA() {
 
         {/* Contact details */}
         <div className="border-t border-gold/25 pt-16">
-          <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-10 text-center">
+          <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-10 text-center">
             Get in Touch
           </p>
 

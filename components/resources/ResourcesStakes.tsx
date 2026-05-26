@@ -9,7 +9,7 @@ const stakes = [
       <section className="bg-warm py-28 px-6">
         <div className="max-w-6xl mx-auto text-center">
   
-          <p className="font-body text-[9px] tracking-[0.4em] uppercase text-gold mb-6">
+          <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.4em] uppercase text-gold mb-6">
             The Stakes
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">

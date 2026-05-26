@@ -19,7 +19,7 @@ const clientPoints = [
   
           {/* Header */}
           <div className="text-center mb-16">
-            <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-5">
+            <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
               Our Unique Approach
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">
@@ -39,7 +39,7 @@ const clientPoints = [
   
             {/* Clients */}
             <div className="bg-white p-12 flex flex-col">
-              <p className="font-body text-[9px] tracking-[0.3em] uppercase text-gold mb-4">Clients</p>
+              <p className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.3em] uppercase text-gold mb-4">Clients</p>
               <h3 className="font-display text-2xl font-light text-navy mb-6">We Are Your Ambassador</h3>
               <div className="w-8 h-px bg-gold mb-6" />
               <p className="font-body text-sm text-muted leading-relaxed mb-4">
@@ -61,15 +61,15 @@ const clientPoints = [
               </ul>
               <a
                 href="#contact"
-                className="mt-auto font-body text-[9px] tracking-[0.28em] uppercase border border-navy text-navy px-8 py-4 hover:bg-navy hover:text-white transition-all duration-300 no-underline inline-flex items-center gap-3 self-start"
+                className="mt-auto font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase border border-navy text-navy px-8 py-4 hover:bg-navy hover:text-white transition-all duration-300 no-underline inline-flex items-center gap-3 self-start"
               >
-                Request a Confidential Consultation →
+                Request a Confidential Consultation
               </a>
             </div>
   
             {/* Candidates */}
             <div className="bg-navy p-12 flex flex-col">
-              <p className="font-body text-[9px] tracking-[0.3em] uppercase text-gold mb-4">Candidates</p>
+              <p className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.3em] uppercase text-gold mb-4">Candidates</p>
               <h3 className="font-display text-2xl font-light text-white mb-6">We Are Your Career Agent</h3>
               <div className="w-8 h-px bg-gold mb-6" />
               <p className="font-body text-sm text-white/60 leading-relaxed mb-4">
@@ -90,9 +90,9 @@ const clientPoints = [
               </ul>
               <a
                 href="#contact"
-                className="mt-auto font-body text-[9px] tracking-[0.28em] uppercase border border-gold text-gold px-8 py-4 hover:bg-gold hover:text-navy transition-all duration-300 no-underline inline-flex items-center gap-3 self-start"
+                className="mt-auto font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase border border-white text-white px-8 py-4 hover:bg-gold hover:text-navy transition-all duration-300 no-underline inline-flex items-center gap-3 self-start"
               >
-                Explore Our Job Opportunities →
+                Explore Our Job Opportunities
               </a>
             </div>
           </div>

@@ -9,7 +9,7 @@ const callSteps = [
       <section id="contact" className="bg-navy py-28 px-6">
         <div className="max-w-3xl mx-auto text-center">
   
-          <p className="font-body text-[9px] tracking-[0.4em] uppercase text-gold mb-5">
+          <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.4em] uppercase text-gold mb-5">
             Next Step
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-white leading-[1.12] mb-6">
@@ -17,7 +17,7 @@ const callSteps = [
           </h2>
           <div className="w-12 h-px bg-gold mx-auto mb-10" />
   
-          <p className="font-body text-[9px] tracking-[0.3em] uppercase text-white/40 mb-12">
+          <p className="font-body text-[9px] md:text-[14px] tracking-[0.3em] uppercase text-white/40 mb-12">
             What Happens on the Call:
           </p>
   

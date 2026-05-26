@@ -13,12 +13,12 @@ const sectors = [
   
   export default function SearchWhoWeAre() {
     return (
-      <section className="bg-warm py-28 px-6">
+      <section className="bg-white py-28 px-6">
         <div className="max-w-5xl mx-auto">
   
           {/* Header */}
           <div className="text-center mb-16">
-            <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-5">
+            <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
               Who We Are
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">
@@ -46,13 +46,13 @@ const sectors = [
           </div>
   
           {/* Sectors */}
-          <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold text-center mb-10">
+          <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold text-center mb-10">
             Our Niche Sectors
           </p>
   
           <div className="grid md:grid-cols-2 gap-px bg-gold/15">
             {sectors.map((s) => (
-              <div key={s.number} className="bg-white p-12">
+              <div key={s.number} className="bg-cream p-12">
                 <p className="font-display text-[56px] font-light text-navy/10 leading-none mb-2">
                   {s.number}
                 </p>

@@ -11,7 +11,7 @@ const pillars = [
         <div className="max-w-5xl mx-auto">
   
           <div className="text-center mb-16">
-            <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-5">
+            <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
               Our Strategic Focus
             </p>
             <div className="w-12 h-px bg-gold mx-auto mb-6" />

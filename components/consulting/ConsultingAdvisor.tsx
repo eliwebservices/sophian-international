@@ -142,7 +142,7 @@ const advisoryReceives = [
         <div className="bg-warm py-28 px-6">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
-              <p className="font-body text-[9px] tracking-[0.4em] uppercase text-gold mb-5">
+              <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.4em] uppercase text-gold mb-5">
                 Which Engagement Is Right for You?
               </p>
               <div className="w-12 h-px bg-gold mx-auto" />

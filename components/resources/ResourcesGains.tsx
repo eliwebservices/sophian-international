@@ -19,7 +19,7 @@ const gains = [
   
             {/* Success picture */}
             <div className="bg-white/[0.04] p-14">
-              <p className="font-body text-[9px] tracking-[0.4em] uppercase text-gold mb-6">
+              <p className="font-body text-[9px] md:text-[12px] font-semibold tracking-[0.4em] uppercase text-gold mb-6">
                 Success Picture
               </p>
               <h2 className="font-display text-3xl font-light text-white leading-[1.12] mb-6">
@@ -42,7 +42,7 @@ const gains = [
   
             {/* Benefits */}
             <div className="bg-white/[0.04] p-14">
-              <p className="font-body text-[9px] tracking-[0.4em] uppercase text-gold mb-6">
+              <p className="font-body text-[9px] md:text-[12px] font-semibold tracking-[0.4em] uppercase text-gold mb-6">
                 Benefits
               </p>
               <h2 className="font-display text-3xl font-light text-white leading-[1.12] mb-6">

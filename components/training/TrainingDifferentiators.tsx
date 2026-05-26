@@ -9,7 +9,7 @@ const items = [
       <section className="bg-navy py-28 px-6">
         <div className="max-w-5xl mx-auto text-center">
   
-          <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-5">
+          <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
             What Sets Us Apart
           </p>
           <div className="w-12 h-px bg-gold mx-auto mb-16" />

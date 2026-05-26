@@ -5,7 +5,7 @@ export default function SearchContact() {
   
           {/* Header */}
           <div className="text-center mb-20">
-            <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-5">
+            <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
               Get in Touch
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-white leading-[1.12] mb-6">
@@ -59,9 +59,9 @@ export default function SearchContact() {
           <div className="text-center">
             <a
               href="mailto:yourguide@sophianinternational.com"
-              className="font-body text-[9px] tracking-[0.28em] uppercase bg-gold text-navy px-10 py-4 hover:bg-gold2 transition-colors duration-300 no-underline inline-flex items-center gap-3"
+              className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase bg-gold text-navy px-10 py-4 hover:bg-gold2 transition-colors duration-300 no-underline inline-flex items-center gap-3"
             >
-              Request a Confidential Consultation →
+              Request a Confidential Consultation
             </a>
           </div>
         </div>

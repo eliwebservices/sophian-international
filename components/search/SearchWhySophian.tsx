@@ -8,19 +8,19 @@ const reasons = [
   
   export default function SearchWhySophian() {
     return (
-      <section className="bg-navy py-28 px-6">
+      <section className="bg-cream py-28 px-6">
         <div className="max-w-6xl mx-auto">
   
           {/* Header */}
           <div className="text-center mb-20">
-            <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-5">
+            <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
               Why Sophian
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-light text-white leading-[1.12] mb-6">
+            <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">
               The Sophian Difference
             </h2>
             <div className="w-12 h-px bg-gold mx-auto mb-8" />
-            <p className="font-body text-sm text-white/60 leading-relaxed max-w-3xl mx-auto">
+            <p className="font-body text-sm text-muted leading-relaxed max-w-3xl mx-auto">
               Sophian International was founded in Beijing with a singular focus: precision executive
               search for the hospitality properties that hold the highest standards in the world.
               Two decades on, that focus has never changed.
@@ -38,8 +38,8 @@ const reasons = [
                 ].join(" ")}
               >
                 <div className="w-6 h-px bg-gold mb-5" />
-                <h3 className="font-display text-xl font-light text-white mb-4">{r.title}</h3>
-                <p className="font-body text-sm text-white/55 leading-relaxed">{r.desc}</p>
+                <h3 className="font-display text-xl font-light text-navy mb-4">{r.title}</h3>
+                <p className="font-body text-sm text-muted leading-relaxed">{r.desc}</p>
               </div>
             ))}
           </div>
@@ -47,7 +47,7 @@ const reasons = [
           {/* Quote */}
           <div className="relative border border-gold/20 p-12 md:p-16 max-w-3xl mx-auto text-center">
             <span className="block font-display text-[72px] leading-[0.75] text-gold/25 mb-4">"</span>
-            <p className="font-display italic text-xl md:text-2xl font-light text-white/90 leading-relaxed mb-6">
+            <p className="font-display italic text-xl md:text-2xl font-light text-muted leading-relaxed mb-6">
               Modernisation of recruitment processes is no longer optional — it's essential for
               attracting and retaining the leaders who will define the future of luxury hospitality.
             </p>

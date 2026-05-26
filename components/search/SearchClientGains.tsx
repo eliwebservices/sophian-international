@@ -14,12 +14,12 @@ const gains = [
   
   export default function SearchClientGains() {
     return (
-      <section className="bg-cream py-28 px-6">
+      <section className="bg-white py-28 px-6">
         <div className="max-w-6xl mx-auto">
   
           {/* Header */}
           <div className="text-center mb-16">
-            <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-5">
+            <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
               The Sophian Advantage
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">

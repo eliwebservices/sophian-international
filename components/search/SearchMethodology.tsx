@@ -7,12 +7,12 @@ const phases = [
   
   export default function SearchMethodology() {
     return (
-      <section className="bg-warm py-28 px-6">
+      <section className="bg-white py-28 px-6">
         <div className="max-w-5xl mx-auto">
   
           {/* Header */}
           <div className="text-center mb-20">
-            <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-5">
+            <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
               Methodology
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">
@@ -27,20 +27,33 @@ const phases = [
           </div>
   
           {/* Phases */}
-          <div className="grid md:grid-cols-2 gap-px bg-gold/15 mb-16">
+          <div className="grid md:grid-cols-2 gap-px bg-white/15 mb-16">
             {phases.map((p) => (
+              // <div
+              //   key={p.number}
+              //   className="group bg-cream p-12 hover:bg-navy transition-colors duration-500"
+              // >
               <div
                 key={p.number}
-                className="group bg-white p-12 hover:bg-navy transition-colors duration-500"
+                className="group bg-cream p-12"
               >
-                <p className="font-display text-[56px] font-light text-navy/10 group-hover:text-white/10 leading-none mb-3 transition-colors duration-500">
+                {/* <p className="font-display text-[56px] font-light text-navy/10 group-hover:text-white/10 leading-none mb-3 transition-colors duration-500">
+                  {p.number}
+                </p> */}
+                <p className="font-display text-[56px] font-light text-navy/10 leading-none mb-3">
                   {p.number}
                 </p>
-                <h3 className="font-display text-2xl font-light text-navy group-hover:text-white mb-4 transition-colors duration-500">
+                {/* <h3 className="font-display text-2xl font-light text-navy group-hover:text-white mb-4 transition-colors duration-500">
+                  {p.title}
+                </h3> */}
+                <h3 className="font-display text-2xl font-light text-navy mb-4">
                   {p.title}
                 </h3>
                 <div className="w-8 h-px bg-gold mb-5 group-hover:w-14 transition-all duration-500" />
-                <p className="font-body text-sm text-muted group-hover:text-white/60 leading-relaxed transition-colors duration-500">
+                {/* <p className="font-body text-sm text-muted group-hover:text-white/60 leading-relaxed transition-colors duration-500">
+                  {p.desc}
+                </p> */}
+                <p className="font-body text-sm text-muted leading-relaxed">
                   {p.desc}
                 </p>
               </div>
@@ -50,9 +63,9 @@ const phases = [
           <div className="text-center">
             <a
               href="#contact"
-              className="font-body text-[9px] tracking-[0.28em] uppercase bg-navy text-white px-10 py-4 hover:bg-navy2 transition-colors duration-300 no-underline inline-flex items-center gap-3"
+              className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase bg-navy text-white px-10 py-4 hover:bg-navy2 transition-colors duration-300 no-underline inline-flex items-center gap-3"
             >
-              Request a Confidential Consultation →
+              Request a Confidential Consultation
             </a>
           </div>
         </div>

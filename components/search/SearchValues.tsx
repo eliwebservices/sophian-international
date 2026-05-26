@@ -15,11 +15,11 @@ const values = [
   
   export default function SearchValues() {
     return (
-      <section className="bg-cream py-28 px-6">
+      <section className="bg-cream py-28 pt-0 px-6">
         <div className="max-w-5xl mx-auto">
   
           <div className="text-center mb-16">
-            <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-6">
+            <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
               Our Values
             </p>
             <div className="w-12 h-px bg-gold mx-auto" />
