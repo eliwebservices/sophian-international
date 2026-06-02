@@ -1,3 +1,5 @@
+import ScheduleCallButton from "../ScheduleCallButton";
+
 const steps = [
   { n: "01", title: "Schedule a Call",  body: "In a thirty-minute intake call, we'll discuss what's holding you back and where you want your people and culture to grow. We can also meet in person." },
   { n: "02", title: "Get a Plan",       body: "Together we craft a proven strategy and plan for how we'll grow your business. Transformation is much easier with a plan — and we'll show you yours." },
@@ -50,12 +52,13 @@ export default function HomePlan() {
         </div>
 
         <div className="text-center">
-          <a
+          {/* <a
             href="#contact"
             className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase bg-navy hover:bg-navy/90 text-white px-10 py-4 transition-all duration-300 no-underline inline-flex items-center gap-3"
           >
             Book Your Discovery Call Now
-          </a>
+          </a> */}
+          <ScheduleCallButton variant="navy" className="hover:bg-navy/90!" label="Book Your Discovery Call Now"/>
         </div>
       </div>
     </section>

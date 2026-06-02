@@ -1,3 +1,5 @@
+import ScheduleCallButton from "../ScheduleCallButton";
+
 export default function SearchContact() {
     return (
       <section id="contact" className="bg-navy py-28 px-6">
@@ -57,12 +59,13 @@ export default function SearchContact() {
           </div>
   
           <div className="text-center">
-            <a
+            {/* <a
               href="mailto:yourguide@sophianinternational.com"
               className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase bg-gold text-navy px-10 py-4 hover:bg-gold2 transition-colors duration-300 no-underline inline-flex items-center gap-3"
             >
               Request a Confidential Consultation
-            </a>
+            </a> */}
+            <ScheduleCallButton label="Request a Confidential Consultation"/>
           </div>
         </div>
       </section>

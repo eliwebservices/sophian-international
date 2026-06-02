@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScheduleCallButton from "../ScheduleCallButton";
 
 export default function HomeHero() {
     return (
@@ -65,12 +66,13 @@ export default function HomeHero() {
 
   
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
-            <a
+            {/* <a
               href="#contact"
               className="font-display font-semibold text-[9px] tracking-[0.28em] uppercase border border-white/40 text-white px-10 py-4 hover:bg-gold transition-colors duration-300 no-underline inline-flex items-center justify-center gap-3"
             >
               Schedule a Discovery Call
-            </a>
+            </a> */}
+            <ScheduleCallButton variant="outline-white" className="text-[9px]!"/>
             <a
               href="#services"
               className="font-display font-semibold text-[9px] tracking-[0.28em] uppercase border border-white/40 text-white px-10 py-4 hover:border-gold hover:text-gold transition-all duration-300 no-underline inline-flex items-center justify-center gap-3"

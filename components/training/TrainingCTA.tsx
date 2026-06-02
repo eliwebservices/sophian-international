@@ -1,11 +1,13 @@
 "use client";
+import { ChartColumn, Handshake, Mail, Phone, Settings, Users } from "lucide-react";
 import { useState } from "react";
+import ScheduleCallButton from "../ScheduleCallButton";
 
 const features = [
-  { icon: "⚙", title: "Customized Programs",   desc: "Tailored to your specific operational needs" },
-  { icon: "👥", title: "Expert Facilitators",   desc: "Experienced hospitality industry professionals" },
-  { icon: "📊", title: "Measurable ROI",        desc: "Performance tracking and impact reporting" },
-  { icon: "🤝", title: "Ongoing Support",       desc: "Post-training follow-up and continuous coaching" },
+  { icon: <Settings />, title: "Customized Programs",   desc: "Tailored to your specific operational needs" },
+  { icon: <Users />, title: "Expert Facilitators",   desc: "Experienced hospitality industry professionals" },
+  { icon: <ChartColumn />, title: "Measurable ROI",        desc: "Performance tracking and impact reporting" },
+  { icon: <Handshake />, title: "Ongoing Support",       desc: "Post-training follow-up and continuous coaching" },
 ];
 
 export default function TrainingCTA() {
@@ -38,8 +40,8 @@ export default function TrainingCTA() {
         {/* Feature icons */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-gold/15 mb-20">
           {features.map((f, i) => (
-            <div key={i} className="bg-white p-8 text-center">
-              <span className="block text-2xl mb-4">{f.icon}</span>
+            <div key={i} className="bg-white p-8 text-center flex-col items-center justify-center">
+              <span className="inline-block text-2xl mb-4 text-gold">{f.icon}</span>
               <p className="font-body text-[9px] tracking-[0.15em] uppercase text-[#1a1a1a] font-medium mb-2">
                 {f.title}
               </p>
@@ -59,9 +61,9 @@ export default function TrainingCTA() {
             </p>
             <a
               href="mailto:YourGuide@sophianinternational.com"
-              className="font-body text-[9px] tracking-[0.28em] uppercase bg-gold text-navy px-8 py-4 hover:bg-gold2 transition-colors duration-300 no-underline inline-flex items-center gap-3"
+              className="font-display text-[9px] md:text-[10px] tracking-[0.28em] uppercase bg-gold text-navy px-8 py-4 hover:bg-gold2 transition-colors duration-300 no-underline inline-flex items-center gap-3"
             >
-              Get Started →
+              Get Started
             </a>
           </div>
           <div className="bg-white p-12 border border-gold/25">
@@ -71,12 +73,13 @@ export default function TrainingCTA() {
               A complimentary 30-minute consultation to discuss your training priorities and how
               we can best support your team.
             </p>
-            <a
+            {/* <a
               href="mailto:YourGuide@sophianinternational.com"
               className="font-body text-[9px] tracking-[0.28em] uppercase border border-navy text-navy px-8 py-4 hover:bg-navy hover:text-white transition-all duration-300 no-underline inline-flex items-center gap-3"
             >
-              Schedule Now →
-            </a>
+              Schedule Now
+            </a> */}
+            <ScheduleCallButton variant="outline-navy" label="Schedule Now"/>
           </div>
         </div>
 
@@ -88,11 +91,11 @@ export default function TrainingCTA() {
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-12 mb-16">
             {[
-              { icon: "✉", label: "Email", val: "YourGuide@sophianinternational.com", href: "mailto:YourGuide@sophianinternational.com" },
-              { icon: "📞", label: "Phone", val: "+86 183 623 756 90", href: "tel:+8618362375690" },
+              { icon: <Mail />, label: "Email", val: "yourguide@sophianinternational.com", href: "mailto:YourGuide@sophianinternational.com" },
+              { icon: <Phone />, label: "Phone", val: "+86 183 623 756 90", href: "tel:+8618362375690" },
             ].map((d) => (
               <div key={d.label} className="flex items-center gap-4">
-                <div className="w-9 h-9 border border-gold/25 flex items-center justify-center text-gold text-sm flex-shrink-0">
+                <div className="w-9 h-9 flex items-center justify-center text-gold text-sm flex-shrink-0">
                   {d.icon}
                 </div>
                 <div>

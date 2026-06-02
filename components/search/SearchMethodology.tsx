@@ -1,3 +1,5 @@
+import ScheduleCallButton from "../ScheduleCallButton";
+
 const phases = [
     { number: "01", title: "Immersive Brief", desc: "We spend time on property and with ownership to understand culture, ambition, and the invisible qualities that make each mandate unique." },
     { number: "02", title: "Targeted Research", desc: "Proactive mapping of global talent — not posting to job boards. We approach the best people, whether or not they're looking." },
@@ -61,12 +63,13 @@ const phases = [
           </div>
   
           <div className="text-center">
-            <a
+            {/* <a
               href="#contact"
               className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase bg-navy text-white px-10 py-4 hover:bg-navy2 transition-colors duration-300 no-underline inline-flex items-center gap-3"
             >
               Request a Confidential Consultation
-            </a>
+            </a> */}
+            <ScheduleCallButton variant="navy" className="hover:bg-navy/90!" label="Request a Confidential Consultation"/>
           </div>
         </div>
       </section>

@@ -9,7 +9,7 @@ const points = [
 
 export default function ConsultingAbout() {
   return (
-    <section className="bg-warm py-28 px-6">
+    <section className="bg-cream py-28 px-6">
       <div className="max-w-4xl mx-auto">
 
         <div className="text-center mb-16">
@@ -46,9 +46,9 @@ export default function ConsultingAbout() {
             </ul>
             <Link
               href="/about"
-              className="font-body text-[9px] tracking-[0.25em] uppercase text-navy border-b border-navy pb-0.5 hover:text-gold hover:border-gold transition-colors duration-300 no-underline"
+              className="font-display font-semibold md:text-[10px] text-[9px] tracking-[0.25em] uppercase text-navy border-b border-navy pb-0.5 hover:text-gold hover:border-gold transition-colors duration-300 no-underline"
             >
-              Learn More About Us →
+              Learn More About Us
             </Link>
           </div>
 

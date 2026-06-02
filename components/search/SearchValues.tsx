@@ -27,12 +27,19 @@ const values = [
   
           <div className="grid md:grid-cols-3 divide-x divide-gold/25 border border-gold/25">
             {values.map((v) => (
-              <div key={v.title} className="bg-white p-12 text-center group hover:bg-navy transition-colors duration-500">
-                <h3 className="font-display text-2xl font-light text-navy group-hover:text-white mb-5 transition-colors duration-500">
+              // <div key={v.title} className="bg-white p-12 text-center group hover:bg-navy transition-colors duration-500">
+              <div key={v.title} className="bg-white p-12 text-center group">
+                {/* <h3 className="font-display text-2xl font-light text-navy group-hover:text-white mb-5 transition-colors duration-500">
+                  {v.title}
+                </h3> */}
+                <h3 className="font-display text-2xl font-light text-navy  mb-5">
                   {v.title}
                 </h3>
-                <div className="w-8 h-px bg-gold mx-auto mb-5" />
-                <p className="font-body text-sm text-muted group-hover:text-white/60 leading-relaxed transition-colors duration-500">
+                <div className="w-8 h-px bg-gold mx-auto mb-5 group-hover:w-14 transition-all duration-500" />
+                {/* <p className="font-body text-sm text-muted group-hover:text-white/60 leading-relaxed transition-colors duration-500">
+                  {v.desc}
+                </p> */}
+                <p className="font-body text-sm text-muted leading-relaxed">
                   {v.desc}
                 </p>
               </div>

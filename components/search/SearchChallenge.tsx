@@ -1,3 +1,5 @@
+import ScheduleCallButton from "../ScheduleCallButton";
+
 const challenges = [
     { title: "Scarcity at the top.", desc: "The talent pool at genuine luxury calibre is small and rarely visible." },
     { title: "The global-local gap.", desc: "Candidates with international pedigree often lack China or APAC market fluency — or vice versa." },
@@ -51,12 +53,13 @@ const challenges = [
           </div>
   
           <div className="text-center">
-            <a
+            {/* <a
               href="#contact"
               className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase bg-navy text-white px-10 py-4 hover:bg-gold2 transition-colors duration-300 no-underline inline-flex items-center gap-3"
             >
               Request a Confidential Consultation
-            </a>
+            </a> */}
+            <ScheduleCallButton variant="navy" className="hover:bg-navy/90!" label="Request a Confidential Consultation"/>
           </div>
         </div>
       </section>

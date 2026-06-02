@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CalModal from "@/components/CalModal";
+import { CalModalProvider } from "@/context/CalModalContext";
 
 export const metadata: Metadata = {
   title:
@@ -18,9 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        <CalModalProvider>
+          <Navbar />
+          {children}
+          <Footer />
+          <CalModal />
+        </CalModalProvider>
       </body>
     </html>
   );

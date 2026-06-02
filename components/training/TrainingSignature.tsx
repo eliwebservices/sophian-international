@@ -1,3 +1,5 @@
+import ScheduleCallButton from "../ScheduleCallButton";
+
 const steps = [
     {
       number: "1",
@@ -44,7 +46,7 @@ const steps = [
   
   export default function TrainingSignature() {
     return (
-      <section className="bg-navy py-28 px-6">
+      <section className="bg-white py-28 px-6">
         <div className="max-w-5xl mx-auto">
   
           <div className="text-center mb-16">
@@ -52,14 +54,14 @@ const steps = [
               Signature Solution
             </p>
             <div className="w-12 h-px bg-gold mx-auto mb-6" />
-            <h2 className="font-display text-4xl md:text-5xl font-light text-white leading-[1.12] mb-8">
+            <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-8">
               Build a Complete Hotel Training System in 5 Days
             </h2>
             <div className="max-w-3xl mx-auto space-y-5">
-              <p className="font-body text-sm text-white/60 leading-relaxed">
+              <p className="font-body text-sm text-muted leading-relaxed">
                 Individual programs deliver value. An integrated Training System delivers transformation.
               </p>
-              <p className="font-body text-sm text-white/60 leading-relaxed">
+              <p className="font-body text-sm text-muted leading-relaxed">
                 The Sophian 5-Day System is our flagship engagement: a complete diagnostic, design,
                 and deployment process that installs a fully operational learning infrastructure
                 within your hotel. The result is not a workshop — it is a self-sustaining capability
@@ -68,7 +70,7 @@ const steps = [
             </div>
           </div>
   
-          <h3 className="font-display text-2xl font-light text-white text-center mb-12">
+          <h3 className="font-display text-2xl font-light text-navy text-center mb-12">
             The 4-Step Framework
           </h3>
   
@@ -81,7 +83,7 @@ const steps = [
               >
                 <div className="flex items-start gap-8">
                   <div className="flex-shrink-0 text-center min-w-[60px]">
-                    <span className="font-body text-[9px] tracking-[0.2em] uppercase text-white/35 block mb-1">
+                    <span className="font-body text-[9px] tracking-[0.2em] uppercase text-navy block mb-1">
                       Step
                     </span>
                     <span className="font-display text-[56px] font-light text-gold/40 leading-none">
@@ -89,11 +91,11 @@ const steps = [
                     </span>
                   </div>
                   <div className="flex-1 pt-2">
-                    <h4 className="font-display text-2xl font-light text-white mb-2">{step.title}</h4>
-                    <p className="font-body text-sm text-gold/70 italic mb-5">{step.subtitle}</p>
+                    <h4 className="font-display text-2xl font-light text-navy mb-2">{step.title}</h4>
+                    <p className="font-body text-sm text-gold/70 mb-5">{step.subtitle}</p>
                     <ul className="flex flex-col gap-2.5 list-none p-0 m-0">
                       {step.bullets.map((b, i) => (
-                        <li key={i} className="flex gap-3 font-body text-sm text-white/55 leading-relaxed">
+                        <li key={i} className="flex gap-3 font-body text-sm text-muted leading-relaxed">
                           <span className="text-gold flex-shrink-0 mt-0.5">·</span>
                           <span>{b}</span>
                         </li>
@@ -107,17 +109,18 @@ const steps = [
   
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="#contact"
-              className="font-body text-[9px] tracking-[0.28em] uppercase bg-gold text-navy px-10 py-4 hover:bg-gold2 transition-colors duration-300 no-underline inline-flex items-center gap-3"
+              href="contact"
+              className="font-display md:text-[10px] text-[9px] tracking-[0.28em] uppercase bg-navy text-white px-10 py-4 hover:bg-navy/90 transition-colors duration-300 no-underline inline-flex items-center gap-3"
             >
-              Request a Proposal →
+              Request a Proposal
             </a>
-            <a
+            {/* <a
               href="#contact"
               className="font-body text-[9px] tracking-[0.28em] uppercase border border-white/30 text-white px-10 py-4 hover:border-gold hover:text-gold transition-all duration-300 no-underline inline-flex items-center gap-3"
             >
               Book a Discovery Call
-            </a>
+            </a> */}
+            <ScheduleCallButton variant="outline-navy" label="Book a Discovery Call"/>
           </div>
         </div>
       </section>

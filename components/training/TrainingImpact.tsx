@@ -24,7 +24,7 @@ const stats = [
   
   export default function TrainingImpact() {
     return (
-      <section className="bg-warm py-28 px-6">
+      <section className="bg-white py-28 px-6">
         <div className="max-w-5xl mx-auto">
   
           <div className="text-center mb-16">

@@ -14,7 +14,7 @@ const steps = [
   
   export default function ConsultingMethodology() {
     return (
-      <section className="bg-warm py-28 px-6">
+      <section className="bg-cream py-28 px-6">
         <div className="max-w-5xl mx-auto">
   
           <div className="text-center mb-16">

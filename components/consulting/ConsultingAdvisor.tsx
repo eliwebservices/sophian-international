@@ -51,7 +51,7 @@ const advisoryReceives = [
     return (
       <section>
         {/* Advisor retainer */}
-        <div className="bg-cream py-28 px-6">
+        <div className="bg-white py-28 px-6">
           <div className="max-w-4xl mx-auto">
   
             <div className="text-center mb-16">
@@ -69,7 +69,7 @@ const advisoryReceives = [
   
             <div className="grid md:grid-cols-2 gap-px bg-gold/15">
               {/* Left — what it is */}
-              <div className="bg-white p-12">
+              <div className="bg-cream p-12">
                 <p className="font-display text-[9px] md:text-[14px] tracking-[0.3em] font-semibold uppercase text-gold mb-5">
                   The Advisory
                 </p>
@@ -139,7 +139,7 @@ const advisoryReceives = [
         </div>
   
         {/* Which engagement guide */}
-        <div className="bg-warm py-28 px-6">
+        <div className="bg-cream py-28 px-6">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
               <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.4em] uppercase text-gold mb-5">
@@ -150,17 +150,17 @@ const advisoryReceives = [
   
             <div className="grid md:grid-cols-2 gap-px bg-gold/15">
               {engagementGuide.map((block) => (
-                <div key={block.title} className="bg-white p-12 hover:bg-navy group transition-colors duration-500">
-                  <h3 className="font-display text-2xl font-light text-navy group-hover:text-white mb-2 transition-colors duration-500">
+                <div key={block.title} className="bg-white p-12 group">
+                  <h3 className="font-display text-2xl font-light text-navy mb-2">
                     {block.title}
                   </h3>
-                  <p className="font-body text-sm text-gold italic mb-6">{block.prefix}</p>
+                  <p className="font-body text-sm text-gold mb-6">{block.prefix}</p>
                   <div className="w-8 h-px bg-gold mb-6 group-hover:w-14 transition-all duration-500" />
                   <ul className="flex flex-col gap-3 list-none p-0 m-0">
                     {block.items.map((item) => (
                       <li key={item} className="flex items-start gap-3">
                         <span className="text-gold flex-shrink-0 mt-0.5">→</span>
-                        <span className="font-body text-sm text-muted group-hover:text-white/60 leading-relaxed transition-colors duration-500">
+                        <span className="font-body text-sm text-muted leading-relaxed">
                           {item}
                         </span>
                       </li>

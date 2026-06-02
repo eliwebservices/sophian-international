@@ -1,3 +1,5 @@
+import ScheduleCallButton from "../ScheduleCallButton";
+
 export default function SearchHero() {
     return (
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden text-white">
@@ -36,12 +38,13 @@ export default function SearchHero() {
   
           <div className="w-12 h-px bg-gold mx-auto mb-10" />
   
-          <a
+          {/* <a
             href="#contact"
             className="font-display font-semibold text-[9px] tracking-[0.28em] uppercase border border-white/40 text-white px-10 py-4 hover:bg-gold transition-colors duration-300 no-underline inline-flex items-center justify-center gap-3"
           >
             Request a Confidential Consultation
-          </a>
+          </a> */}
+          <ScheduleCallButton variant="outline-white" className="text-[9px]!" label="Request a Confidential Consultation"/>
         </div>
   
         {/* Scroll */}

@@ -1,3 +1,5 @@
+import ScheduleCallButton from "../ScheduleCallButton";
+
 const onProperty = [
     ["General Manager / Managing Director", "Strategic visionaries who define brand culture and drive operational excellence across ultra-luxury properties."],
     ["Hotel Manager", "Senior operational leaders ensuring seamless guest experiences and day-to-day property performance."],
@@ -121,12 +123,13 @@ const onProperty = [
           </div>
   
           <div className="text-center">
-            <a
+            {/* <a
               href="#contact"
               className="font-display text-[9px] md:text-[10px] font-semibold tracking-[0.28em] uppercase bg-navy text-white px-10 py-4 hover:bg-navy2 transition-colors duration-300 no-underline inline-flex items-center gap-3"
             >
               Request a Confidential Consultation
-            </a>
+            </a> */}
+            <ScheduleCallButton variant="navy" className="hover:bg-navy/90!" label="Request a Confidential Consultation"/>
           </div>
         </div>
       </section>

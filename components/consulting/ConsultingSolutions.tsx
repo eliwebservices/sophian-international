@@ -8,7 +8,7 @@ const clientEngagements = [
   
   export default function ConsultingSolutions() {
     return (
-      <section className="bg-cream py-28 px-6">
+      <section className="bg-white py-28 px-6">
         <div className="max-w-4xl mx-auto">
   
           <div className="text-center mb-16">
@@ -23,7 +23,7 @@ const clientEngagements = [
   
           <div className="grid md:grid-cols-2 gap-px bg-gold/15">
             {/* Who we are */}
-            <div className="bg-white p-12">
+            <div className="bg-cream p-12">
               <p className="font-body text-[9px] tracking-[0.3em] uppercase text-gold mb-5">
                 Who We Are
               </p>
