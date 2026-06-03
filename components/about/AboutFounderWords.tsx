@@ -28,7 +28,7 @@ const paragraphs = [
             {paragraphs.map((p, i) => (
               <p
                 key={i}
-                className={`font-body text-sm leading-relaxed ${i === 2 ? "font-display italic text-xl text-muted not-font-body" : "text-muted"}`}
+                className={`font-body text-sm leading-relaxed ${i === 2 ? "font-display text-xl text-muted not-font-body" : "text-muted"}`}
               >
                 {p}
               </p>
@@ -36,7 +36,7 @@ const paragraphs = [
           </div>
   
           <div className="border-t border-gold/25 pt-10">
-            <p className="font-display italic text-2xl font-light text-navy">Nick Huang</p>
+            <p className="font-display text-2xl font-light text-navy">Nick Huang</p>
             <p className="font-display text-[9px] tracking-[0.3em] uppercase text-gold mt-2">
               Founder & Managing Director, Sophian International
             </p>

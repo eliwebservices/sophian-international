@@ -6,7 +6,7 @@ const stakes = [
   
   export default function ResourcesStakes() {
     return (
-      <section className="bg-warm py-28 px-6">
+      <section className="bg-cream py-28 px-6">
         <div className="max-w-6xl mx-auto text-center">
   
           <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.4em] uppercase text-gold mb-6">
@@ -21,16 +21,16 @@ const stakes = [
             {stakes.map((s, i) => (
               <div
                 key={i}
-                className="group bg-white p-12 hover:bg-navy transition-colors duration-500"
+                className="group bg-white p-12"
               >
-                <p className="font-display text-[56px] font-light text-navy/10 group-hover:text-white/10 leading-none mb-4 transition-colors duration-500">
+                <p className="font-display text-[56px] font-light text-navy/10 leading-none mb-4">
                   0{i + 1}
                 </p>
-                <h3 className="font-display text-2xl font-light text-navy group-hover:text-white mb-3 transition-colors duration-500">
+                <h3 className="font-display text-2xl font-light text-navy mb-3">
                   {s.title}
                 </h3>
                 <div className="w-6 h-px bg-gold mx-auto my-4 group-hover:w-12 transition-all duration-500" />
-                <p className="font-body text-sm text-muted group-hover:text-white/60 leading-relaxed transition-colors duration-500">
+                <p className="font-body text-sm text-muted leading-relaxed">
                   {s.body}
                 </p>
               </div>
@@ -38,7 +38,7 @@ const stakes = [
           </div>
   
           <div className="border border-gold/25 bg-white max-w-xl mx-auto p-10">
-            <p className="font-display italic text-xl md:text-2xl font-light text-navy leading-relaxed">
+            <p className="font-display text-xl md:text-2xl font-light text-navy leading-relaxed">
               This isn't a capability issue.<br />
               It's a <span className="text-gold">clarity issue</span>.
             </p>

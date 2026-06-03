@@ -19,16 +19,16 @@ const offerings = [
   
   export default function ResourcesPlan() {
     return (
-      <section className="bg-navy py-28 px-6">
+      <section className="bg-cream py-28 px-6">
         <div className="max-w-6xl mx-auto">
   
           <div className="text-center mb-16">
             <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.4em] uppercase text-gold mb-6">
               The Plan
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-light text-white leading-[1.12] mb-6">
+            <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">
               One Free Career<br />
-              <span className="italic">Clarity Support Session</span>
+              Clarity Support Session
             </h2>
             <div className="w-12 h-px bg-gold mx-auto" />
           </div>
@@ -37,21 +37,21 @@ const offerings = [
             {offerings.map((o, i) => (
               <div
                 key={i}
-                className="group bg-white/[0.04] p-12 hover:bg-white/[0.07] transition-colors duration-500 relative overflow-hidden"
+                className="group bg-white p-12 relative overflow-hidden"
               >
-                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gold scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
+                {/* <div className="absolute top-0 left-0 right-0 h-[2px] bg-gold scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" /> */}
                 <p className="font-display text-[48px] font-light text-gold/15 leading-none mb-3">
                   0{i + 1}
                 </p>
-                <h3 className="font-display text-xl font-light text-white mb-4">{o.title}</h3>
-                <div className="w-8 h-px bg-gold/40 mb-5" />
-                <p className="font-body text-sm text-white/55 leading-relaxed">{o.body}</p>
+                <h3 className="font-display text-xl font-light text-navy mb-4">{o.title}</h3>
+                <div className="w-8 h-px bg-gold/40 mb-5 group-hover:w-14 transition-all duration-500" />
+                <p className="font-body text-sm text-muted leading-relaxed">{o.body}</p>
               </div>
             ))}
           </div>
   
           <div className="border border-gold/20 p-10 text-center">
-            <p className="font-display italic text-lg md:text-xl font-light text-white/80 leading-relaxed">
+            <p className="font-display text-lg md:text-xl font-light text-muted leading-relaxed">
               Not everything at once. Only what is{" "}
               <span className="text-gold">most relevant and useful for you</span>.
             </p>

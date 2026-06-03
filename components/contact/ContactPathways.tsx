@@ -14,6 +14,8 @@ const pathways = [
     closing:
       "Sophian begins with a confidential leadership audit — mapping the role against the asset's trajectory, ownership structure, and market position before a single candidate is considered.",
     href: "/executive-search",
+    image: "/images/nick-training-with-mic.jpg",
+    alt: "Senior leadership appointment",
   },
   {
     num: "02",
@@ -28,6 +30,8 @@ const pathways = [
     closing:
       "Sophian conducts a standards gap analysis on-property, then designs role-specific training architectures that integrate into existing operations — not around them.",
     href: "/corporate-training",
+    image: "/images/service-culture.jpg",
+    alt: "Team training and standards",
   },
   {
     num: "03",
@@ -41,12 +45,14 @@ const pathways = [
     closing:
       "Sophian builds people infrastructure — from org design and succession planning to performance frameworks — that ties directly to the asset's commercial strategy and ownership objectives.",
     href: "/hr-consulting",
+    image: "/images/ambassadors.png",
+    alt: "People strategy and systems",
   },
 ];
 
 export default function ContactPathways() {
   return (
-    <section className="bg-warm py-28 px-6">
+    <section className="bg-white py-28 px-6">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
@@ -66,32 +72,62 @@ export default function ContactPathways() {
 
         {/* Pathway cards */}
         <div className="flex flex-col gap-px bg-gold/15">
-          {pathways.map((p) => (
+          {pathways.map((p, index) => (
             <article
               key={p.num}
-              className="bg-white p-10 md:p-14 grid md:grid-cols-12 gap-8 hover:bg-cream transition-colors duration-300"
+              className={[
+                "grid md:grid-cols-2 min-h-[420px]",
+                // Alternate: even index = image left, odd = image right
+                index % 2 !== 0 ? "md:[direction:rtl]" : "",
+              ].join(" ")}
             >
-              {/* Number */}
-              <div className="md:col-span-2">
-                <p className="font-display text-[72px] font-light text-navy/10 leading-none">
-                  {p.num}
-                </p>
+              {/* Image */}
+              <div
+                className="relative overflow-hidden group min-h-[300px] md:min-h-0"
+                style={{ direction: "ltr" }}
+              >
+                <img
+                  src={p.image}
+                  alt={p.alt}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-navy/30" />
+
+                {/* Number badge */}
+                {/* <div className="absolute top-6 left-6 bg-navy/70 backdrop-blur-sm px-4 py-2">
+                  <p className="font-display text-lg font-light text-gold leading-none">
+                    {p.num}
+                  </p>
+                </div> */}
+
+                {/* Title overlay at bottom */}
+                {/* <div className="absolute bottom-6 left-6 right-6">
+                  <h3 className="font-display text-2xl md:text-3xl font-light text-white leading-snug">
+                    {p.title}
+                  </h3>
+                </div> */}
               </div>
 
               {/* Content */}
-              <div className="md:col-span-10 space-y-6">
+              <div
+                className="bg-white p-10 md:p-14 flex flex-col justify-center space-y-6"
+                style={{ direction: "ltr" }}
+              >
                 <h3 className="font-display text-2xl md:text-3xl font-light text-navy">
                   {p.title}
                 </h3>
                 <p className="font-body text-sm text-muted leading-relaxed">{p.body}</p>
 
                 <div>
-                  <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold mb-4">
+                  <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-4">
                     Diagnostic Prompts
                   </p>
                   <ul className="flex flex-col gap-2.5 list-none p-0 m-0">
                     {p.prompts.map((prompt) => (
-                      <li key={prompt} className="flex gap-3 font-body text-sm text-[#1a1a1a] leading-relaxed">
+                      <li
+                        key={prompt}
+                        className="flex gap-3 font-body text-sm text-[#1a1a1a] leading-relaxed"
+                      >
                         <span className="text-gold flex-shrink-0">—</span>
                         <span>{prompt}</span>
                       </li>
@@ -105,9 +141,10 @@ export default function ContactPathways() {
 
                 <Link
                   href={p.href}
-                  className="inline-flex items-center gap-2 font-body text-[9px] tracking-[0.3em] uppercase text-navy hover:text-gold transition-colors duration-300 no-underline"
+                  className="inline-flex items-center gap-2 font-display text-[9px] font-semibold tracking-[0.3em] uppercase text-navy hover:text-gold transition-colors duration-300 no-underline group"
                 >
-                  Learn More →
+                  Learn More
+                  {/* <span className="group-hover:translate-x-1 transition-transform duration-300">→</span> */}
                 </Link>
               </div>
             </article>

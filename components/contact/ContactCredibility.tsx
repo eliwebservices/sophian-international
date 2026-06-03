@@ -14,7 +14,7 @@ const primary = [
   
   export default function ContactCredibility() {
     return (
-      <section className="bg-cream py-28 px-6">
+      <section className="bg-white py-28 px-6">
         <div className="max-w-6xl mx-auto">
   
           {/* Primary stats */}
@@ -55,7 +55,7 @@ const primary = [
           <div className="relative max-w-3xl mx-auto bg-warm/[0.5] border border-gold/20 p-12 md:p-16 text-center text-white">
             <div className="absolute -top-3 -left-3 right-3 bottom-3 border border-gold/10 pointer-events-none" />
             <span className="block font-display text-[80px] leading-[0.75] text-gold/30 mb-5">"</span>
-            <blockquote className="font-display italic text-xl md:text-2xl font-light text-navy leading-relaxed mb-10">
+            <blockquote className="font-display text-xl md:text-2xl font-light text-navy leading-relaxed mb-10">
               They filled our General Manager vacancy in three weeks, revamped our leadership
               training program, and redesigned our HR policies — all running in parallel without a
               single disruption. It felt like having an elite internal team we didn't have to build.

@@ -6,7 +6,7 @@ const notes = [
   
   export default function ResourcesBoundaries() {
     return (
-      <section className="bg-warm py-28 px-6">
+      <section className="bg-cream py-28 px-6">
         <div className="max-w-3xl mx-auto text-center">
   
           <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.4em] uppercase text-gold mb-6">
@@ -34,7 +34,7 @@ const notes = [
           {/* Closing */}
           <div className="border border-gold/25 bg-white p-12">
             <span className="block font-display text-[72px] leading-[0.75] text-gold/25 mb-5">"</span>
-            <p className="font-display italic text-xl md:text-2xl font-light text-navy leading-relaxed">
+            <p className="font-display text-xl md:text-2xl font-light text-navy leading-relaxed">
               It's a moment of clarity before you move forward.<br />
               If you're looking for honest perspective rather than pressure,<br />
               this page is meant for you.

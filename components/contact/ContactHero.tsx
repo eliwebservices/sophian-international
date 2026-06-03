@@ -23,7 +23,7 @@ export default function ContactHero() {
   
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-[1.08] text-white mb-10">
             The right conversation,<br />
-            <span className="italic">at the right moment</span>
+            at the right moment
           </h1>
   
           <div className="w-12 h-px bg-gold mx-auto mb-10" />
@@ -33,7 +33,7 @@ export default function ContactHero() {
             operational — it's structural. A General Manager vacancy that keeps recurring. A team
             that underperforms despite investment. A people strategy that no longer serves the asset.
           </p>
-          <p className="font-display italic text-xl text-white/65 max-w-2xl mx-auto leading-relaxed mb-14">
+          <p className="font-body text-sm md:text-base text-white/80 max-w-2xl mx-auto leading-relaxed mb-14">
             When you reach that point, the next step isn't a proposal. It's a conversation.
           </p>
   

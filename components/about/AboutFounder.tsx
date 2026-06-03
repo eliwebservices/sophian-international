@@ -42,7 +42,7 @@ const stats = [
               </div>
   
               <blockquote className="border-l-2 border-gold pl-6 py-2">
-                <p className="font-display italic text-xl md:text-2xl font-light text-navy leading-relaxed">
+                <p className="font-display text-xl md:text-2xl font-light text-navy leading-relaxed">
                   "When people are developed with clarity, care, and purpose, performance follows
                   naturally."
                 </p>

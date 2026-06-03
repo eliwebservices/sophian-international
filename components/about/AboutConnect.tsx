@@ -1,3 +1,5 @@
+import ScheduleCallButton from "../ScheduleCallButton";
+
 const careerImages = [
     {
       src: "/images/home-strip-1.jpg",
@@ -23,7 +25,7 @@ const careerImages = [
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-10">
             We Look Forward to<br />
-            <span className="italic">Connecting With You</span>
+            Connecting With You
           </h2>
           <div className="w-12 h-px bg-gold mx-auto mb-10" />
   
@@ -35,16 +37,17 @@ const careerImages = [
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-24">
             <a
               href="/#contact"
-              className="font-body text-[9px] tracking-[0.28em] uppercase bg-navy text-white px-10 py-4 hover:bg-navy2 transition-colors duration-300 no-underline inline-flex items-center gap-3"
+              className="font-display md:text-[10px] text-[9px] tracking-[0.28em] uppercase bg-navy text-white px-10 py-4 hover:bg-navy2 transition-colors duration-300 no-underline inline-flex items-center gap-3"
             >
-              Get in Touch →
+              Get in Touch
             </a>
-            <a
+            {/* <a
               href="/#contact"
               className="font-body text-[9px] tracking-[0.28em] uppercase border border-navy text-navy px-10 py-4 hover:bg-navy hover:text-white transition-all duration-300 no-underline inline-flex items-center gap-3"
             >
               Schedule a Call
-            </a>
+            </a> */}
+            <ScheduleCallButton variant="outline-navy" label="Schedule a Call"/>
           </div>
   
           {/* Sophian tagline */}
@@ -52,7 +55,7 @@ const careerImages = [
             <p className="font-display text-[9px] tracking-[0.4em] uppercase text-gold mb-3">
               Sophian International
             </p>
-            <p className="font-display italic text-lg text-muted">
+            <p className="font-display text-lg text-muted">
               People & Culture Partner for Mission-Driven Hospitality
             </p>
           </div>

@@ -18,7 +18,7 @@ const steps = [
   
   export default function ContactNextSteps() {
     return (
-      <section className="bg-cream py-28 px-6">
+      <section className="bg-white py-28 px-6">
         <div className="max-w-6xl mx-auto">
   
           <div className="text-center mb-16">
@@ -35,7 +35,7 @@ const steps = [
             {steps.map((s) => (
               <div
                 key={s.n}
-                className="group bg-white p-14 text-center hover:bg-navy transition-colors duration-500"
+                className="group bg-cream p-14 text-center hover:bg-navy transition-colors duration-500"
               >
                 <p className="font-display text-[80px] font-light text-navy/10 group-hover:text-white/10 leading-none mb-5 transition-colors duration-500">
                   {s.n}

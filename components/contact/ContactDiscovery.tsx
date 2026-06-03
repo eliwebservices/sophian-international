@@ -1,3 +1,5 @@
+import ScheduleCallButton from "../ScheduleCallButton";
+
 const pillars = [
     {
       title: "Confidential",
@@ -15,7 +17,7 @@ const pillars = [
   
   export default function ContactDiscovery() {
     return (
-      <section className="bg-white py-28 px-6">
+      <section className="bg-cream py-28 px-6">
         <div className="max-w-5xl mx-auto text-center">
   
           <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.4em] uppercase text-gold mb-6">
@@ -44,12 +46,13 @@ const pillars = [
             ))}
           </div>
   
-          <a
+          {/* <a
             href="#inquiry"
             className="font-body text-[9px] tracking-[0.28em] uppercase bg-navy text-white px-10 py-4 hover:bg-navy2 transition-colors duration-300 no-underline inline-flex items-center gap-3"
           >
-            Schedule a Private Discussion →
-          </a>
+            Schedule a Private Discussion
+          </a> */}
+          <ScheduleCallButton variant="navy" className="hover:bg-navy/90!" label="Schedule a Private Discussion"/>
         </div>
       </section>
     );
