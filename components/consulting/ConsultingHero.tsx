@@ -1,3 +1,5 @@
+import ScheduleCallButton from "../ScheduleCallButton";
+
 export default function ConsultingHero() {
     return (
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden text-white">
@@ -57,12 +59,13 @@ export default function ConsultingHero() {
             and your leadership team can't fix — we isolate the root cause and engineer the solution.
           </p> */}
   
-          <a
+          {/* <a
             href="#contact"
             className="font-body text-[9px] tracking-[0.28em] uppercase bg-gold text-navy px-10 py-4 hover:bg-gold2 transition-colors duration-300 no-underline inline-flex items-center gap-3 mb-16"
           >
             Schedule Consultation →
-          </a>
+          </a> */}
+          <ScheduleCallButton variant="outline-white" className="text-[9px]! mb-16!" label="Schedule Consultation"/>
   
           {/* 3-Step path */}
           {/* <div className="border border-gold/20 p-8 md:p-10 max-w-3xl mx-auto mb-12">
@@ -96,10 +99,10 @@ export default function ConsultingHero() {
           <div className="flex flex-wrap items-center justify-center gap-8">
             {["Strategic Partnership", "Industry Expertise", "Tailored Solutions"].map((label, i) => (
               <span key={label} className="flex items-center gap-8">
-                <span className="font-body text-[9px] tracking-[0.25em] uppercase text-white/40">
+                <span className="font-display md:text-[11px] text-[9px] tracking-[0.25em] uppercase text-white">
                   {label}
                 </span>
-                {i < 2 && <span className="w-px h-3 bg-gold/25" />}
+                {i < 2 && <span className="w-px h-3 bg-gold" />}
               </span>
             ))}
           </div>

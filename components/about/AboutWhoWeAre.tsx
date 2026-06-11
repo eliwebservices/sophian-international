@@ -35,7 +35,7 @@ export default function AboutWhoWeAre() {
             Your People & Culture Partner
           </h2>
           <div className="w-12 h-px bg-gold mx-auto mb-8" />
-          <p className="font-display text-sm text-muted leading-relaxed max-w-3xl mx-auto">
+          <p className="font-body text-lg text-muted leading-relaxed max-w-3xl mx-auto">
             We lead the way in creating people-first experiences, making a difference in where
             you are going and how you get there.
           </p>

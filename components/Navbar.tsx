@@ -89,7 +89,7 @@ export default function Navbar() {
             Schedule a Call
           </Link>
           <Link
-            href="/free-resources"
+            href="/free-resources/fr-2"
             className="hidden md:inline-flex font-body text-[11px] font-semibold uppercase text-navy px-5 py-2 hover:bg-gold2 transition-colors duration-300 no-underline items-center gap-2"
           >
             Free Workshop
@@ -125,32 +125,85 @@ export default function Navbar() {
         </Link>
 
         {/* Centre — Desktop nav links (hidden on mobile) */}
-        <ul className="hidden md:flex items-center list-none m-0 p-0">
-          {navItems.map((l, index) => (
-            <li key={l.label} className="flex items-center">
-            <div className="px-4">
+        {/* Centre — Desktop nav links (hidden on mobile) */}
+<ul className="hidden md:flex items-center list-none m-0 p-0">
+  {navItems.map((l, index) => (
+    <li key={l.label} className="flex items-center">
+
+      {/* Free Resources gets a dropdown, all others are plain links */}
+      {l.href === "/free-resources" ? (
+        <div className="px-4 relative group/dropdown">
+          <Link
+            href={l.href}
+            className={[
+              "font-display text-[11px] font-medium tracking-[0.18em] uppercase transition-all duration-300 no-underline py-1 relative inline-flex items-center gap-1.5",
+              "after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-px after:bg-gold after:transition-all after:duration-300",
+              isActive(l.href)
+                ? "text-gold after:w-full after:opacity-100"
+                : "text-white/80 hover:text-gold after:w-0 hover:after:w-full after:opacity-100",
+            ].join(" ")}
+          >
+            {l.label}
+            {/* Chevron */}
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 10 10"
+              fill="none"
+              className="transition-transform duration-300 group-hover/dropdown:rotate-180 flex-shrink-0 mt-0.5"
+            >
+              <path d="M2 3.5 L5 6.5 L8 3.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </Link>
+
+          {/* Dropdown panel */}
+          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 bg-navy border border-gold/20 shadow-2xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 z-50">
+            {/* Arrow tip */}
+            <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-navy border-l border-t border-gold/20 rotate-45" />
+
+            <div className="py-2">
               <Link
-                href={l.href}
-                className={[
-                  "font-display text-[11px] font-medium tracking-[0.18em] uppercase transition-all duration-300 no-underline py-1 relative",
-                  "after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-px after:bg-gold after:transition-all after:duration-300",
-                  isActive(l.href)
-                    ? "text-gold after:w-full after:opacity-100"
-                    : "text-white/80 hover:text-gold after:w-0 hover:after:w-full after:opacity-100",
-                ].join(" ")}
+                href="/free-resources"
+                className="flex items-center gap-3 px-5 py-3 font-display text-[10px] font-semibold tracking-[0.18em] uppercase text-white/70 hover:text-gold hover:bg-white/[0.05] transition-all duration-200 no-underline"
               >
-                {l.label}
+                <span className="text-gold/50 text-xs">01</span>
+                Career Clarity
+              </Link>
+              <div className="h-px bg-gold/10 mx-4" />
+              <Link
+                href="/free-resources/fr-2"
+                className="flex items-center gap-3 px-5 py-3 font-display text-[10px] font-semibold tracking-[0.18em] uppercase text-white/70 hover:text-gold hover:bg-white/[0.05] transition-all duration-200 no-underline"
+              >
+                <span className="text-gold/50 text-xs">02</span>
+                Free Workshop
               </Link>
             </div>
-          
-            {/* Gold dot separator */}
-            {index < navItems.length - 1 && (
-              <span className="w-1 h-1 rounded-full bg-gold/60 flex-shrink-0" />
-            )}
-          </li>
-          
-          ))}
-        </ul>
+          </div>
+        </div>
+      ) : (
+        <div className="px-4">
+          <Link
+            href={l.href}
+            className={[
+              "font-display text-[11px] font-medium tracking-[0.18em] uppercase transition-all duration-300 no-underline py-1 relative",
+              "after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-px after:bg-gold after:transition-all after:duration-300",
+              isActive(l.href)
+                ? "text-gold after:w-full after:opacity-100"
+                : "text-white/80 hover:text-gold after:w-0 hover:after:w-full after:opacity-100",
+            ].join(" ")}
+          >
+            {l.label}
+          </Link>
+        </div>
+      )}
+
+      {/* Gold dot separator */}
+      {index < navItems.length - 1 && (
+        <span className="w-1 h-1 rounded-full bg-gold/60 flex-shrink-0" />
+      )}
+    </li>
+  ))}
+</ul>
 
         {/* Right — Desktop contact icons + Mobile hamburger */}
         <div className="flex items-center gap-5">

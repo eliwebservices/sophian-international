@@ -47,7 +47,7 @@ export default function AboutWhatWeDo() {
             Empowering Mission-Driven Hospitality
           </h2>
           <div className="w-12 h-px bg-gold mx-auto mb-8" />
-          <p className="font-body text-sm text-muted leading-relaxed max-w-3xl mx-auto mb-8">
+          <p className="font-body text-lg text-muted leading-relaxed max-w-3xl mx-auto mb-8">
             We exist to empower mission-driven hotels and restaurants to transform their growth
             through People & Culture solutions — creating people-first experiences for employees,
             guests, owners, and the broader community.

@@ -1,3 +1,5 @@
+import ScheduleCallButton from "../ScheduleCallButton";
+
 export default function ContactHero() {
     return (
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden text-white">
@@ -37,12 +39,14 @@ export default function ContactHero() {
             When you reach that point, the next step isn't a proposal. It's a conversation.
           </p>
   
-          <a
+          {/* <a
             href="#inquiry"
             className="font-body text-[9px] tracking-[0.28em] uppercase bg-gold text-navy px-10 py-4 hover:bg-gold2 transition-colors duration-300 no-underline inline-flex items-center gap-3"
           >
             Schedule a Private Discussion →
-          </a>
+          </a> */}
+
+          <ScheduleCallButton variant="outline-white" className="text-[9px]!" label="Schedule a Private Discussion"/>
         </div>
   
         {/* Scroll */}

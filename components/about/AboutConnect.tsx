@@ -29,7 +29,7 @@ const careerImages = [
           </h2>
           <div className="w-12 h-px bg-gold mx-auto mb-10" />
   
-          <p className="font-body text-sm text-muted leading-relaxed max-w-2xl mx-auto mb-14">
+          <p className="font-body text-lg text-muted leading-relaxed max-w-2xl mx-auto mb-14">
             Ready to transform your hospitality organization's people and culture? Let's start a
             conversation about how we can help you achieve lasting success.
           </p>
