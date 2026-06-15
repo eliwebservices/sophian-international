@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import AssessmentModal from "@/components/home/AssessmentModal";
+import { Sparkle, Sparkles } from "lucide-react";
 
 export default function HomeAssessment() {
   const [open, setOpen] = useState(false);
@@ -41,13 +42,13 @@ export default function HomeAssessment() {
               {[
                 { num: "3",  sub: "Minutes"   },
                 { num: "15", sub: "Questions"  },
-                { num: "∞",  sub: "Insight"   },
+                { num: <Sparkles />,  sub: "Insight"   },
               ].map((p, i) => (
                 <div
                   key={i}
-                  className={`flex-1 bg-white text-center py-5 ${i < 2 ? "border-r border-gold/25" : ""}`}
+                  className={`flex-1 justify-center bg-white text-center py-5 ${i < 2 ? "border-r border-gold/25" : ""}`}
                 >
-                  <strong className="block font-display text-3xl font-light text-navy">{p.num}</strong>
+                  <strong className="flex justify-center font-display text-3xl font-light text-navy">{p.num}</strong>
                   <span className="font-display text-[9px] font-semibold tracking-[0.2em] uppercase text-muted">{p.sub}</span>
                 </div>
               ))}
