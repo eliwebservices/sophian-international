@@ -11,7 +11,8 @@ export default function ResourcesHero() {
           animation: "kenburns 18s ease-out forwards",
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-navy/15 via-navy/50 to-navy/92" />
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-navy/15 via-navy/50 to-navy/92" /> */}
+      <div className="absolute inset-0 bg-gradient-to-b bg-navy/10" />
 
       {/* Content */}
       <div
@@ -25,8 +26,11 @@ export default function ResourcesHero() {
                 Free Career Clarity Support
               </p> 
               <p className="font-body text-[9px] tracking-[0.35em] uppercase text-white/50 mb-10">
-                Turn Career Confusion Into a Clear Next Step
-              </p> */}
+              Turn Career Confusion Into a Clear Next Step
+            </p> */}
+            {/* <p className="flex items-center justify-center gap-4 font-body text-[14px] tracking-[0.35em] uppercase text-white font-bold mb-8 before:h-[1px] before:w-12 before:bg-white after:h-[1px] after:w-12 after:bg-white">
+                Free Career Clarity Support
+              </p>  */}
 
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-[1.08] text-white mb-10">
               Feeling Stuck in Your
@@ -36,7 +40,7 @@ export default function ResourcesHero() {
 
             <div className="w-12 h-px bg-gold mb-10 mx-auto" />
 
-            <p className="font-body text-sm md:text-base text-white/75 max-w-xl leading-relaxed mb-12 mx-auto">
+            <p className="font-body text-sm md:text-base text-white max-w-xl leading-relaxed mb-12 mx-auto">
               Share your situation and receive one free clarity check — career
               direction, resume structure, and answers to your most important
               one or two questions.
@@ -61,7 +65,7 @@ export default function ResourcesHero() {
               </a>
             </div>
 
-            <p className="font-display text-base text-white/45">
+            <p className="font-display text-base text-white">
               For hospitality professionals seeking direction, confidence, and
               clarity.
             </p>

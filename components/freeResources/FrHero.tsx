@@ -15,13 +15,14 @@ export default function ResourcesHero() {
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/75 to-navy/40" />
+      {/* <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/75 to-navy/40" /> */}
+      <div className="absolute inset-0 bg-gradient-to-b bg-navy/20" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-28 w-full">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Left — main copy */}
           <div>
-            <p className="font-display text-[9px] font-semibold tracking-[0.4em] uppercase text-gold mb-6 md:text-[11px]">
+            <p className="font-display text-[9px] font-semibold tracking-[0.4em] uppercase text-white mb-6 md:text-[11px]">
               Free tools for hotel owners, GMs & HR professionals
             </p>
 
@@ -97,21 +98,21 @@ export default function ResourcesHero() {
                 className="bg-white/[0.08] backdrop-blur-md border border-white/15 px-7 py-6 flex items-center justify-between group hover:bg-white/[0.14] transition-colors duration-300"
               >
                 <div className="flex items-center gap-5">
-                  <span className="text-gold text-2xl">{pack.icon}</span>
+                  <span className="text-white text-2xl">{pack.icon}</span>
                   <div>
                     <p className="font-display text-base font-light text-white">
                       {pack.title}
                     </p>
-                    <p className="font-display text-[9px] font-semibold tracking-[0.2em] uppercase text-gold/70 mt-0.5">
+                    <p className="font-display text-[9px] font-semibold tracking-[0.2em] uppercase text-white/70 mt-0.5">
                       {pack.sub}
                     </p>
                   </div>
                 </div>
                 <button
                   onClick={() => scrollTo("request")}
-                  className="font-display text-[9px] font-semibold tracking-[0.2em] uppercase text-gold border border-gold/40 px-4 py-2 hover:bg-gold hover:text-navy transition-all duration-300 cursor-pointer bg-transparent flex-shrink-0"
+                  className="font-display text-[9px] font-semibold tracking-[0.2em] uppercase text-white border border-white/40 px-4 py-2 hover:bg-gold hover:text-white transition-all duration-300 cursor-pointer bg-transparent flex-shrink-0"
                 >
-                  Unlock →
+                  Unlock
                 </button>
               </div>
             ))}

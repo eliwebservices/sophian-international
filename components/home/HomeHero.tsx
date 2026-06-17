@@ -15,7 +15,8 @@ export default function HomeHero() {
           }}
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/20 via-navy/50 to-navy/90" />
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-navy/20 via-navy/50 to-navy/90" /> */}
+        <div className="absolute inset-0 bg-gradient-to-b bg-navy/10" />
   
         {/* Content */}
         <div

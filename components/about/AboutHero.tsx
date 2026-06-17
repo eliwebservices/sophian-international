@@ -10,7 +10,8 @@ export default function AboutHero() {
             animation: "kenburns 18s ease-out forwards",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/20 via-navy/55 to-navy/92" />
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-navy/20 via-navy/55 to-navy/92" /> */}
+        <div className="absolute inset-0 bg-gradient-to-b bg-navy/10" />
   
         {/* Content */}
         <div
@@ -24,15 +25,15 @@ export default function AboutHero() {
             People & Culture Partner
           </p> */}
   
-          <p className="font-body text-[9px] md:text-[14px] tracking-[0.35em] uppercase text-gold mb-8">
+          {/* <p className="flex items-center justify-center gap-4 font-body text-[14px] tracking-[0.35em] uppercase text-white font-bold mb-8 before:h-[1px] before:w-12 before:bg-white after:h-[1px] after:w-12 after:bg-white">
             Our Culture
-          </p>
+          </p> */}
   
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-[1.08] text-white mb-10">
+          <h1 className="font-display text-5xl md:text-6xl font-light lg:text-7xl leading-[1.08] text-white mb-10">
             We Help You<br />
-            <span className="italic text-[45px]">Discover</span> <br/>
+            <span className="text-[45px]">Discover</span> <br/>
             Your True Hospitality<br />
-            <span className="italic text-[45px]">Through</span> <br/> 
+            <span className="text-[45px]">Through</span> <br/> 
             The Power of People & Culture
           </h1>
   

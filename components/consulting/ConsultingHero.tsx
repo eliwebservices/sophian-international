@@ -12,7 +12,8 @@ export default function ConsultingHero() {
             animation: "kenburns 18s ease-out forwards",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/25 via-navy/60 to-navy/95" />
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-navy/25 via-navy/60 to-navy/95" /> */}
+        <div className="absolute inset-0 bg-gradient-to-b bg-navy/10" />
   
         {/* Content */}
         <div

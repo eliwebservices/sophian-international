@@ -11,7 +11,8 @@ export default function TrainingHero() {
           }}
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/20 via-navy/55 to-navy/92" />
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-navy/20 via-navy/55 to-navy/92" /> */}
+        <div className="absolute inset-0 bg-gradient-to-b bg-navy/10" />
   
         {/* Content */}
         <div
@@ -21,9 +22,9 @@ export default function TrainingHero() {
           {/* <p className="font-body text-[9px] tracking-[0.35em] uppercase text-gold2 mb-4">
             Sophian International
           </p> */}
-          <p className="font-body text-[14px] tracking-[0.35em] uppercase text-gold mb-8">
+          {/* <p className="flex items-center justify-center gap-4 font-body text-[14px] tracking-[0.35em] uppercase text-white font-bold mb-8 before:h-[1px] before:w-12 before:bg-white after:h-[1px] after:w-12 after:bg-white">
           Corporate Training
-          </p>
+          </p> */}
   
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-[1.08] text-white mb-8">
           Learning & Culture Solutions for Hospitality

@@ -12,16 +12,17 @@ export default function ContactHero() {
             animation: "kenburns 18s ease-out forwards",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/20 via-navy/55 to-navy/92" />
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-navy/20 via-navy/55 to-navy/92" /> */}
+        <div className="absolute inset-0 bg-gradient-to-b bg-navy/10" />
   
         {/* Content */}
         <div
           className="relative z-10 w-full max-w-4xl mx-auto px-6 pb-28 text-center"
           style={{ animation: "fadeUp 0.9s 0.2s both" }}
         >
-          <p className="font-body text-[14px] tracking-[0.4em] uppercase text-gold mb-10">
+          {/* <p className="flex items-center justify-center gap-4 font-body text-[14px] tracking-[0.35em] uppercase text-white font-bold mb-8 before:h-[1px] before:w-12 before:bg-white after:h-[1px] after:w-12 after:bg-white">
             Strategic Engagement
-          </p>
+          </p> */}
   
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-[1.08] text-white mb-10">
             The right conversation,<br />
@@ -30,12 +31,12 @@ export default function ContactHero() {
   
           <div className="w-12 h-px bg-gold mx-auto mb-10" />
   
-          <p className="font-body text-sm md:text-base text-white/80 max-w-2xl mx-auto leading-relaxed mb-6">
+          <p className="font-body text-sm md:text-base text-white max-w-2xl mx-auto leading-relaxed mb-6">
             There comes a point in every hospitality organization where the challenge is no longer
             operational — it's structural. A General Manager vacancy that keeps recurring. A team
             that underperforms despite investment. A people strategy that no longer serves the asset.
           </p>
-          <p className="font-body text-sm md:text-base text-white/80 max-w-2xl mx-auto leading-relaxed mb-14">
+          <p className="font-body text-sm md:text-base text-white max-w-2xl mx-auto leading-relaxed mb-14">
             When you reach that point, the next step isn't a proposal. It's a conversation.
           </p>
   
