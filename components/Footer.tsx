@@ -9,25 +9,25 @@ export default function Footer() {
     <footer className="bg-navy px-6 pt-20 pb-10">
       <div className="max-w-6xl mx-auto">
 
-        <div className="grid md:grid-cols-6 gap-12 lg:gap-16 pb-16 border-b border-gold/15 mb-10">
+        <div className="grid md:grid-cols-7 gap-12 lg:gap-16 pb-16 border-b border-gold/15 mb-10">
 
           <div className="md:col-span-2">
-            <p className="font-display text-3xl font-light tracking-widest text-white mb-1">Sophian</p>
+            <p className="font-body text-3xl font-light text-white mb-1">SOPHIAN</p>
             <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
               International · People & Culture Partner
             </p>
-            <p className="font-display text-sm leading-relaxed text-white/40 max-w-xs mb-8">
+            <p className="font-display text-sm leading-relaxed text-white max-w-xs mb-8">
               Empowering mission-driven hotels and hospitality brands to transform their
               growth through People & Culture solutions — creating people-first experiences
               for employees, guests, owners, and the broader community.
             </p>
-            <p className="font-body text-base italic text-white/25">
-              "When people are developed with clarity, care, and purpose,<br />
-              performance follows naturally." — Nick Huang
+            <p className="font-body text-base italic text-white/50">
+              "When people are developed with clarity, care, and purpose,
+              performance follows naturally." <br /> — Nick Huang
             </p>
           </div>
 
-          <div>
+          <div className="md:col-span-2">
             <p className="font-display text-[9px] font-semibold tracking-[0.28em] uppercase text-gold mb-6">Services</p>
             <ul className="flex flex-col gap-3 list-none p-0 m-0">
               {[
@@ -39,7 +39,7 @@ export default function Footer() {
                 <li key={s.slug}>
                   <Link
                     href={s.slug}
-                    className="font-display text-sm text-white/45 hover:text-gold transition-colors duration-200 no-underline"
+                    className="font-display text-sm text-white hover:text-gold transition-colors duration-200 no-underline"
                   >
                     {s.title}
                   </Link>
@@ -52,7 +52,7 @@ export default function Footer() {
             <p className="font-display text-[9px] font-semibold tracking-[0.28em] uppercase text-gold mb-6">Contact</p>
             <div className="flex flex-col gap-5">
               {[
-                { label: "Email",    val: "YourGuide@sophianinternational.com" },
+                { label: "Email",    val: "yourguide@sophianinternational.com" },
                 { label: "Location", val: "Beijing, China"                     },
                 { label: "WeChat",   val: ""               },
               ].map(d => (
@@ -60,7 +60,7 @@ export default function Footer() {
                   <p className="font-display text-[9px] font-semibold tracking-[0.2em] uppercase text-gold/60 mb-1">
                     {d.label}
                   </p>
-                  <p className="font-display text-sm text-white/45">{d.val}</p>
+                  <p className="font-display text-sm text-white">{d.val}</p>
                 </div>
               ))}
               <Image
@@ -76,13 +76,13 @@ export default function Footer() {
             <p className="font-display text-[9px] font-semibold tracking-[0.28em] uppercase text-gold mb-6">Terms</p>
             <ul className="flex flex-col gap-3 list-none p-0 m-0">
               {[
-                { title: "Cookie Policie",    slug: "/cookie-policy"    },
+                { title: "Cookie Policy",    slug: "/cookie-policy"    },
                 { title: "Privacy Policy",  slug: "/privacy-policy"  },
               ].map(s => (
                 <li key={s.slug}>
                   <Link
                     href={s.slug}
-                    className="font-display text-sm text-white/45 hover:text-gold transition-colors duration-200 no-underline"
+                    className="font-display text-sm text-white hover:text-gold transition-colors duration-200 no-underline"
                   >
                     {s.title}
                   </Link>
@@ -111,7 +111,7 @@ export default function Footer() {
 
           {/* Right — Dynamic year */}
           <p className="font-display text-[10px] font-semibold tracking-[0.2em] uppercase text-white/25">
-            Sophian International © {currentYear}
+            Sophian International © 2000 - {currentYear}
           </p>
         </div>
 
