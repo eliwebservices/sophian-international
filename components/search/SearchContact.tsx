@@ -1,3 +1,4 @@
+import { Mail, MapPin, Phone } from "lucide-react";
 import ScheduleCallButton from "../ScheduleCallButton";
 
 export default function SearchContact() {
@@ -25,12 +26,12 @@ export default function SearchContact() {
           {/* Contact details */}
           <div className="grid md:grid-cols-3 gap-px bg-gold/10 mb-16">
             {[
-              { icon: "✉", label: "Email",    val: "yourguide@sophianinternational.com" },
-              { icon: "📞", label: "Phone",    val: "+853 6350 9608" },
-              { icon: "📍", label: "Location", val: "Beijing, China" },
+              { icon: <Mail />, label: "Email",    val: "yourguide@sophianinternational.com" },
+              { icon: <Phone />, label: "Phone",    val: "+853 6350 9608" },
+              { icon: <MapPin/>, label: "Location", val: "Beijing, China" },
             ].map((d) => (
-              <div key={d.label} className="bg-white/[0.04] p-10 text-center hover:bg-white/[0.08] transition-colors duration-300">
-                <span className="block text-2xl text-gold mb-4">{d.icon}</span>
+              <div key={d.label} className="flex flex-col bg-white/[0.04] p-10 text-center hover:bg-white/[0.08] transition-colors duration-300">
+                <span className="block text-2xl text-gold mb-4 mx-auto">{d.icon}</span>
                 <p className="font-body text-[9px] tracking-[0.25em] uppercase text-white/45 mb-3">{d.label}</p>
                 <p className="font-body text-sm text-white break-all">{d.val}</p>
               </div>

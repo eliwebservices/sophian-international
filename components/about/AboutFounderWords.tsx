@@ -1,5 +1,5 @@
 const paragraphs = [
-    "After more than 20 years in lifestyle and ultra-luxury hospitality leadership roles across Mainland China — including Sanya, Chengdu, Guangzhou, Shanghai, and Beijing — I have seen the same people challenges arise again and again: hire the right leaders, train teams to standard, and reduce costly turnover that quietly increases labor costs while eroding performance and service standards.",
+    "After more than 20 years in lifestyle and ultra-luxury hospitality leadership roles across Mainland China — including Sanya, Chengdu, Guangzhou, Shanghai, and Beijing, Bangkok and Tokyo — I have seen the same people challenges arise again and again: hire the right leaders, train teams to higher standard, and reduce costly turnover that quietly increases labor costs while eroding performance and service standards.",
     "As a hospitality insider who genuinely cares about this industry, I have built strong relationships with senior executive decision-makers and a practical understanding of what owners, guests, team members, and the business truly need. This has become a personal calling — a natural transition in my career: to connect exceptional executives, empower leaders and organizations to grow forward, and strengthen People & Culture across hospitality.",
     "I firmly believe that organizations thrive when their people grow — professionally and personally.",
     "That is why I founded Sophian International. We combine deep industry experience, a trusted network, and international-standard People & Culture expertise to help hotels and hospitality groups build strong teams, develop capable leaders, and sustain a service culture that lasts.",
@@ -28,7 +28,7 @@ const paragraphs = [
             {paragraphs.map((p, i) => (
               <p
                 key={i}
-                className={`font-body text-sm leading-relaxed ${i === 2 ? "font-display text-xl text-muted not-font-body" : "text-muted"}`}
+                className={`font-body text-md leading-relaxed ${i === 2 ? "font-display text-xl text-muted not-font-body" : "text-muted"}`}
               >
                 {p}
               </p>

@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="bg-navy px-6 pt-20 pb-10">
       <div className="max-w-6xl mx-auto">
 
-        <div className="grid md:grid-cols-4 gap-12 lg:gap-16 pb-16 border-b border-gold/15 mb-10">
+        <div className="grid md:grid-cols-6 gap-12 lg:gap-16 pb-16 border-b border-gold/15 mb-10">
 
           <div className="md:col-span-2">
             <p className="font-display text-3xl font-light tracking-widest text-white mb-1">Sophian</p>
@@ -48,13 +48,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="md:col-span-2">
             <p className="font-display text-[9px] font-semibold tracking-[0.28em] uppercase text-gold mb-6">Contact</p>
             <div className="flex flex-col gap-5">
               {[
                 { label: "Email",    val: "YourGuide@sophianinternational.com" },
                 { label: "Location", val: "Beijing, China"                     },
-                { label: "WeChat",   val: "Available on request"               },
+                { label: "WeChat",   val: ""               },
               ].map(d => (
                 <div key={d.label}>
                   <p className="font-display text-[9px] font-semibold tracking-[0.2em] uppercase text-gold/60 mb-1">
@@ -70,6 +70,27 @@ export default function Footer() {
                 alt="sophian-wechat-qr-code"
               />
             </div>
+          </div>
+
+          <div>
+            <p className="font-display text-[9px] font-semibold tracking-[0.28em] uppercase text-gold mb-6">Terms</p>
+            <ul className="flex flex-col gap-3 list-none p-0 m-0">
+              {[
+                { title: "Executive Search",    slug: "executive-search"    },
+                { title: "Corporate Training",  slug: "corporate-training"  },
+                { title: "HR Consulting",       slug: "hr-consulting"       },
+                { title: "Free Career Clarity", slug: "free-resources"      },
+              ].map(s => (
+                <li key={s.slug}>
+                  <Link
+                    href={s.slug}
+                    className="font-display text-sm text-white/45 hover:text-gold transition-colors duration-200 no-underline"
+                  >
+                    {s.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 

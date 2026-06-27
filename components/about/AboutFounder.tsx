@@ -37,7 +37,7 @@ const stats = [
   <div className="md:col-span-3">
               <div className="space-y-5 mb-10">
                 {bio.map((p, i) => (
-                  <p key={i} className="font-body text-sm text-muted leading-relaxed">{p}</p>
+                  <p key={i} className="font-body text-md text-muted leading-relaxed">{p}</p>
                 ))}
               </div>
   
