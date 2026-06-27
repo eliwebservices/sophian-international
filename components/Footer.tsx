@@ -76,10 +76,8 @@ export default function Footer() {
             <p className="font-display text-[9px] font-semibold tracking-[0.28em] uppercase text-gold mb-6">Terms</p>
             <ul className="flex flex-col gap-3 list-none p-0 m-0">
               {[
-                { title: "Executive Search",    slug: "executive-search"    },
-                { title: "Corporate Training",  slug: "corporate-training"  },
-                { title: "HR Consulting",       slug: "hr-consulting"       },
-                { title: "Free Career Clarity", slug: "free-resources"      },
+                { title: "Cookie Policie",    slug: "/cookie-policy"    },
+                { title: "Privacy Policy",  slug: "/privacy-policy"  },
               ].map(s => (
                 <li key={s.slug}>
                   <Link
