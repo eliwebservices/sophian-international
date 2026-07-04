@@ -24,7 +24,8 @@ export default function SearchContact() {
           </div>
   
           {/* Contact details */}
-          <div className="grid md:grid-cols-3 gap-px bg-gold/10 mb-16">
+          <div className="grid grid-cols-2 gap-2">
+          <div className="grid md:grid-cols-1 gap-px bg-gold/10 mb-16">
             {[
               { icon: <Mail />, label: "Email",    val: "yourguide@sophianinternational.com" },
               { icon: <Phone />, label: "Phone",    val: "+853 6350 9608" },
@@ -39,7 +40,7 @@ export default function SearchContact() {
           </div>
   
           {/* Client / Candidate split */}
-          <div className="grid md:grid-cols-2 gap-px bg-gold/10 mb-16">
+          <div className="grid md:grid-cols-1 gap-px bg-gold/10 mb-16">
             <div className="bg-white/[0.04] p-12">
               <p className="font-body text-[9px] tracking-[0.3em] uppercase text-gold mb-4">Clients</p>
               <p className="font-body text-sm text-white/60 leading-relaxed">
@@ -57,6 +58,7 @@ export default function SearchContact() {
                 future roles.
               </p>
             </div>
+          </div>
           </div>
   
           <div className="text-center">

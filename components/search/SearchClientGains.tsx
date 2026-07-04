@@ -28,22 +28,50 @@ export default function SearchClientGains() {
           <div className="w-12 h-px bg-gold mx-auto" />
         </div>
 
-        {/* Split — image left, gains right */}
-        <div className="grid md:grid-cols-2 gap-px bg-gold/15 mb-20">
+        {/* Full-bleed image with gradient overlay and gains on top */}
+        <div className="relative overflow-hidden min-h-[520px] mb-20 group">
 
-          {/* Image */}
-          <div className="relative overflow-hidden min-h-[400px] group">
-            <img
-              src="/images/here-to-serve_.jpg"
-              alt="Executive hospitality leadership"
-              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-navy/20" />
+          {/* Background image */}
+          <img
+            src="/images/here-to-serve_.jpg"
+            alt="Executive hospitality leadership"
+            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          />
 
-            {/* Decorative quote on image */}
-            {/* <div className="absolute bottom-8 left-8 right-8">
-              <div className="border-l-2 border-gold pl-5">
-                <p className="font-body text-base italic text-white/90 leading-relaxed">
+          {/* Gradient — transparent right, dark navy left */}
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/92 via-navy/70 to-navy/10" />
+
+          {/* Decorative inset border frame */}
+          <div className="absolute top-6 left-6 bottom-6 right-6 border border-gold/15 pointer-events-none" />
+
+          {/* Content sits on the left over the image */}
+          <div className="relative z-10 h-full flex items-center">
+            <div className="px-14 md:px-20 py-16 max-w-xl">
+
+              <p className="font-display text-[9px] md:text-[11px] font-semibold tracking-[0.35em] uppercase text-gold mb-8">
+                What You Get
+              </p>
+
+              <div className="flex flex-col gap-7">
+                {gains.map((g, i) => (
+                  <div key={g} className="flex items-start gap-5">
+                    {/* Number */}
+                    <span className="font-display text-3xl font-light text-gold leading-none flex-shrink-0 w-8">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div className="pt-1">
+                      <div className="w-6 h-px bg-gold mb-3" />
+                      <p className="font-display text-base font-light text-white/90 leading-relaxed">
+                        {g}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Pull quote at bottom */}
+              <div className="mt-12 border-l-2 border-gold pl-5">
+                <p className="font-body text-sm italic text-white/60 leading-relaxed">
                   "In a market of genuine scarcity, precision is not a
                   differentiator — it is the only approach that works."
                 </p>
@@ -51,29 +79,6 @@ export default function SearchClientGains() {
                   — Sophian International
                 </p>
               </div>
-            </div> */}
-          </div>
-
-          {/* Gains */}
-          <div className="bg-cream px-12 py-14 flex flex-col justify-center">
-            <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-8">
-              What You Get
-            </p>
-            <div className="flex flex-col gap-6">
-              {gains.map((g, i) => (
-                <div key={g} className="flex items-start gap-5">
-                  {/* Number */}
-                  <span className="font-display text-3xl font-light text-gold/30 leading-none flex-shrink-0 w-8">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <div className="pt-1">
-                    <div className="w-6 h-px bg-gold mb-3" />
-                    <p className="font-display text-base font-light text-navy leading-relaxed">
-                      {g}
-                    </p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>

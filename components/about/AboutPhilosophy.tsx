@@ -6,7 +6,7 @@ export default function AboutPhilosophy() {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('/images/our-philosophy-background.png')",
+            "url('/images/our-philosophy-background-new.png')",
         }}
       />
       {/* Dark overlay so text remains readable */}

@@ -21,7 +21,7 @@ const values = [
     cn: "新生",
     sub: "Creating lasting personal, cultural, and leadership change",
     desc: "We enable lasting transformation across people, leadership, and culture. Like a butterfly emerging from its chrysalis, we guide organizations through meaningful, beautiful change.",
-    image: "/images/butterfly-transform.png",
+    image: "/images/butterfly-transform-new.png",
   },
 ];
 

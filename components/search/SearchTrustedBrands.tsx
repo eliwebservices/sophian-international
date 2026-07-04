@@ -6,16 +6,16 @@
 "use client"
 
   const brands = [
-    { name: "Accor", src: "/images/company-logos/accor-logo.png" },
-    { name: "IHG", src: "/images/company-logos/IHG.png" },
-    { name: "Hilton", src: "/images/company-logos/Hilton-Worldwide-Logo.png" },
-    { name: "Marriott", src: "/images/company-logos/Marriott-Logo.png" },
-    { name: "Rosewood", src: "/images/company-logos/Rosewood-logo.png" },
-    { name: "Aman", src: "/images/company-logos/Aman.png" },
-    { name: "Kempinski", src: "/images/company-logos/Kempinski-Logo.png" },
-    { name: "Starwood", src: "/images/company-logos/starwood.png" },
-    { name: "SH", src: "/images/company-logos/SH.jpeg" },
-    { name: "one hotel", src: "/images/company-logos/one-hotel.png" },
+    { name: "Accor", src: "/images/company-logos-colored/accor.png" },
+    { name: "IHG", src: "/images/company-logos-colored/ihg.png" },
+    { name: "Hilton", src: "/images/company-logos-colored/hilton.png" },
+    { name: "Marriott", src: "/images/company-logos-colored/marriott.png" },
+    { name: "Rosewood", src: "/images/company-logos-colored/rosewood.png" },
+    { name: "Aman", src: "/images/company-logos-colored/aman.png" },
+    { name: "Kempinski", src: "/images/company-logos-colored/kempinski.png" },
+    { name: "Starwood", src: "/images/company-logos-colored/starwood.png" },
+    { name: "SH", src: "/images/company-logos-colored/sh.png" },
+    // { name: "one hotel", src: "/images/company-logos-colored/one-hotel.png" },
   ];
 
   
@@ -23,7 +23,7 @@
     const doubled = [...brands, ...brands];
 
     return (
-      <section className="bg-cream py-20 pb-1 px-6">
+      <section className="bg-navy py-20 pb-1 px-6">
         {/* <div className="max-w-5xl mx-auto">
           <p className="font-body text-[9px] tracking-[0.3em] uppercase text-muted text-center mb-10">
             Trusted by Leading Properties Across Greater China and Asia Pacific
@@ -41,7 +41,7 @@
         </div> */}
 {/*  */}
         <div className="mb-6">
-          <p className="font-display text-[14px] font-semibold tracking-[0.3em] uppercase text-muted text-center mb-8">
+          <p className="font-display text-[14px] font-semibold tracking-[0.3em] uppercase text-white text-center mb-8">
           Trusted by Leading Properties Across Greater China and Asia Pacific
           </p>
         </div>
@@ -49,8 +49,8 @@
         {/* Outer wrapper clips the overflow */}
         <div className="relative overflow-hidden mb-20 border-y border-gold/20 py-8">
           {/* Fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-navy to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-navy to-transparent z-10 pointer-events-none" />
 
           {/* Scrolling track */}
           <div

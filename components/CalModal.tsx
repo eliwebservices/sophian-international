@@ -36,7 +36,7 @@ export default function CalModal() {
         {/* Cal.com embed */}
         <div className="flex-1 overflow-y-auto">
           <Cal
-            calLink="nickhuana/discovery-call"
+            calLink="sophianinternational/free-discovery-call"
             style={{ width: "100%", height: "100%", minHeight: "600px" }}
             config={{
               layout: "month_view",

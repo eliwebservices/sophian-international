@@ -75,7 +75,7 @@ export default function SearchApproach() {
               <ul className="flex flex-col gap-3 mb-10 list-none p-0 m-0">
                 {clientPoints.map((p) => (
                   <li key={p} className="flex gap-3 font-body text-sm text-[#1a1a1a]">
-                    <span className="text-gold flex-shrink-0 mt-0.5">→</span>
+                    {/* <span className="text-gold flex-shrink-0 mt-0.5">→</span> */}
                     <span>{p}</span>
                   </li>
                 ))}
@@ -114,7 +114,7 @@ export default function SearchApproach() {
               <ul className="flex flex-col gap-3 mb-10 list-none p-0 m-0">
                 {candidatePoints.map((p) => (
                   <li key={p} className="flex gap-3 font-body text-sm text-white/80">
-                    <span className="text-gold flex-shrink-0 mt-0.5">→</span>
+                    {/* <span className="text-gold flex-shrink-0 mt-0.5">→</span> */}
                     <span>{p}</span>
                   </li>
                 ))}

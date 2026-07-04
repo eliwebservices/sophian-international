@@ -34,26 +34,24 @@ const pillars = [
           </div>
   
           {/* Pillars */}
-          <div className="grid md:grid-cols-2 gap-px bg-navy/5">
-            {pillars.map((p) => (
-              // <div
-              //   key={p.number}
-              //   className="group bg-white p-12 hover:bg-white/[0.08] transition-colors duration-500 relative overflow-hidden"
-              // >
-              <div
-                key={p.number}
-                className="group bg-white p-12 relative overflow-hidden"
-              >
-                {/* <div className="absolute top-0 left-0 right-0 h-[2px] bg-gold scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" /> */}
-                <p className="font-display text-[56px] font-light text-navy/15 leading-none mb-3">
-                  {p.number}
-                </p>
-                <h3 className="font-display text-2xl font-light text-navy mb-4">{p.title}</h3>
-                <div className="w-8 h-px bg-gold/40 mb-5 group-hover:w-14 transition-all duration-500" />
-                <p className="font-body text-sm text-muted leading-relaxed">{p.desc}</p>
-              </div>
-            ))}
-          </div>
+          <div className="max-w-6xl mx-auto px-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-gold/20">
+          {pillars.map((p) => (
+            <div key={p.number} className="px-8 first:pl-0 last:pr-0">
+              <p className="font-display text-[11px] font-light text-gold/40 mb-3">
+                {p.number}
+              </p>
+              <div className="w-5 h-px bg-gold mb-4" />
+              <h3 className="font-display text-base font-light text-navy mb-3 leading-snug">
+                {p.title}
+              </h3>
+              <p className="font-body text-xs text-muted leading-relaxed">
+                {p.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
         </div>
       </section>
     );

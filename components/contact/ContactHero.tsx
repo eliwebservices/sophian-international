@@ -12,8 +12,8 @@ export default function ContactHero() {
             animation: "kenburns 18s ease-out forwards",
           }}
         />
-        {/* <div className="absolute inset-0 bg-gradient-to-b from-navy/20 via-navy/55 to-navy/92" /> */}
-        <div className="absolute inset-0 bg-gradient-to-b bg-navy/10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/20 via-navy/55 to-navy/92" />
+        {/* <div className="absolute inset-0 bg-gradient-to-b bg-navy/10" /> */}
   
         {/* Content */}
         <div

@@ -16,7 +16,7 @@ export default function Footer() {
             <p className="font-display text-[9px] font-semibold tracking-[0.35em] uppercase text-gold mb-6">
               International · People & Culture Partner
             </p>
-            <p className="font-display text-sm leading-relaxed text-white max-w-xs mb-8">
+            <p className="font-display text-sm leading-relaxed text-white/75 max-w-xs mb-8">
               Empowering mission-driven hotels and hospitality brands to transform their
               growth through People & Culture solutions — creating people-first experiences
               for employees, guests, owners, and the broader community.
@@ -39,7 +39,7 @@ export default function Footer() {
                 <li key={s.slug}>
                   <Link
                     href={s.slug}
-                    className="font-display text-sm text-white hover:text-gold transition-colors duration-200 no-underline"
+                    className="font-display text-sm text-white/75 hover:text-gold transition-colors duration-200 no-underline"
                   >
                     {s.title}
                   </Link>
@@ -60,7 +60,7 @@ export default function Footer() {
                   <p className="font-display text-[9px] font-semibold tracking-[0.2em] uppercase text-gold/60 mb-1">
                     {d.label}
                   </p>
-                  <p className="font-display text-sm text-white">{d.val}</p>
+                  <p className="font-display text-sm text-white/75">{d.val}</p>
                 </div>
               ))}
               <Image
@@ -82,7 +82,7 @@ export default function Footer() {
                 <li key={s.slug}>
                   <Link
                     href={s.slug}
-                    className="font-display text-sm text-white hover:text-gold transition-colors duration-200 no-underline"
+                    className="font-display text-sm text-white/75 hover:text-gold transition-colors duration-200 no-underline"
                   >
                     {s.title}
                   </Link>
@@ -95,7 +95,7 @@ export default function Footer() {
         {/* ── ICP LICENSE BAR ── */}
         <div className="flex items-center justify-between mb-8">
           {/* Left — ICP license */}
-          <p className="font-display text-[10px] font-semibold tracking-[0.2em] uppercase text-white/25">
+          <p className="font-display text-[10px] font-semibold tracking-[0.2em] uppercase text-white/45">
             ICP LICENSE
           </p>
 
@@ -110,7 +110,7 @@ export default function Footer() {
           </div>
 
           {/* Right — Dynamic year */}
-          <p className="font-display text-[10px] font-semibold tracking-[0.2em] uppercase text-white/25">
+          <p className="font-display text-[10px] font-semibold tracking-[0.2em] uppercase text-white/45">
             Sophian International © 2000 - {currentYear}
           </p>
         </div>
