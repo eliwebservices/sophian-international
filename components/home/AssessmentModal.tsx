@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import ScheduleCallButton from "../ScheduleCallButton";
 
 const pillars = [
   {
@@ -278,16 +279,16 @@ export default function AssessmentModal({ open, onClose }: Props) {
                 </p>
               )}
               <div className="flex flex-wrap gap-3 justify-center">
-                <a href="#contact" onClick={handleClose}
-                  className="font-body text-[9px] tracking-[0.28em] uppercase bg-navy text-white px-8 py-4 hover:bg-navy2 transition-colors no-underline inline-flex items-center gap-2.5"
+                <a href="contact"
+                  className="font-display text-[10px] tracking-[0.28em] uppercase bg-navy text-white px-8 py-4 hover:bg-navy2 transition-colors no-underline inline-flex items-center gap-2.5"
                 >
-                  Request Custom Audit →
+                  Request Custom Audit
                 </a>
                 <button onClick={handleClose}
-                  className="font-body text-[9px] tracking-[0.28em] uppercase border border-navy text-navy px-8 py-4 hover:bg-navy hover:text-white transition-all cursor-pointer bg-transparent"
                 >
-                  Schedule Discovery Call
+                  <ScheduleCallButton variant="outline-navy" label="Schedule Discovery Call" className=""/>
                 </button>
+                
               </div>
             </div>
           )}

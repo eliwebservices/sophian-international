@@ -24,7 +24,7 @@ const steps = [
   
   export default function TrainingMethodology() {
     return (
-      <section className="bg-warm py-28 px-6">
+      <section className="bg-cream py-28 px-6">
         <div className="max-w-5xl mx-auto">
   
           <div className="text-center mb-20">
@@ -43,15 +43,15 @@ const steps = [
   
           <div className="grid md:grid-cols-3 gap-px bg-gold/15">
             {steps.map((step) => (
-              <div key={step.number} className="bg-white p-12 text-center group hover:bg-navy transition-colors duration-500">
-                <span className="font-display text-[64px] font-light text-navy/15 group-hover:text-white/10 leading-none block mb-4 transition-colors duration-500">
+              <div key={step.number} className="bg-white p-12 text-center group ">
+                <span className="font-display text-[64px] font-light text-navy/15 leading-none block mb-4">
                   {step.number}
                 </span>
-                <h3 className="font-display text-2xl font-light text-navy group-hover:text-white mb-2 transition-colors duration-500">
+                <h3 className="font-display text-2xl font-light text-navy  mb-2">
                   {step.title}
                 </h3>
                 <p className="font-body text-sm text-gold italic mb-5">{step.subtitle}</p>
-                <p className="font-body text-sm text-muted group-hover:text-white/55 leading-relaxed mb-8 transition-colors duration-500">
+                <p className="font-body text-sm text-muted  leading-relaxed mb-8">
                   {step.desc}
                 </p>
                 <span className="inline-block font-body text-[9px] tracking-[0.2em] uppercase text-gold border border-gold/40 px-4 py-2">

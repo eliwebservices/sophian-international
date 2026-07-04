@@ -36,7 +36,7 @@ const careerImages = [
   
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-24">
             <a
-              href="/#contact"
+              href="/contact"
               className="font-display md:text-[10px] text-[9px] tracking-[0.28em] uppercase bg-navy text-white px-10 py-4 hover:bg-navy2 transition-colors duration-300 no-underline inline-flex items-center gap-3"
             >
               Get in Touch

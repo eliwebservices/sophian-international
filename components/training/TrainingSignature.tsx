@@ -7,7 +7,7 @@ const steps = [
     number: "1",
     title: "Build Your Core Trainer Team",
     subtitle: "Ensure training has clear ownership, delivery capability, and follow-up discipline",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=85&fit=crop",
+    image: "/images/home-strip-5.jpg",
     bullets: [
       "Department Trainer: Owns the annual training plan, maintains the training matrix, converts SOP updates into executable content",
       "Training Coach: Leads on-the-job training and skills coaching; focuses on observable, measurable performance",
@@ -18,7 +18,7 @@ const steps = [
     number: "2",
     title: "Develop Trainer Skills",
     subtitle: "Turn your strongest operators into confident facilitators and coaches",
-    image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=900&q=85&fit=crop",
+    image: "/images/service-culture.jpg",
     bullets: [
       "Facilitation fundamentals: Course structure, adult learning principles, classroom management",
       "OJT coaching method: Demonstrate → Explain → Practice → Feedback → Re-check",
@@ -29,7 +29,7 @@ const steps = [
     number: "3",
     title: "Establish Courses & Training Plans",
     subtitle: "Align all training activity directly to business strategy and operational standards",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=85&fit=crop",
+    image: "/images/home-strip-2.jpg",
     bullets: [
       "Design logic: Vision → Strategy → Org Structure → Job Descriptions → Task Lists → SOPs → Training Plan",
       "Four training categories: Corrective · Compliance · Operational · Talent Development",
@@ -40,7 +40,7 @@ const steps = [
     number: "4",
     title: "Evaluate & Recognize Success",
     subtitle: "Prove effectiveness with data; sustain performance with recognition and continuous improvement",
-    image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=900&q=85&fit=crop",
+    image: "/images/ambassadors.png",
     bullets: [
       "Completion metrics: Plan completion rate, coverage rate, re-training frequency",
       "Learning metrics: Quiz pass rates, skills certification, role readiness assessments",
