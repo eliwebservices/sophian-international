@@ -5,16 +5,47 @@ export default function ResourcesRequest() {
   const [form, setForm] = useState({
     name: "", email: "", role: "", phone: "", company: "", wechat: "", remarks: "",
   });
-  const [sent, setSent] = useState(false);
+  const [sent, setSent]       = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError]     = useState("");
 
   const update = (k: string, v: string) => setForm((f) => ({ ...f, [k]: v }));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.role) return;
-    setSent(true);
-    setForm({ name: "", email: "", role: "", phone: "", company: "", wechat: "", remarks: "" });
-    setTimeout(() => setSent(false), 6000);
+
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/resources", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: form.name,
+          email:    form.email,
+          role:     form.role,
+          phone:    form.phone,
+          company:  form.company,
+          wechat:   form.wechat,
+          remarks:  form.remarks,
+        }),
+      });
+
+      if (res.ok) {
+        setSent(true);
+        setForm({ name: "", email: "", role: "", phone: "", company: "", wechat: "", remarks: "" });
+        setTimeout(() => setSent(false), 6000);
+      } else {
+        const data = await res.json();
+        setError(data.error ?? "Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const fieldCls =
@@ -116,11 +147,28 @@ export default function ResourcesRequest() {
                 />
               </div>
 
+              {error && (
+                <p className="font-display text-sm text-red-500 text-center">{error}</p>
+              )}
+
               <button
                 type="submit"
-                className="w-full bg-navy text-white font-display text-[9px] font-semibold tracking-[0.3em] uppercase py-4 hover:bg-gold hover:text-navy transition-all duration-300 cursor-pointer border-none mt-2"
+                disabled={loading || sent}
+                className="w-full bg-navy text-white font-display text-[9px] font-semibold tracking-[0.3em] uppercase py-4 transition-all duration-300 cursor-pointer border-none mt-2 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-3"
               >
-                Unlock Free Resources →
+                {loading ? (
+                  <svg className="animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                    <circle cx="12" cy="12" r="10" strokeOpacity="0.25" />
+                    <path d="M12 2 a10 10 0 0 1 10 10" />
+                  </svg>
+                ) : sent ? (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#908E66" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="7,12 11,16 17,8" />
+                  </svg>
+                ) : (
+                  "Unlock Free Resources →"
+                )}
               </button>
 
               {sent && (
