@@ -33,9 +33,10 @@ const fieldCls =
   "w-full bg-transparent border-0 border-b border-gold/30 text-navy font-display text-sm px-0 py-3 outline-none focus:border-navy transition-colors placeholder:text-muted/40 rounded-none appearance-none";
 
 export default function ContactForm() {
-  const [form, setForm] = useState(initial);
-  const [sent, setSent]   = useState(false);
-  const [error, setError] = useState("");
+  const [form, setForm]       = useState(initial);
+  const [sent, setSent]       = useState(false);
+  const [error, setError]     = useState("");
+  const [loading, setLoading] = useState(false);
 
   const update = <K extends keyof typeof form>(k: K, v: (typeof form)[K]) =>
     setForm((f) => ({ ...f, [k]: v }));
@@ -61,6 +62,8 @@ export default function ContactForm() {
       return;
     }
 
+    setLoading(true);
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -78,6 +81,8 @@ export default function ContactForm() {
       }
     } catch (err) {
       setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -408,12 +413,25 @@ export default function ContactForm() {
             {/* Divider before submit */}
             <div className="w-full h-px bg-gold/20" />
 
-            {/* Submit */}
+            {/* Submit — with loader and checkmark */}
             <button
               type="submit"
-              className="w-full bg-navy text-white font-display text-[9px] font-semibold tracking-[0.3em] uppercase py-4 hover:bg-navy2 transition-colors duration-300 flex items-center justify-center gap-3 cursor-pointer border-none"
+              disabled={loading || sent}
+              className="w-full bg-navy text-white font-display text-[9px] font-semibold tracking-[0.3em] uppercase py-4 transition-colors duration-300 flex items-center justify-center gap-3 cursor-pointer border-none disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              Send Inquiry →
+              {loading ? (
+                <svg className="animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                  <circle cx="12" cy="12" r="10" strokeOpacity="0.25" />
+                  <path d="M12 2 a10 10 0 0 1 10 10" />
+                </svg>
+              ) : sent ? (
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#908E66" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="7,12 11,16 17,8" />
+                </svg>
+              ) : (
+                "Send Inquiry →"
+              )}
             </button>
 
             <p className="font-display text-xs text-muted italic text-center">
