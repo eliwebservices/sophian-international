@@ -126,105 +126,132 @@ export default function Navbar() {
 
         {/* Centre — Desktop nav links (hidden on mobile) */}
         {/* Centre — Desktop nav links (hidden on mobile) */}
-<ul className="hidden md:flex items-center list-none m-0 p-0">
-  {navItems.map((l, index) => (
-    <li key={l.label} className="flex items-center">
+        <ul className="hidden md:flex items-center list-none m-0 p-0">
+          {navItems.map((l, index) => (
+            <li key={l.label} className="flex items-center">
+              {/* Free Resources gets a dropdown, all others are plain links */}
+              {l.href === "/free-resources" ? (
+                <div className="px-4 relative group/dropdown">
+                  <Link
+                    href={l.href}
+                    className={[
+                      "font-display text-[11px] font-medium tracking-[0.18em] uppercase transition-all duration-300 no-underline py-1 relative inline-flex items-center gap-1.5",
+                      "after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-px after:bg-gold after:transition-all after:duration-300",
+                      isActive(l.href)
+                        ? "text-gold after:w-full after:opacity-100"
+                        : "text-white/80 hover:text-gold after:w-0 hover:after:w-full after:opacity-100",
+                    ].join(" ")}
+                  >
+                    {l.label}
+                    {/* Chevron */}
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      className="transition-transform duration-300 group-hover/dropdown:rotate-180 flex-shrink-0 mt-0.5"
+                    >
+                      <path
+                        d="M2 3.5 L5 6.5 L8 3.5"
+                        stroke="currentColor"
+                        strokeWidth="1.2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </Link>
 
-      {/* Free Resources gets a dropdown, all others are plain links */}
-      {l.href === "/free-resources" ? (
-        <div className="px-4 relative group/dropdown">
-          <Link
-            href={l.href}
-            className={[
-              "font-display text-[11px] font-medium tracking-[0.18em] uppercase transition-all duration-300 no-underline py-1 relative inline-flex items-center gap-1.5",
-              "after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-px after:bg-gold after:transition-all after:duration-300",
-              isActive(l.href)
-                ? "text-gold after:w-full after:opacity-100"
-                : "text-white/80 hover:text-gold after:w-0 hover:after:w-full after:opacity-100",
-            ].join(" ")}
-          >
-            {l.label}
-            {/* Chevron */}
-            <svg
-              width="10"
-              height="10"
-              viewBox="0 0 10 10"
-              fill="none"
-              className="transition-transform duration-300 group-hover/dropdown:rotate-180 flex-shrink-0 mt-0.5"
-            >
-              <path d="M2 3.5 L5 6.5 L8 3.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </Link>
+                  {/* Dropdown panel */}
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 bg-navy border border-gold/20 shadow-2xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 z-50">
+                    {/* Arrow tip */}
+                    <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-navy border-l border-t border-gold/20 rotate-45" />
 
-          {/* Dropdown panel */}
-          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 bg-navy border border-gold/20 shadow-2xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 z-50">
-            {/* Arrow tip */}
-            <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-navy border-l border-t border-gold/20 rotate-45" />
+                    <div className="py-2">
+                      <Link
+                        href="/free-resources"
+                        className="flex items-center gap-3 px-5 py-3 font-display text-[10px] font-semibold tracking-[0.18em] uppercase text-white/70 hover:text-gold hover:bg-white/[0.05] transition-all duration-200 no-underline"
+                      >
+                        <span className="text-gold/50 text-xs">01</span>
+                        Career Clarity
+                      </Link>
+                      <div className="h-px bg-gold/10 mx-4" />
+                      <Link
+                        href="/free-resources/fr-2"
+                        className="flex items-center gap-3 px-5 py-3 font-display text-[10px] font-semibold tracking-[0.18em] uppercase text-white/70 hover:text-gold hover:bg-white/[0.05] transition-all duration-200 no-underline"
+                      >
+                        <span className="text-gold/50 text-xs">02</span>
+                        Free Workshop
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="px-4">
+                  <Link
+                    href={l.href}
+                    className={[
+                      "font-display text-[11px] font-medium tracking-[0.18em] uppercase transition-all duration-300 no-underline py-1 relative",
+                      "after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-px after:bg-gold after:transition-all after:duration-300",
+                      isActive(l.href)
+                        ? "text-gold after:w-full after:opacity-100"
+                        : "text-white/80 hover:text-gold after:w-0 hover:after:w-full after:opacity-100",
+                    ].join(" ")}
+                  >
+                    {l.label}
+                  </Link>
+                </div>
+              )}
 
-            <div className="py-2">
-              <Link
-                href="/free-resources"
-                className="flex items-center gap-3 px-5 py-3 font-display text-[10px] font-semibold tracking-[0.18em] uppercase text-white/70 hover:text-gold hover:bg-white/[0.05] transition-all duration-200 no-underline"
-              >
-                <span className="text-gold/50 text-xs">01</span>
-                Career Clarity
-              </Link>
-              <div className="h-px bg-gold/10 mx-4" />
-              <Link
-                href="/free-resources/fr-2"
-                className="flex items-center gap-3 px-5 py-3 font-display text-[10px] font-semibold tracking-[0.18em] uppercase text-white/70 hover:text-gold hover:bg-white/[0.05] transition-all duration-200 no-underline"
-              >
-                <span className="text-gold/50 text-xs">02</span>
-                Free Workshop
-              </Link>
-            </div>
-          </div>
-        </div>
-      ) : (
-        <div className="px-4">
-          <Link
-            href={l.href}
-            className={[
-              "font-display text-[11px] font-medium tracking-[0.18em] uppercase transition-all duration-300 no-underline py-1 relative",
-              "after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-px after:bg-gold after:transition-all after:duration-300",
-              isActive(l.href)
-                ? "text-gold after:w-full after:opacity-100"
-                : "text-white/80 hover:text-gold after:w-0 hover:after:w-full after:opacity-100",
-            ].join(" ")}
-          >
-            {l.label}
-          </Link>
-        </div>
-      )}
-
-      {/* Gold dot separator */}
-      {index < navItems.length - 1 && (
-        <span className="w-1 h-1 rounded-full bg-gold/60 flex-shrink-0" />
-      )}
-    </li>
-  ))}
-</ul>
+              {/* Gold dot separator */}
+              {index < navItems.length - 1 && (
+                <span className="w-1 h-1 rounded-full bg-gold/60 flex-shrink-0" />
+              )}
+            </li>
+          ))}
+        </ul>
 
         {/* Right — Desktop contact icons + Mobile hamburger */}
         <div className="flex items-center gap-5">
           {/* Desktop icons — hidden on mobile */}
           <div className="hidden md:flex items-center gap-5">
             {/* WeChat */}
-            <a
-              href="#"
-              title="WeChat"
-              className="text-white/60 hover:text-gold transition-colors duration-300"
-            >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="currentColor"
+            {/* WeChat — with QR code dropdown on hover */}
+            <div className="relative group/wechat">
+              <a
+                href="#"
+                title="WeChat"
+                className="text-white/60 hover:text-gold transition-colors duration-300 block"
               >
-                <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c-.2-.661-.314-1.354-.314-2.066C8.377 10.3 12.57 6.886 17.677 6.886c.568 0 1.126.048 1.668.135C18.172 3.76 13.773.188 8.69.188z" />
-                <path d="M23.98 14.925c0-3.39-3.207-6.135-7.168-6.135-3.963 0-7.17 2.745-7.17 6.135 0 3.389 3.207 6.134 7.17 6.134.887 0 1.739-.14 2.524-.395a.76.76 0 0 1 .635.083l1.687.987a.287.287 0 0 0 .148.048c.141 0 .258-.115.258-.261 0-.063-.025-.123-.042-.186l-.346-1.311a.522.522 0 0 1 .19-.59c1.61-1.2 2.664-2.987 2.664-4.97l.45.46z" />
-              </svg>
-            </a>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c-.2-.661-.314-1.354-.314-2.066C8.377 10.3 12.57 6.886 17.677 6.886c.568 0 1.126.048 1.668.135C18.172 3.76 13.773.188 8.69.188z" />
+                  <path d="M23.98 14.925c0-3.39-3.207-6.135-7.168-6.135-3.963 0-7.17 2.745-7.17 6.135 0 3.389 3.207 6.134 7.17 6.134.887 0 1.739-.14 2.524-.395a.76.76 0 0 1 .635.083l1.687.987a.287.287 0 0 0 .148.048c.141 0 .258-.115.258-.261 0-.063-.025-.123-.042-.186l-.346-1.311a.522.522 0 0 1 .19-.59c1.61-1.2 2.664-2.987 2.664-4.97l.45.46z" />
+                </svg>
+              </a>
+
+              {/* QR code dropdown */}
+              <div className="absolute top-full right-1/2 translate-x-1/2 mt-3 opacity-0 invisible group-hover/wechat:opacity-100 group-hover/wechat:visible transition-all duration-200 z-50">
+                {/* Arrow tip */}
+                <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-navy border-l border-t border-gold/20 rotate-45" />
+
+                <div className="bg-navy border border-gold/20 shadow-2xl p-5 flex flex-col items-center gap-3 w-46">
+                  <Image
+                    src="/images/sophian-wechat-qr-code.png"
+                    width={2000}
+                    height={2000}
+                    alt="Sophian WeChat QR Code"
+                    className="w-38 h-38"
+                  />
+                  <p className="font-display text-[9px] font-semibold tracking-[0.2em] uppercase text-gold text-center">
+                    Scan to Add on WeChat
+                  </p>
+                </div>
+              </div>
+            </div>
 
             {/* Phone */}
             <a

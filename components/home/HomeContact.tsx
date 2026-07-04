@@ -4,17 +4,27 @@ import { useState } from "react";
 
 export default function HomeContact() {
   const [form, setForm] = useState({
-    firstName: "", lastName: "", email: "",
-    organisation: "", service: "", message: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+    organisation: "",
+    service: "",
+    message: "",
   });
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const update = (k: string, v: string) => setForm(f => ({ ...f, [k]: v }));
+  const update = (k: string, v: string) => setForm((f) => ({ ...f, [k]: v }));
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.firstName || !form.email || !form.service || !form.message) return;
-  
+    if (!form.firstName || !form.email || !form.service || !form.message)
+      return;
+
+    setLoading(true);
+
+    // Inside handleSubmit, replace the try/catch:
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -22,21 +32,34 @@ export default function HomeContact() {
         body: JSON.stringify({
           fullName: `${form.firstName} ${form.lastName}`.trim(),
           role: "Other",
-          company: form.organisation,
+          company: form.organisation || "Not provided",
           email: form.email,
           service: form.service,
           message: form.message,
         }),
       });
-  
+
       if (res.ok) {
         setSent(true);
-        setForm({ firstName: "", lastName: "", email: "",
-                  organisation: "", service: "", message: "" });
-        setTimeout(() => setSent(false), 5000);
+        setError("");
+        setForm({
+          firstName: "",
+          lastName: "",
+          email: "",
+          organisation: "",
+          service: "",
+          message: "",
+        });
+        setTimeout(() => setSent(false), 4000);
+      } else {
+        const data = await res.json();
+        setError(data.error ?? "Something went wrong. Please try again.");
       }
     } catch (err) {
       console.error(err);
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -51,28 +74,34 @@ export default function HomeContact() {
     <section id="contact" className="bg-cream py-28 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-5 gap-16 items-start">
-
           {/* Info column */}
           <div className="md:col-span-2">
             <p className="font-display text-[9px] md:text-[14px] font-semibold tracking-[0.35em] uppercase text-gold mb-5">
               Get in Touch
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-light text-navy leading-[1.12] mb-6">
-              Connect with<br />Sophian International
+              Connect with
+              <br />
+              Sophian International
             </h2>
             <div className="w-12 h-px bg-gold mb-6" />
             <p className="font-body text-xl text-navy mb-6">
               Transforming Your People & Culture Starts Here
             </p>
             <p className="font-display text-sm leading-relaxed text-muted mb-12">
-              Whether you're preparing for a pre-opening, refining leadership structure,
-              or strengthening organizational capability — we're ready to advise and
-              support your next phase of growth.
+              Whether you're preparing for a pre-opening, refining leadership
+              structure, or strengthening organizational capability — we're
+              ready to advise and support your next phase of growth.
             </p>
 
             {[
-              { icon: "✉", label: "Email",       val: "YourGuide@sophianinternational.com", href: "mailto:YourGuide@sophianinternational.com" },
-              { icon: "💬", label: "WeChat/WhatsApp",      val: "+853 6350 9608" },
+              {
+                icon: "✉",
+                label: "Email",
+                val: "YourGuide@sophianinternational.com",
+                href: "mailto:YourGuide@sophianinternational.com",
+              },
+              { icon: "💬", label: "WeChat/WhatsApp", val: "+853 6350 9608" },
               { icon: "📍", label: "Head Office", val: "Beijing, China" },
             ].map((d) => (
               <div key={d.label} className="flex gap-4 items-start mb-7">
@@ -83,10 +112,16 @@ export default function HomeContact() {
                   <p className="font-display text-[9px] font-semibold tracking-[0.25em] uppercase text-muted mb-1">
                     {d.label}
                   </p>
-                  {d.href
-                    ? <a href={d.href} className="font-display text-sm text-navy hover:text-gold transition-colors no-underline">{d.val}</a>
-                    : <p className="font-display text-sm text-navy">{d.val}</p>
-                  }
+                  {d.href ? (
+                    <a
+                      href={d.href}
+                      className="font-display text-sm text-navy hover:text-gold transition-colors no-underline"
+                    >
+                      {d.val}
+                    </a>
+                  ) : (
+                    <p className="font-display text-sm text-navy">{d.val}</p>
+                  )}
                 </div>
               </div>
             ))}
@@ -110,7 +145,7 @@ export default function HomeContact() {
                 <label className={labelCls}>First Name *</label>
                 <input
                   value={form.firstName}
-                  onChange={e => update("firstName", e.target.value)}
+                  onChange={(e) => update("firstName", e.target.value)}
                   placeholder="First name"
                   className={fieldCls}
                 />
@@ -119,7 +154,7 @@ export default function HomeContact() {
                 <label className={labelCls}>Last Name</label>
                 <input
                   value={form.lastName}
-                  onChange={e => update("lastName", e.target.value)}
+                  onChange={(e) => update("lastName", e.target.value)}
                   placeholder="Last name"
                   className={fieldCls}
                 />
@@ -131,7 +166,7 @@ export default function HomeContact() {
               <input
                 type="email"
                 value={form.email}
-                onChange={e => update("email", e.target.value)}
+                onChange={(e) => update("email", e.target.value)}
                 placeholder="your@email.com"
                 className={fieldCls}
               />
@@ -141,7 +176,7 @@ export default function HomeContact() {
               <label className={labelCls}>Organisation</label>
               <input
                 value={form.organisation}
-                onChange={e => update("organisation", e.target.value)}
+                onChange={(e) => update("organisation", e.target.value)}
                 placeholder="Hotel or company name"
                 className={fieldCls}
               />
@@ -151,10 +186,12 @@ export default function HomeContact() {
               <label className={labelCls}>I'm enquiring about *</label>
               <select
                 value={form.service}
-                onChange={e => update("service", e.target.value)}
+                onChange={(e) => update("service", e.target.value)}
                 className={fieldCls}
               >
-                <option value="" disabled>Select a service</option>
+                <option value="" disabled>
+                  Select a service
+                </option>
                 <option value="executive">Executive Search</option>
                 <option value="training">Corporate Training</option>
                 <option value="consulting">HR Consulting</option>
@@ -166,7 +203,7 @@ export default function HomeContact() {
               <label className={labelCls}>Brief Overview *</label>
               <textarea
                 value={form.message}
-                onChange={e => update("message", e.target.value)}
+                onChange={(e) => update("message", e.target.value)}
                 rows={4}
                 maxLength={1000}
                 placeholder="Briefly describe your situation or need..."
@@ -174,18 +211,53 @@ export default function HomeContact() {
               />
             </div>
 
+            {error && (
+  <p className="font-display text-sm text-red-500 text-center">
+    {error}
+  </p>
+)}
+
+
+            {/* Submit button — shows loader while submitting, checkmark on success */}
             <button
               type="submit"
-              className="w-full bg-navy text-white font-display text-[9px] font-semibold tracking-[0.3em] uppercase py-4 hover:bg-navy2 transition-colors duration-300 flex items-center justify-center gap-3 cursor-pointer border-none mt-2"
+              disabled={loading || sent}
+              className="w-full bg-navy text-white font-display text-[9px] font-semibold tracking-[0.3em] uppercase py-4 transition-colors duration-300 flex items-center justify-center gap-3 cursor-pointer border-none mt-2 disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              Submit Enquiry →
+              {loading ? (
+                /* Spinner */
+                <svg
+                  className="animate-spin"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                >
+                  <circle cx="12" cy="12" r="10" strokeOpacity="0.25" />
+                  <path d="M12 2 a10 10 0 0 1 10 10" />
+                </svg>
+              ) : sent ? (
+                /* Checkmark in circle */
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#908E66"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="7,12 11,16 17,8" />
+                </svg>
+              ) : (
+                "Submit Enquiry →"
+              )}
             </button>
-
-            {sent && (
-              <p className="font-display text-sm text-gold text-center border-t border-gold/20 pt-4">
-                Enquiry received. We'll be in touch within 48 hours.
-              </p>
-            )}
 
             <p className="font-display text-xs text-muted text-center italic">
               All enquiries are treated with complete confidentiality.

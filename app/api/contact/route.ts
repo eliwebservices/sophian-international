@@ -6,11 +6,11 @@ import { resend } from "@/lib/resend";
 const schema = z.object({
   fullName:              z.string().trim().min(1).max(120),
   role:                  z.string().min(1),
-  company:               z.string().trim().min(1).max(160),
+  company: z.string().trim().max(160).optional().default("Not provided"),
   location:              z.string().trim().max(160).optional(),
   email:                 z.string().trim().email().max(255),
   phone:                 z.string().trim().max(80).optional(),
-  service:               z.enum(["search", "training", "consulting", "unsure"]),
+  service: z.enum(["search", "executive", "training", "consulting", "unsure", "multiple"]),
   timeline:              z.string().optional(),
   message:               z.string().trim().min(10).max(1500),
   // Executive Search
